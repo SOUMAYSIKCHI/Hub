@@ -1,0 +1,1258 @@
+{
+    "module": "Computer Networks Fundamentals",
+    "topics": [
+      {
+        "title": "Introduction to Computer Networks",
+        "content": {
+          "explanation": "A computer network is a collection of interconnected computing devices that can exchange data and share resources with each other. Networks enable communication, resource sharing (like printers and files), and access to distributed applications and services. They can range from small local networks (LANs) to large global networks (the Internet).",
+          "explainLikeKid": "Imagine you and your friends want to share drawings or play a game. If you link all your drawing pads together with magical strings, that's like a computer network! Everyone can send their drawings to everyone else and play together.",
+          "code": "# This is a conceptual representation of network devices communicating.\n# Actual code for a basic network setup involves specific protocols and hardware configurations.\n\n# Device A sends data to Device B\ndef send_data(sender, receiver, data):\n    print(f\"{sender} sending '{data}' to {receiver}\")\n\ndef receive_data(receiver, data):\n    print(f\"{receiver} received '{data}'\")\n\nsend_data(\"Computer1\", \"Printer\", \"Print Job\")\nreceive_data(\"Printer\", \"Print Job\")\n\nsend_data(\"Server\", \"Client_Laptop\", \"Web Page Data\")\nreceive_data(\"Client_Laptop\", \"Web Page Data\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a computer network?",
+            "answer": "A computer network is a system of interconnected computing devices that can exchange data and share resources."
+          },
+          {
+            "question": "What are the primary benefits of computer networks?",
+            "answer": "Resource sharing (hardware and software), communication (email, messaging), and data sharing."
+          },
+          {
+            "question": "What is the most well-known example of a computer network?",
+            "answer": "The Internet."
+          },
+          {
+            "question": "What are some common applications of computer networks?",
+            "answer": "Email, web Browse, online gaming, video conferencing, and cloud computing."
+          },
+          {
+            "question": "Briefly explain the role of a 'host' in a network.",
+            "answer": "A host is any device connected to a network that sends, receives, or processes data, such as computers, servers, or smartphones."
+          }
+        ]
+      },
+      {
+        "title": "Types of Networks and Interconnected Networks",
+        "content": {
+          "explanation": "Networks are categorized based on their geographic scale and purpose. Common types include: Local Area Network (LAN) for a small area like an office, Metropolitan Area Network (MAN) covering a city, Wide Area Network (WAN) covering large geographic regions (like countries), and Personal Area Network (PAN) for individual devices. Interconnected networks form larger systems, with the Internet being the largest example.",
+          "explainLikeKid": "Networks are like different sized play areas. A LAN is your small bedroom play area. A MAN is a whole playground. A WAN is like connecting many playgrounds across different cities! The Internet is like connecting all the playgrounds in the world!",
+          "code": "# This is a conceptual representation of network types.\n\nNETWORK_TYPES = {\n    \"PAN\": \"Personal Area Network (e.g., Bluetooth devices)\",\n    \"LAN\": \"Local Area Network (e.g., home Wi-Fi, office Ethernet)\",\n    \"MAN\": \"Metropolitan Area Network (e.g., city-wide Wi-Fi)\",\n    \"WAN\": \"Wide Area Network (e.g., connecting offices across continents)\",\n    \"Internet\": \"Global network of networks\"\n}\n\ndef describe_network(network_type):\n    if network_type in NETWORK_TYPES:\n        print(f\"A {network_type} is: {NETWORK_TYPES[network_type]}\")\n    else:\n        print(\"Unknown network type.\")\n\ndescribe_network(\"LAN\")\ndescribe_network(\"WAN\")\ndescribe_network(\"Internet\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a LAN?",
+            "answer": "A Local Area Network (LAN) connects devices in a small geographic area, like an office or home."
+          },
+          {
+            "question": "What distinguishes a WAN from a LAN?",
+            "answer": "A WAN (Wide Area Network) covers a much larger geographic area, often using telecommunication lines, unlike a LAN which is localized."
+          },
+          {
+            "question": "Give an example of a PAN.",
+            "answer": "Connecting a smartphone to a Bluetooth headset or a fitness tracker."
+          },
+          {
+            "question": "What is the Internet in terms of network types?",
+            "answer": "The Internet is a global network of interconnected computer networks, essentially a vast WAN."
+          },
+          {
+            "question": "What is an intranet vs. an extranet?",
+            "answer": "An intranet is a private network accessible only to an organization's members. An extranet is a private network that extends an intranet to external users (e.g., customers, partners) while maintaining security."
+          }
+        ]
+      },
+      {
+        "title": "Network and Logical Topologies",
+        "content": {
+          "explanation": "Network topology refers to the physical or logical arrangement of nodes (devices) and connections (links) in a network. Physical topology describes the actual layout of cables, while logical topology describes how data flows between devices, regardless of their physical arrangement. Common topologies include Bus, Star, Ring, Mesh, and Hybrid.",
+          "explainLikeKid": "Think of how your friends hold hands to play a game. If everyone holds hands in a circle, that's a 'ring' shape. If everyone holds hands with just one person in the middle, that's a 'star' shape. That's like network topology!",
+          "code": "# This is a conceptual representation of network topologies.\n\nTOPOLOGIES = {\n    \"Star\": \"All devices connect to a central hub/switch.\",\n    \"Bus\": \"All devices share a single communication line.\",\n    \"Ring\": \"Devices are connected in a closed loop.\",\n    \"Mesh\": \"Every device is connected to every other device.\"\n}\n\ndef describe_topology(topo_name):\n    if topo_name in TOPOLOGIES:\n        print(f\"In {topo_name} topology: {TOPOLOGIES[topo_name]}\")\n    else:\n        print(\"Unknown topology.\")\n\ndescribe_topology(\"Star\")\ndescribe_topology(\"Bus\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is network topology?",
+            "answer": "Network topology is the arrangement of elements (links, nodes, etc.) of a communication network."
+          },
+          {
+            "question": "Differentiate between physical and logical topology.",
+            "answer": "Physical topology refers to the actual physical layout of the network devices and cables, while logical topology describes how data flows through the network, independent of its physical layout."
+          },
+          {
+            "question": "Describe Star topology.",
+            "answer": "In a Star topology, all network devices are connected to a central hub or switch. If the central device fails, the entire network fails."
+          },
+          {
+            "question": "What is a Mesh topology?",
+            "answer": "In a Mesh topology, every device is connected to every other device. This provides high redundancy but is expensive to implement for large networks."
+          },
+          {
+            "question": "What is a Hybrid topology?",
+            "answer": "A Hybrid topology combines two or more different basic topologies to form a larger, more complex network."
+          }
+        ]
+      },
+      {
+        "title": "OSI Model and Layers",
+        "content": {
+          "explanation": "The Open Systems Interconnection (OSI) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstract layers. Each layer performs specific network functions, communicating only with the layers directly above and below it. It helps in understanding and designing network architectures.",
+          "explainLikeKid": "Imagine sending a very special secret message to your friend using a super complex machine. The OSI model is like a 7-step instruction manual for that machine. Each step does one special thing to the message before it gets sent, and then your friend's machine does the 7 steps in reverse!",
+          "code": "# This is a conceptual representation of the OSI Model layers.\n\nOSI_LAYERS = [\n    \"7. Application Layer (HTTP, FTP, SMTP)\",\n    \"6. Presentation Layer (Data encryption, compression)\",\n    \"5. Session Layer (Managing communication sessions)\",\n    \"4. Transport Layer (TCP, UDP - reliable/unreliable data transfer)\",\n    \"3. Network Layer (IP - logical addressing, routing)\",\n    \"2. Data Link Layer (MAC addresses, framing)\",\n    \"1. Physical Layer (Cables, connectors, bits)\"\n]\n\ndef describe_osi_layer(layer_number):\n    if 1 <= layer_number <= 7:\n        print(f\"OSI Layer {OSI_LAYERS[layer_number - 1]}\")\n    else:\n        print(\"Invalid OSI layer number.\")\n\ndescribe_osi_layer(7)\ndescribe_osi_layer(4)\ndescribe_osi_layer(1)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the OSI model?",
+            "answer": "The OSI (Open Systems Interconnection) model is a conceptual framework that divides network communication into seven distinct layers."
+          },
+          {
+            "question": "List the seven layers of the OSI model.",
+            "answer": "Application, Presentation, Session, Transport, Network, Data Link, and Physical."
+          },
+          {
+            "question": "Which OSI layer is responsible for logical addressing and routing?",
+            "answer": "The Network Layer (Layer 3)."
+          },
+          {
+            "question": "Which OSI layer is responsible for reliable data transfer between end systems?",
+            "answer": "The Transport Layer (Layer 4)."
+          },
+          {
+            "question": "What is the purpose of the Physical Layer?",
+            "answer": "The Physical Layer (Layer 1) deals with the physical transmission and reception of raw bit streams over a physical medium (e.g., cables, radio waves)."
+          }
+        ]
+      },
+      {
+        "title": "TCP/IP Model",
+        "content": {
+          "explanation": "The TCP/IP (Transmission Control Protocol/Internet Protocol) model is a four-layer conceptual model that describes how data is exchanged over the internet. It is a more practical and widely implemented model compared to the OSI model, on which the Internet is based. Its layers are Application, Transport, Internet, and Network Access.",
+          "explainLikeKid": "If the OSI model is a very long recipe with 7 steps, the TCP/IP model is a shorter, more popular recipe with only 4 main steps that everyone actually uses to send messages on the internet!",
+          "code": "# This is a conceptual representation of the TCP/IP Model layers.\n\nTCP_IP_LAYERS = [\n    \"4. Application Layer (HTTP, DNS, FTP, SMTP)\",\n    \"3. Transport Layer (TCP, UDP)\",\n    \"2. Internet Layer (IP, ICMP, ARP)\",\n    \"1. Network Access Layer (Ethernet, Wi-Fi)\"\n]\n\ndef describe_tcp_ip_layer(layer_number):\n    if 1 <= layer_number <= 4:\n        print(f\"TCP/IP Layer {TCP_IP_LAYERS[layer_number - 1]}\")\n    else:\n        print(\"Invalid TCP/IP layer number.\")\n\ndescribe_tcp_ip_layer(4)\ndescribe_tcp_ip_layer(2)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are the four layers of the TCP/IP model?",
+            "answer": "Application, Transport, Internet, and Network Access (or Link) layers."
+          },
+          {
+            "question": "How does the TCP/IP model relate to the OSI model?",
+            "answer": "The TCP/IP model is a more condensed and practical model compared to the 7-layer OSI model, mapping some OSI layers into single TCP/IP layers."
+          },
+          {
+            "question": "Which layer in TCP/IP is equivalent to the OSI Network Layer?",
+            "answer": "The Internet Layer."
+          },
+          {
+            "question": "What protocols reside in the TCP/IP Transport Layer?",
+            "answer": "TCP (Transmission Control Protocol) and UDP (User Datagram Protocol)."
+          },
+          {
+            "question": "Why is the TCP/IP model more widely used than the OSI model?",
+            "answer": "The TCP/IP model is the foundational architecture of the Internet, making it more practical and relevant in real-world networking."
+          }
+        ]
+      },
+      {
+        "title": "Network Cabling and Connectors",
+        "content": {
+          "explanation": "Network cabling refers to the physical media used to transmit data, primarily twisted-pair copper cables (Ethernet), fiber optic cables, and coaxial cables. Connectors are the physical interfaces that terminate these cables and connect them to network devices (e.g., RJ-45 for Ethernet, SC/LC for fiber). Proper cabling is crucial for network performance and reliability.",
+          "explainLikeKid": "Think of network cables as roads that carry tiny data cars. Some roads are copper (like normal streets), some are super-fast glass tubes (fiber optics), and connectors are like the special plugs that let the roads connect to your computer or game console!",
+          "code": "# This is a conceptual representation of cable and connector types.\n\nCABLE_TYPES = {\n    \"Twisted Pair\": \"Copper cables (e.g., Cat5e, Cat6) for Ethernet.\",\n    \"Fiber Optic\": \"Glass or plastic strands for high-speed, long-distance data via light.\",\n    \"Coaxial\": \"Older cable type, still used for cable TV and some internet.\"\n}\n\nCONNECTOR_TYPES = {\n    \"RJ-45\": \"Standard connector for Ethernet cables.\",\n    \"SC/LC\": \"Common connectors for fiber optic cables.\"\n}\n\ndef describe_cable_connector(cable, connector):\n    print(f\"Cable: {cable} ({CABLE_TYPES.get(cable, 'Unknown')})\")\n    print(f\"Connector: {connector} ({CONNECTOR_TYPES.get(connector, 'Unknown')})\")\n\ndescribe_cable_connector(\"Twisted Pair\", \"RJ-45\")\ndescribe_cable_connector(\"Fiber Optic\", \"SC/LC\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are the main types of network cables?",
+            "answer": "Twisted-pair (copper), fiber optic, and coaxial cables."
+          },
+          {
+            "question": "What is an RJ-45 connector used for?",
+            "answer": "It is the standard connector for Ethernet (twisted-pair) cables."
+          },
+          {
+            "question": "What are the advantages of fiber optic cables over copper cables?",
+            "answer": "Higher bandwidth, longer transmission distances, immunity to electromagnetic interference, and better security."
+          },
+          {
+            "question": "What is 'crosstalk' in twisted-pair cables?",
+            "answer": "It's the interference caused by signals in one wire pair bleeding into another wire pair, reduced by twisting the wires."
+          },
+          {
+            "question": "When would you choose coaxial cable for networking today?",
+            "answer": "Mainly for cable television (CATV) distribution and older forms of broadband internet access."
+          }
+        ]
+      },
+      {
+        "title": "Network Devices",
+        "content": {
+          "explanation": "Network devices are hardware components used to connect, manage, and secure a computer network. Common devices include: Hubs (for broadcasting), Switches (for intelligent packet forwarding within a LAN), Routers (for connecting different networks and routing traffic), Modems (for converting signals), Access Points (for wireless connectivity), and Firewalls (for security).",
+          "explainLikeKid": "Network devices are like the special tools that help your data cars travel on the roads. A 'switch' is like a smart traffic controller in a city, directing cars to the right house. A 'router' is like a guide that helps cars find the right road to a completely different city!",
+          "code": "# This is a conceptual representation of network devices and their basic functions.\n\nNETWORK_DEVICES = {\n    \"Hub\": \"Connects multiple devices and broadcasts data to all.\",\n    \"Switch\": \"Connects multiple devices and intelligently forwards data to the correct device (within a LAN).\",\n    \"Router\": \"Connects different networks and routes data packets between them.\",\n    \"Modem\": \"Converts digital signals from a computer to analog signals for transmission over phone/cable lines, and vice versa.\",\n    \"Access Point\": \"Allows wireless devices to connect to a wired network.\"\n}\n\ndef describe_device(device_name):\n    if device_name in NETWORK_DEVICES:\n        print(f\"{device_name}: {NETWORK_DEVICES[device_name]}\")\n    else:\n        print(\"Unknown device.\")\n\ndescribe_device(\"Switch\")\ndescribe_device(\"Router\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary difference between a hub and a switch?",
+            "answer": "A hub broadcasts data to all connected devices, while a switch intelligently forwards data only to the intended destination device."
+          },
+          {
+            "question": "What is the main function of a router?",
+            "answer": "A router connects different networks and forwards data packets between them, based on IP addresses."
+          },
+          {
+            "question": "What is a modem used for?",
+            "answer": "A modem (modulator-demodulator) converts digital signals from a computer into analog signals for transmission over a physical medium (e.g., phone line, cable line) and vice-versa."
+          },
+          {
+            "question": "What is an Access Point?",
+            "answer": "An Access Point (AP) creates a wireless local area network (WLAN), allowing Wi-Fi devices to connect to a wired network."
+          },
+          {
+            "question": "Which network device operates at Layer 2 (Data Link) and Layer 3 (Network) of the OSI model?",
+            "answer": "Switches primarily operate at Layer 2, while routers operate at Layer 3. Some advanced switches (Layer 3 switches) can perform routing functions."
+          }
+        ]
+      },
+      {
+        "title": "Ethernet Frame",
+        "content": {
+          "explanation": "An Ethernet frame is the basic unit of data transmission over an Ethernet network. It encapsulates data from higher layers (like IP packets) with a header and a trailer, containing information such as source and destination MAC addresses, type/length field, and a Frame Check Sequence (FCS) for error detection. It operates at the Data Link Layer (Layer 2) of the OSI model.",
+          "explainLikeKid": "Imagine your data is a letter you want to send. An Ethernet frame is like the special envelope that makes sure your letter travels correctly on the local road. It has 'from' and 'to' addresses (for devices in the same building) and a special checker to make sure the letter didn't get messed up!",
+          "code": "# This is a conceptual representation of an Ethernet Frame structure.\n\nETHERNET_FRAME_FIELDS = {\n    \"Preamble\": \"7 bytes - Synchronization\",\n    \"Start Frame Delimiter (SFD)\": \"1 byte - Marks start of frame\",\n    \"Destination MAC Address\": \"6 bytes - Receiver's hardware address\",\n    \"Source MAC Address\": \"6 bytes - Sender's hardware address\",\n    \"Type/Length\": \"2 bytes - Indicates protocol type or data length\",\n    \"Data (Payload)\": \"46-1500 bytes - Actual data (e.g., IP packet)\",\n    \"Frame Check Sequence (FCS)\": \"4 bytes - Error detection (CRC)\"\n}\n\ndef describe_ethernet_frame_part(part_name):\n    if part_name in ETHERNET_FRAME_FIELDS:\n        print(f\"{part_name}: {ETHERNET_FRAME_FIELDS[part_name]}\")\n    else:\n        print(\"Unknown Ethernet frame part.\")\n\ndescribe_ethernet_frame_part(\"Source MAC Address\")\ndescribe_ethernet_frame_part(\"Data (Payload)\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is an Ethernet frame?",
+            "answer": "An Ethernet frame is the basic unit of data that encapsulates higher-layer data for transmission over an Ethernet network."
+          },
+          {
+            "question": "At which OSI layer does the Ethernet frame primarily operate?",
+            "answer": "The Data Link Layer (Layer 2)."
+          },
+          {
+            "question": "What is the purpose of the MAC address in an Ethernet frame?",
+            "answer": "MAC (Media Access Control) addresses are hardware addresses used to uniquely identify devices within a local network segment (Layer 2 communication)."
+          },
+          {
+            "question": "What is the function of the Frame Check Sequence (FCS)?",
+            "answer": "The FCS is a 4-byte field used for error detection to ensure data integrity during transmission."
+          },
+          {
+            "question": "What is the typical maximum size of an Ethernet frame payload?",
+            "answer": "The maximum size of the data (payload) field in a standard Ethernet frame is 1500 bytes (MTU - Maximum Transmission Unit)."
+          }
+        ]
+      },
+      {
+        "title": "Network Protocols",
+        "content": {
+          "explanation": "Network protocols are sets of rules and standards that govern how data is transmitted and received across a network. They define the format of data, how devices communicate, and how errors are handled. Protocols are essential for ensuring interoperability between diverse network devices and software.",
+          "explainLikeKid": "Imagine you and your friends have to follow rules when you talk, like 'always say hello first' or 'only use words from our secret list.' Network protocols are like those rules, but for computers to talk to each other so they don't get confused!",
+          "code": "# This is a conceptual representation of a simplified protocol interaction.\n\nclass SimpleProtocol:\n    def __init__(self, name):\n        self.name = name\n\n    def send_message(self, message):\n        print(f\"[{self.name} Protocol] Sending: '{message}'\")\n        # Simulate encoding/packaging message according to protocol rules\n        encoded_message = f\"<{self.name}> {message} </{self.name}>\"\n        return encoded_message\n\n    def receive_message(self, encoded_message):\n        print(f\"[{self.name} Protocol] Receiving: '{encoded_message}'\")\n        # Simulate decoding/unpacking message\n        if f\"<{self.name}>\" in encoded_message and f\"</{self.name}>\" in encoded_message:\n            decoded_message = encoded_message.replace(f\"<{self.name}> \", \"\").replace(f\" </{self.name}>\", \"\")\n            print(f\"[{self.name} Protocol] Decoded: '{decoded_message}'\")\n            return decoded_message\n        else:\n            print(f\"[{self.name} Protocol] Error: Message not conforming to protocol.\")\n            return None\n\n# Example usage\nhttp_protocol = SimpleProtocol(\"HTTP\")\nftp_protocol = SimpleProtocol(\"FTP\")\n\n# HTTP interaction\nhttp_data = http_protocol.send_message(\"GET /index.html\")\nhttp_protocol.receive_message(http_data)\n\n# FTP interaction\nftp_data = ftp_protocol.send_message(\"UPLOAD myfile.txt\")\nftp_protocol.receive_message(ftp_data)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a network protocol?",
+            "answer": "A network protocol is a set of formal rules and conventions that governs how data is exchanged between devices on a network."
+          },
+          {
+            "question": "Why are protocols necessary in networking?",
+            "answer": "Protocols ensure that different devices can communicate and understand each other, standardizing data format, transmission methods, and error handling."
+          },
+          {
+            "question": "Give an example of a common network protocol.",
+            "answer": "TCP, IP, HTTP, FTP, DNS."
+          },
+          {
+            "question": "What is a 'protocol stack'?",
+            "answer": "A protocol stack is a set of network protocols working together, typically organized in layers, to perform a specific communication task (e.g., the TCP/IP stack)."
+          },
+          {
+            "question": "What is the difference between connection-oriented and connectionless protocols?",
+            "answer": "Connection-oriented protocols (like TCP) establish a connection before data transfer, ensuring reliability. Connectionless protocols (like UDP) send data without establishing a prior connection, offering faster but less reliable transmission."
+          }
+        ]
+      },
+      {
+        "title": "Application Layer Protocols (HTTP, FTP, SMTP, SNMP)",
+        "content": {
+          "explanation": "Application Layer protocols are at the highest level of the TCP/IP model, directly interacting with user applications. They define how specific application data is formatted and exchanged. Key examples include: HTTP (Hypertext Transfer Protocol) for web Browse, FTP (File Transfer Protocol) for file transfers, SMTP (Simple Mail Transfer Protocol) for sending emails, and SNMP (Simple Network Management Protocol) for network device management.",
+          "explainLikeKid": "These are like the specific rule books for different kinds of computer conversations. HTTP is the rule book for looking at websites. FTP is the rule book for sending big files. SMTP is for sending emails. SNMP is for checking if all the network's toys are working okay!",
+          "code": "# This is a conceptual representation of application layer protocol functions.\n\nPROTOCOLS = {\n    \"HTTP\": \"Used for accessing and transferring web pages and other web content.\",\n    \"FTP\": \"Used for transferring files between client and server.\",\n    \"SMTP\": \"Used for sending email messages.\",\n    \"SNMP\": \"Used for managing and monitoring network devices.\"\n}\n\ndef simulate_protocol_action(protocol_name, action):\n    if protocol_name in PROTOCOLS:\n        print(f\"Simulating {protocol_name}: {PROTOCOLS[protocol_name]} -- Action: '{action}'\")\n    else:\n        print(\"Unknown protocol.\")\n\nsimulate_protocol_action(\"HTTP\", \"Requesting www.example.com\")\nsimulate_protocol_action(\"FTP\", \"Uploading document.pdf\")\nsimulate_protocol_action(\"SMTP\", \"Sending email to user@example.com\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the role of Application Layer protocols?",
+            "answer": "They define how applications communicate with each other over the network and interact with the user, specifying data formats and communication rules for specific services."
+          },
+          {
+            "question": "What is HTTP used for?",
+            "answer": "HTTP (Hypertext Transfer Protocol) is the foundation of the World Wide Web, used for retrieving resources like HTML documents, images, etc."
+          },
+          {
+            "question": "Explain the purpose of FTP.",
+            "answer": "FTP (File Transfer Protocol) is used for transferring files between a client and a server on a computer network."
+          },
+          {
+            "question": "What is SMTP primarily used for?",
+            "answer": "SMTP (Simple Mail Transfer Protocol) is used for sending outgoing email messages from a client to a mail server and between mail servers."
+          },
+          {
+            "question": "How does SNMP help in network management?",
+            "answer": "SNMP (Simple Network Management Protocol) allows network administrators to monitor and manage network devices, retrieve device information, and configure device settings."
+          }
+        ]
+      },
+      {
+        "title": "Layer Functions",
+        "content": {
+          "explanation": "Each layer in network models (like OSI or TCP/IP) performs distinct functions. For example, the Physical Layer handles raw bit transmission, Data Link Layer deals with MAC addressing and framing, Network Layer handles IP addressing and routing, Transport Layer provides end-to-end communication and reliability, and the Application Layer supports network applications and user interfaces.",
+          "explainLikeKid": "Think of building a big LEGO tower. Each layer of LEGOs has a special job. One layer connects the big pieces, another layer makes sure the colors are right, and the top layer is where you put your cool flag! Each network layer has its own special job.",
+          "code": "# This is a conceptual mapping of common network functions to their respective layers.\n\nNETWORK_LAYER_FUNCTIONS = {\n    \"Physical Layer\": \"Bit stream transmission, hardware specifications.\",\n    \"Data Link Layer\": \"MAC addressing, error detection (within a link), framing.\",\n    \"Network Layer\": \"Logical addressing (IP), routing, packet forwarding.\",\n    \"Transport Layer\": \"End-to-end communication, segmentation/reassembly, flow control, reliability (TCP) or speed (UDP).\",\n    \"Application Layer\": \"User interface to network services, data formatting for specific applications.\"\n}\n\ndef get_layer_function(layer_name):\n    if layer_name in NETWORK_LAYER_FUNCTIONS:\n        print(f\"Function of {layer_name}: {NETWORK_LAYER_FUNCTIONS[layer_name]}\")\n    else:\n        print(\"Unknown layer.\")\n\nget_layer_function(\"Network Layer\")\nget_layer_function(\"Transport Layer\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary function of the Network Layer?",
+            "answer": "Routing and logical addressing (IP addresses) to enable communication between devices on different networks."
+          },
+          {
+            "question": "What are the responsibilities of the Transport Layer?",
+            "answer": "Providing end-to-end communication between applications, segmentation and reassembly of data, flow control, and error recovery (for TCP)."
+          },
+          {
+            "question": "Which layer is responsible for MAC addressing and error detection on a single link?",
+            "answer": "The Data Link Layer."
+          },
+          {
+            "question": "What does the Physical Layer deal with?",
+            "answer": "The raw transmission of bits, electrical signals, cable types, and physical connectors."
+          },
+          {
+            "question": "Where do HTTP, FTP, and SMTP protocols reside in the layer model?",
+            "answer": "They reside in the Application Layer."
+          }
+        ]
+      },
+      {
+        "title": "IP Addressing (IPv4 and IPv6)",
+        "content": {
+          "explanation": "IP (Internet Protocol) addresses are numerical labels assigned to each device connected to a computer network that uses the Internet Protocol for communication. They serve two main functions: host or network interface identification and location addressing. IPv4 uses 32-bit addresses (e.g., 192.168.1.1), while IPv6 uses 128-bit addresses (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334) to accommodate the growing number of internet-connected devices.",
+          "explainLikeKid": "Every house has a unique address so the mailman knows where to deliver letters. In the internet, every computer has a special number address called an IP address so data can find its way! IPv4 addresses are like short house numbers, and IPv6 addresses are super long ones because there are so many more houses now!",
+          "code": "# This is a conceptual representation of IPv4 and IPv6 addresses.\n\ndef validate_ipv4(ip_address):\n    parts = ip_address.split('.')\n    if len(parts) != 4:\n        return False\n    for part in parts:\n        if not part.isdigit() or not (0 <= int(part) <= 255):\n            return False\n    return True\n\ndef validate_ipv6_conceptual(ip_address):\n    # Simplified conceptual validation for illustration\n    # Real IPv6 validation is much more complex due to colons, hex, and compression\n    if ':' in ip_address and len(ip_address) <= 39: # Max length of full IPv6 address\n        return True\n    return False\n\n\nipv4_example = \"192.168.1.100\"\nipv6_example = \"2001:0db8:85a3::8a2e:0370:7334\"\n\nprint(f\"IPv4 '{ipv4_example}' is valid: {validate_ipv4(ipv4_example)}\")\nprint(f\"IPv6 '{ipv6_example}' is conceptually valid: {validate_ipv6_conceptual(ipv6_example)}\")\n\nprint(\"IPv4 vs IPv6:\")\nprint(f\"IPv4: 32-bit address, e.g., {ipv4_example}\")\nprint(f\"IPv6: 128-bit address, e.g., {ipv6_example}\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is an IP address?",
+            "answer": "An IP address is a unique numerical label assigned to each device on a computer network that uses the Internet Protocol for communication, serving as an identifier and a location address."
+          },
+          {
+            "question": "What is the main difference between IPv4 and IPv6?",
+            "answer": "IPv4 uses 32-bit addresses, allowing for approximately 4.3 billion unique addresses, while IPv6 uses 128-bit addresses, providing a vastly larger address space (2^128 unique addresses)."
+          },
+          {
+            "question": "Why was IPv6 developed?",
+            "answer": "IPv6 was developed primarily to address the exhaustion of IPv4 addresses due to the rapid growth of internet-connected devices."
+          },
+          {
+            "question": "How is an IPv4 address typically represented?",
+            "answer": "In dot-decimal notation, with four decimal numbers separated by periods (e.g., 192.168.1.1)."
+          },
+          {
+            "question": "How is an IPv6 address typically represented?",
+            "answer": "In hexadecimal digits separated by colons, with shorthand notation for zeros (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334 can be shortened to 2001:db8:85a3::8a2e:370:7334)."
+          }
+        ]
+      },
+      {
+        "title": "Subnetting, Supernetting and Classful vs Classless Addressing",
+        "content": {
+          "explanation": "Subnetting divides a larger network into smaller, more manageable subnetworks, improving efficiency and security. Supernetting (or CIDR - Classless Inter-Domain Routing) combines multiple smaller networks into a larger one to reduce the number of routing table entries. Classful addressing (old method) categorized IPs into A, B, C, D, E classes based on the first octets, while Classless addressing (CIDR, modern) uses a network prefix length (e.g., /24) to define network and host portions, offering more flexible and efficient IP address allocation.",
+          "explainLikeKid": "Imagine you have a huge block of house numbers. Subnetting is like splitting that big block into smaller, separate mini-blocks for different neighborhoods. Supernetting is putting many small blocks back together into one big one. Classful was an old way of sorting house numbers into big groups (like big city, medium city, small town), but Classless is a new, smarter way to sort them that lets us use all the numbers better!",
+          "code": "# This is a conceptual representation of subnetting/CIDR notation.\n\ndef get_network_prefix_info(ip_cidr):\n    if '/' in ip_cidr:\n        ip, cidr = ip_cidr.split('/')\n        try:\n            cidr_value = int(cidr)\n            if 0 <= cidr_value <= 32: # For IPv4\n                print(f\"IP Address: {ip}, Network Prefix Length (CIDR): /{cidr_value}\")\n                print(f\"This means the first {cidr_value} bits identify the network, and the rest are for hosts.\")\n                return\n        except ValueError:\n            pass\n    print(f\"Invalid CIDR notation: {ip_cidr}\")\n\n\nprint(\"Classless Inter-Domain Routing (CIDR) example:\")\nget_network_prefix_info(\"192.168.1.0/24\")\nget_network_prefix_info(\"10.0.0.0/8\")\n\nprint(\"\\nConceptual Difference:\")\nprint(\"Classful: Network size fixed (e.g., Class C always /24).\")\nprint(\"Classless (CIDR): Network size is flexible, defined by prefix length.\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is subnetting?",
+            "answer": "Subnetting is the process of dividing a larger IP network into smaller subnetworks (subnets), improving organization, security, and efficiency of IP address usage."
+          },
+          {
+            "question": "What is CIDR and why is it important?",
+            "answer": "CIDR (Classless Inter-Domain Routing) is a method for allocating IP addresses and IP routing. It replaces the old classful system, allowing for more flexible and efficient IP address allocation and reducing routing table sizes."
+          },
+          {
+            "question": "What is the difference between classful and classless addressing?",
+            "answer": "Classful addressing uses fixed network sizes (A, B, C classes) based on the first octets. Classless addressing (CIDR) uses a variable-length subnet mask (network prefix length, e.g., /24) to define the network and host portions, offering more flexibility."
+          },
+          {
+            "question": "What is supernetting?",
+            "answer": "Supernetting is the opposite of subnetting; it's the process of combining multiple smaller networks into a single larger network, primarily to reduce the number of entries in routing tables (route aggregation)."
+          },
+          {
+            "question": "What is a subnet mask?",
+            "answer": "A subnet mask is a 32-bit number (for IPv4) that differentiates the network portion of an IP address from the host portion."
+          }
+        ]
+      },
+      {
+        "title": "Network Address Translation (NAT)",
+        "content": {
+          "explanation": "Network Address Translation (NAT) is a method of remapping one IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. It is commonly used to allow multiple devices on a private network to share a single public IP address, conserving public IPv4 addresses and adding a layer of security by hiding internal network structure.",
+          "explainLikeKid": "Imagine your family has one special phone number to call outside, but inside your house, everyone has their own different number. NAT is like the special helper that changes your family's internal number to the one special outside number when you call out, and changes it back when calls come in for you!",
+          "code": "# This is a conceptual representation of NAT operation.\n\nclass NATRouter:\n    def __init__(self, public_ip):\n        self.public_ip = public_ip\n        self.translation_table = {} # Maps internal_ip:port -> external_port\n        self.next_external_port = 50000\n\n    def translate_outgoing(self, internal_ip, internal_port, destination_ip, destination_port):\n        external_port = self.next_external_port\n        self.next_external_port += 1\n        self.translation_table[f\"{internal_ip}:{internal_port}\"] = external_port\n        print(f\"Outgoing: {internal_ip}:{internal_port} -> {self.public_ip}:{external_port} -> {destination_ip}:{destination_port}\")\n        return self.public_ip, external_port\n\n    def translate_incoming(self, received_ip, received_port):\n        for internal_addr, external_port in self.translation_table.items():\n            if external_port == received_port and received_ip == self.public_ip:\n                internal_ip, internal_port = internal_addr.split(':')\n                print(f\"Incoming: {received_ip}:{received_port} -> {internal_ip}:{internal_port}\")\n                return internal_ip, int(internal_port)\n        print(f\"No translation found for {received_ip}:{received_port}\")\n        return None, None\n\n\n# Example usage\nrouter = NATRouter(\"203.0.113.1\")\n\n# Internal device 1 (192.168.1.10) browses web\nrouter.translate_outgoing(\"192.168.1.10\", 12345, \"93.184.216.34\", 80)\n\n# Internal device 2 (192.168.1.11) browses web\nrouter.translate_outgoing(\"192.168.1.11\", 23456, \"93.184.216.34\", 80)\n\n# Incoming response for device 1\nrouter.translate_incoming(\"203.0.113.1\", 50000)\n\n# Incoming response for device 2\nrouter.translate_incoming(\"203.0.113.1\", 50001)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is NAT?",
+            "answer": "NAT (Network Address Translation) is a method that remaps an IP address space into another, allowing multiple devices on a private network to share a single public IP address."
+          },
+          {
+            "question": "What are the primary benefits of using NAT?",
+            "answer": "Conserving public IPv4 addresses and adding a layer of security by hiding the internal network topology from the outside world."
+          },
+          {
+            "question": "Differentiate between Static NAT and Dynamic NAT.",
+            "answer": "Static NAT maps a single private IP address to a single public IP address. Dynamic NAT maps multiple private IP addresses to a pool of public IP addresses on a first-come, first-served basis."
+          },
+          {
+            "question": "What is Port Address Translation (PAT) or NAT Overload?",
+            "answer": "PAT is a form of NAT that maps multiple private IP addresses to a single public IP address by using different source port numbers for each connection, allowing thousands of internal devices to share one public IP."
+          },
+          {
+            "question": "Where is NAT typically implemented?",
+            "answer": "On routers or firewalls at the edge of a private network, connecting to the public internet."
+          }
+        ]
+      },
+      {
+        "title": "Routing Algorithms",
+        "content": {
+          "explanation": "Routing algorithms are software components that determine the best path for data packets to travel from a source network to a destination network. They use various metrics (like hop count, bandwidth, delay) to make decisions. Key types include Distance Vector, Link State, and Path Vector algorithms.",
+          "explainLikeKid": "Imagine you have a map and need to find the best way for your toy cars to get from your house to your friend's house across many towns. Routing algorithms are like the clever rules that help your car choose the best roads on the map!",
+          "code": "# This is a conceptual representation of a simple routing decision.\n\nclass SimpleRouter:\n    def __init__(self, router_id):\n        self.router_id = router_id\n        self.routing_table = {}\n\n    def add_route(self, destination_network, next_hop, metric):\n        self.routing_table[destination_network] = {'next_hop': next_hop, 'metric': metric}\n\n    def get_best_path(self, destination_network):\n        if destination_network in self.routing_table:\n            route = self.routing_table[destination_network]\n            print(f\"Router {self.router_id}: To reach {destination_network}, next hop is {route['next_hop']} (Metric: {route['metric']})\")\n            return route\n        else:\n            print(f\"Router {self.router_id}: No known path to {destination_network}\")\n            return None\n\n# Example usage\nr1 = SimpleRouter(\"R1\")\nr1.add_route(\"10.0.0.0/8\", \"192.168.1.2\", 10)\nr1.add_route(\"172.16.0.0/16\", \"192.168.1.3\", 5)\n\nr1.get_best_path(\"172.16.0.0/16\")\nr1.get_best_path(\"192.168.2.0/24\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary goal of a routing algorithm?",
+            "answer": "To find the optimal (best) path for data packets from a source to a destination across a network."
+          },
+          {
+            "question": "What metrics are commonly used by routing algorithms?",
+            "answer": "Hop count, bandwidth, delay, load, reliability, and cost."
+          },
+          {
+            "question": "What is the difference between static and dynamic routing?",
+            "answer": "Static routing involves manually configuring routes by an administrator. Dynamic routing uses routing protocols to automatically discover and update routes based on network changes."
+          },
+          {
+            "question": "What is 'convergence' in routing?",
+            "answer": "Convergence is the state where all routers in a network have consistent and updated routing tables, reflecting the current network topology."
+          },
+          {
+            "question": "What is a routing table?",
+            "answer": "A routing table is a data table stored in a router or networked computer that lists the routes to particular network destinations and, in some cases, metrics (distances) associated with those routes."
+          }
+        ]
+      },
+      {
+        "title": "Distance Vector and Link State Routing Protocols",
+        "content": {
+          "explanation": "Distance Vector protocols (like RIP, EIGRP) determine the best path based on the 'distance' (e.g., hop count) to a destination, shared with neighbors. They send their full routing table periodically. Link State protocols (like OSPF, IS-IS) have each router build a complete map of the network by exchanging 'link-state advertisements' (LSAs), then calculate the shortest path using algorithms like Dijkstra's. Link state generally offers faster convergence and better scalability for large networks.",
+          "explainLikeKid": "Imagine two ways to find the fastest way to get your toy cars around a big city. Distance Vector is like each car only asking its neighbor 'how far is the destination from you?' and then trusting that answer. Link State is like every car getting a full map of the whole city, so they can figure out the best path all by themselves!",
+          "code": "# This is a conceptual comparison of Distance Vector vs Link State.\n\nROUTING_PROTOCOLS_TYPES = {\n    \"Distance Vector\": {\n        \"description\": \"Routers send their entire routing table to directly connected neighbors periodically.\",\n        \"examples\": [\"RIP\", \"EIGRP\"]\n    },\n    \"Link State\": {\n        \"description\": \"Routers build a complete topology map by exchanging link-state advertisements (LSAs) and then run SPF algorithm (Dijkstra's) to calculate best paths.\",\n        \"examples\": [\"OSPF\", \"IS-IS\"]\n    }\n}\n\ndef describe_routing_type(proto_type):\n    if proto_type in ROUTING_PROTOCOLS_TYPES:\n        info = ROUTING_PROTOCOLS_TYPES[proto_type]\n        print(f\"{proto_type}: {info['description']}\")\n        print(f\"  Examples: {', '.join(info['examples'])}\")\n    else:\n        print(\"Unknown routing protocol type.\")\n\ndescribe_routing_type(\"Distance Vector\")\ndescribe_routing_type(\"Link State\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "Explain the core concept of Distance Vector routing protocols.",
+            "answer": "Distance Vector protocols make routing decisions based on the 'distance' (metric) to a destination and the direction (vector) to reach it. Routers exchange their entire routing tables with directly connected neighbors."
+          },
+          {
+            "question": "Explain the core concept of Link State routing protocols.",
+            "answer": "Link State protocols enable each router to build a complete topology map of the network by exchanging link-state advertisements (LSAs) with all other routers, allowing them to independently calculate the best paths."
+          },
+          {
+            "question": "Name two common Distance Vector protocols.",
+            "answer": "RIP (Routing Information Protocol) and EIGRP (Enhanced Interior Gateway Routing Protocol)."
+          },
+          {
+            "question": "Name two common Link State protocols.",
+            "answer": "OSPF (Open Shortest Path First) and IS-IS (Intermediate System to Intermediate System)."
+          },
+          {
+            "question": "Which routing protocol type generally offers faster convergence and why?",
+            "answer": "Link State protocols generally offer faster convergence because each router has a full network map, allowing them to recalculate paths quickly when network changes occur, rather than waiting for updates from neighbors."
+          }
+        ]
+      },
+      {
+        "title": "Border Gateway Protocol (BGP), Interior Gateway Protocols (IGRP, EIGRP, OSPF)",
+        "content": {
+          "explanation": "Routing protocols are divided into Interior Gateway Protocols (IGPs) and Exterior Gateway Protocols (EGPs). IGPs operate within an Autonomous System (AS) (e.g., a single organization's network) and include IGRP, EIGRP, and OSPF. EGPs, primarily BGP (Border Gateway Protocol), operate between different Autonomous Systems, forming the backbone of the Internet for inter-domain routing.",
+          "explainLikeKid": "Think of a big city with many different neighborhoods. IGPs are like the traffic rules *inside* one neighborhood to get cars around efficiently. BGP is like the big, special rule book for cars traveling *between* completely different cities or countries, helping them find the right 'highway' to connect the cities.",
+          "code": "# This is a conceptual categorization of routing protocols.\n\nROUTING_PROTOCOL_CATEGORIES = {\n    \"Interior Gateway Protocols (IGP)\": {\n        \"scope\": \"Operate within a single Autonomous System (AS).\",\n        \"examples\": [\"RIP\", \"OSPF\", \"EIGRP\", \"IGRP\"]\n    },\n    \"Exterior Gateway Protocols (EGP)\": {\n        \"scope\": \"Operate between different Autonomous Systems (ASes).\",\n        \"examples\": [\"BGP\"]\n    }\n}\n\ndef describe_protocol_category(category):\n    if category in ROUTING_PROTOCOL_CATEGORIES:\n        info = ROUTING_PROTOCOL_CATEGORIES[category]\n        print(f\"{category}: {info['scope']}\")\n        print(f\"  Examples: {', '.join(info['examples'])}\")\n    else:\n        print(\"Unknown protocol category.\")\n\ndescribe_protocol_category(\"Interior Gateway Protocols (IGP)\")\ndescribe_protocol_category(\"Exterior Gateway Protocols (EGP)\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is an Autonomous System (AS) in the context of routing protocols?",
+            "answer": "An Autonomous System is a collection of IP networks and routers under the control of one or more network operators that presents a common, clearly defined routing policy to the Internet."
+          },
+          {
+            "question": "What is the primary function of Border Gateway Protocol (BGP)?",
+            "answer": "BGP is the primary Exterior Gateway Protocol (EGP) used for routing information between different Autonomous Systems (ASes) on the Internet."
+          },
+          {
+            "question": "Name some Interior Gateway Protocols (IGPs).",
+            "answer": "RIP (Routing Information Protocol), OSPF (Open Shortest Path First), EIGRP (Enhanced Interior Gateway Routing Protocol), IGRP (Interior Gateway Routing Protocol)."
+          },
+          {
+            "question": "When would you use an IGP versus an EGP?",
+            "answer": "IGPs are used to route traffic within a single administrative domain (AS), while EGPs (BGP) are used to route traffic between different administrative domains (ASes)."
+          },
+          {
+            "question": "What makes BGP a 'Path Vector' protocol?",
+            "answer": "BGP makes routing decisions based on paths, which are lists of AS numbers that a route has traversed. It allows for policy-based routing decisions rather than just shortest-path calculations."
+          }
+        ]
+      },
+      {
+        "title": "Switching Techniques",
+        "content": {
+          "explanation": "Switching techniques refer to methods used to connect and transfer data between nodes in a network. Common techniques include: Circuit Switching (dedicated path established for the duration of communication, like traditional phone calls), Packet Switching (data broken into packets, transmitted independently, then reassembled at destination, used by the Internet), and Message Switching (entire message sent and stored at intermediate nodes until path is free, less common now).",
+          "explainLikeKid": "Imagine you want to send a toy train across a mini railway. Circuit switching is like building a special, dedicated track just for your train from start to finish. Packet switching is like breaking your train into tiny carts, sending each cart on any available track, and then putting them back together at the end. Message switching is like sending the whole train, but it waits at each station until the next track is clear.",
+          "code": "# This is a conceptual representation of switching techniques.\n\nSWITCHING_TECHNIQUES = {\n    \"Circuit Switching\": \"Dedicated communication path established end-to-end for the duration of the call. (e.g., old telephone networks)\",\n    \"Packet Switching\": \"Data is broken into small packets, each routed independently. (e.g., Internet)\",\n    \"Message Switching\": \"Entire message is stored at intermediate nodes and forwarded when the next link is free. (less common now)\"\n}\n\ndef describe_switching_technique(technique_name):\n    if technique_name in SWITCHING_TECHNIQUES:\n        print(f\"{technique_name}: {SWITCHING_TECHNIQUES[technique_name]}\")\n    else:\n        print(\"Unknown switching technique.\")\n\ndescribe_switching_technique(\"Packet Switching\")\ndescribe_switching_technique(\"Circuit Switching\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary difference between circuit switching and packet switching?",
+            "answer": "Circuit switching establishes a dedicated end-to-end path for the duration of communication, guaranteeing bandwidth. Packet switching breaks data into packets that are routed independently, sharing network resources and offering more flexibility and efficiency."
+          },
+          {
+            "question": "Which switching technique is used by the Internet?",
+            "answer": "Packet switching."
+          },
+          {
+            "question": "What are the advantages of packet switching over circuit switching?",
+            "answer": "Better bandwidth utilization, increased fault tolerance, and no call setup delay (for individual packets)."
+          },
+          {
+            "question": "What is 'store-and-forward' in the context of switching?",
+            "answer": "In packet switching (or message switching), it refers to the process where a node receives an entire packet/message, stores it, and then forwards it to the next node when the path is clear."
+          },
+          {
+            "question": "What are the disadvantages of packet switching?",
+            "answer": "Potential for variable delays (latency), packet loss, and out-of-order packet arrival, which require higher-layer protocols to handle."
+          }
+        ]
+      },
+      {
+        "title": "Ethernet Standards (IEEE 802.3) and Wireless Networking (IEEE 802.11)",
+        "content": {
+          "explanation": "Ethernet (IEEE 802.3) is a family of wired networking technologies primarily used in LANs, defining specifications for physical layer and data link layer communication, including cabling, connectors, and frame formats. Wireless Networking (Wi-Fi, IEEE 802.11) is a set of standards for wireless local area networks (WLANs), enabling devices to communicate without physical cables using radio waves. Both standards have evolved to support increasing speeds (e.g., Gigabit Ethernet, Wi-Fi 6).",
+          "explainLikeKid": "Ethernet is like the rules for how your computer talks to the internet when it's plugged in with a cable. Wi-Fi is like the rules for how your computer talks to the internet without any wires, using invisible radio waves!",
+          "code": "# This is a conceptual representation of Ethernet and Wi-Fi standards.\n\nNETWORK_STANDARDS = {\n    \"Ethernet (IEEE 802.3)\": {\n        \"media\": \"Wired (copper, fiber)\",\n        \"primary_use\": \"Local Area Networks (LANs)\",\n        \"examples\": [\"10BASE-T\", \"100BASE-TX\", \"1000BASE-T\"]\n    },\n    \"Wireless (IEEE 802.11)\": {\n        \"media\": \"Wireless (radio waves)\",\n        \"primary_use\": \"Wireless Local Area Networks (WLANs)\",\n        \"examples\": [\"802.11a\", \"802.11b\", \"802.11g\", \"802.11n\", \"802.11ac\", \"802.11ax (Wi-Fi 6)\"]\n    }\n}\n\ndef describe_standard(standard_name):\n    if standard_name in NETWORK_STANDARDS:\n        info = NETWORK_STANDARDS[standard_name]\n        print(f\"{standard_name}:\")\n        print(f\"  Media: {info['media']}\")\n        print(f\"  Primary Use: {info['primary_use']}\")\n        print(f\"  Examples: {', '.join(info['examples'])}\")\n    else:\n        print(\"Unknown standard.\")\n\ndescribe_standard(\"Ethernet (IEEE 802.3)\")\ndescribe_standard(\"Wireless (IEEE 802.11)\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is IEEE 802.3?",
+            "answer": "IEEE 802.3 is the standard for Ethernet, defining the physical and data link layer specifications for wired LANs, including cabling, connectors, and frame formats."
+          },
+          {
+            "question": "What is IEEE 802.11?",
+            "answer": "IEEE 802.11 is the standard for wireless local area networks (WLANs), commonly known as Wi-Fi, defining specifications for wireless communication using radio waves."
+          },
+          {
+            "question": "What are the common speed classifications for Ethernet?",
+            "answer": "Fast Ethernet (100 Mbps), Gigabit Ethernet (1 Gbps), 10 Gigabit Ethernet (10 Gbps), and so on."
+          },
+          {
+            "question": "Name some different Wi-Fi standards (802.11 variants).",
+            "answer": "802.11a, 802.11b, 802.11g, 802.11n, 802.11ac, and 802.11ax (Wi-Fi 6)."
+          },
+          {
+            "question": "What is CSMA/CD and which standard uses it?",
+            "answer": "CSMA/CD (Carrier Sense Multiple Access with Collision Detection) is a media access control method used in early Ethernet (IEEE 802.3) to handle collisions on a shared medium."
+          }
+        ]
+      },
+      {
+        "title": "Ethernet Switching and VLANs",
+        "content": {
+          "explanation": "Ethernet switching involves using network switches to efficiently forward Ethernet frames to specific destination devices within a LAN, reducing collisions and improving network performance. VLANs (Virtual Local Area Networks) allow for logical segmentation of a physical network into multiple broadcast domains. This means devices on different physical switch ports or even different switches can be grouped into the same logical network, improving security, flexibility, and traffic management.",
+          "explainLikeKid": "Imagine your office is one big room, but you want to make separate play areas for different games without building new walls. Ethernet switching helps all the toys in the same play area find each other fast. VLANs are like invisible walls that let you create those separate play areas even in the same big room, keeping games from mixing!",
+          "code": "# This is a conceptual representation of Ethernet switching and VLANs.\n\nclass EthernetSwitch:\n    def __init__(self, name):\n        self.name = name\n        self.mac_table = {}\n        self.vlan_ports = {}\n\n    def learn_mac(self, mac_address, port):\n        self.mac_table[mac_address] = port\n        print(f\"[{self.name}] Learned MAC {mac_address} on Port {port}\")\n\n    def forward_frame(self, dest_mac, source_mac, data, ingress_port, vlan_id=None):\n        print(f\"\\n[{self.name}] Frame from {source_mac} (Port {ingress_port}) to {dest_mac} (VLAN {vlan_id if vlan_id else 'N/A'})\")\n        \n        if dest_mac in self.mac_table:\n            egress_port = self.mac_table[dest_mac]\n            if vlan_id and egress_port in self.vlan_ports and self.vlan_ports[egress_port] != vlan_id:\n                print(f\"  Blocking: Port {egress_port} is in VLAN {self.vlan_ports[egress_port]}, not {vlan_id}\")\n                return\n            print(f\"  Forwarding to Port {egress_port}\")\n        else:\n            print(\"  Destination MAC not found, flooding to all ports in relevant VLAN.\")\n            # In a real switch, would flood only to ports in same VLAN if VLANs configured\n\n    def configure_vlan_port(self, port, vlan_id):\n        self.vlan_ports[port] = vlan_id\n        print(f\"[{self.name}] Port {port} assigned to VLAN {vlan_id}\")\n\n# Example usage\ncore_switch = EthernetSwitch(\"Core-SW\")\n\ncore_switch.learn_mac(\"AA:BB:CC:DD:EE:01\", 1)\ncore_switch.learn_mac(\"FF:EE:DD:CC:BB:02\", 5)\n\ncore_switch.configure_vlan_port(1, 10) # Port 1 in VLAN 10\ncore_switch.configure_vlan_port(2, 10) # Port 2 in VLAN 10\ncore_switch.configure_vlan_port(3, 20) # Port 3 in VLAN 20\n\n# Frame within the same VLAN\ncore_switch.forward_frame(\"FF:EE:DD:CC:BB:02\", \"AA:BB:CC:DD:EE:01\", \"Data\", 1, vlan_id=10)\n\n# Frame attempting to cross VLANs (blocked)\ncore_switch.forward_frame(\"FF:EE:DD:CC:BB:02\", \"SOME_OTHER_MAC\", \"Data\", 3, vlan_id=20)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary function of an Ethernet switch?",
+            "answer": "To forward Ethernet frames to their intended destination device within a LAN based on MAC addresses, efficiently and reducing collisions."
+          },
+          {
+            "question": "What is a VLAN?",
+            "answer": "A VLAN (Virtual Local Area Network) is a logical grouping of network devices that allows them to communicate as if they were on the same physical segment, even if they are connected to different physical switch ports or switches."
+          },
+          {
+            "question": "What are the benefits of using VLANs?",
+            "answer": "Improved security (isolation), reduced broadcast traffic, simplified network management, and increased flexibility in network design."
+          },
+          {
+            "question": "How do switches learn MAC addresses?",
+            "answer": "Switches learn MAC addresses by examining the source MAC address of incoming frames and associating it with the port on which the frame was received."
+          },
+          {
+            "question": "What is 'broadcast domain' and how do VLANs affect it?",
+            "answer": "A broadcast domain is a network segment where all devices can 'hear' each other's broadcast messages. VLANs break a single physical broadcast domain into multiple smaller logical broadcast domains, limiting the scope of broadcasts."
+          }
+        ]
+      },
+      {
+        "title": "Data Link Layer (L2) Functions",
+        "content": {
+          "explanation": "The Data Link Layer (Layer 2 of the OSI model) is responsible for reliable point-to-point and point-to-multipoint data transfer across a physical link. Its key functions include: Framing (packaging bits into frames), Physical Addressing (MAC addresses), Error Control (detection and sometimes correction of errors within a link), Flow Control (managing data transmission rate), and Media Access Control (MAC) (regulating access to the shared physical medium).",
+          "explainLikeKid": "This layer is like the traffic cop for the road *right outside your house*. It makes sure your data cars are packed correctly in their special envelopes (frames), have the right local address (MAC address), and makes sure they don't crash into other cars on your street!",
+          "code": "# This is a conceptual representation of Data Link Layer functions.\n\nclass DataLinkLayer:\n    def __init__(self, mac_address):\n        self.mac_address = mac_address\n\n    def create_frame(self, dest_mac, data):\n        # Conceptual framing: adds MAC addresses and FCS\n        frame = {\n            \"Preamble\": \"SYNC\",\n            \"SFD\": \"0xAB\",\n            \"Dest_MAC\": dest_mac,\n            \"Source_MAC\": self.mac_address,\n            \"Data\": data,\n            \"FCS\": \"CRC_VALUE\" # For error detection\n        }\n        print(f\"Data Link: Created frame from {self.mac_address} to {dest_mac}\")\n        return frame\n\n    def process_frame(self, frame):\n        print(f\"Data Link: Received frame from {frame['Source_MAC']} to {frame['Dest_MAC']}\")\n        if frame['Dest_MAC'] == self.mac_address or frame['Dest_MAC'] == \"FF:FF:FF:FF:FF:FF\": # Broadcast\n            print(f\"Data Link: Frame is for me! Data: {frame['Data']}\")\n            # Conceptual error check and flow control here\n            return frame['Data']\n        else:\n            print(\"Data Link: Frame not for me.\")\n            return None\n\n# Example usage\ndevice_a = DataLinkLayer(\"AA:BB:CC:DD:EE:01\")\ndevice_b = DataLinkLayer(\"FF:EE:DD:CC:BB:02\")\n\nframe_to_b = device_a.create_frame(\"FF:EE:DD:CC:BB:02\", \"Hello B!\")\ndevice_b.process_frame(frame_to_b)\n\nframe_to_unknown = device_a.create_frame(\"11:22:33:44:55:66\", \"Hello Unknown!\")\ndevice_b.process_frame(frame_to_unknown)",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary role of the Data Link Layer?",
+            "answer": "The Data Link Layer provides reliable data transfer across a single physical link and manages access to the shared physical medium."
+          },
+          {
+            "question": "What is 'framing' at the Data Link Layer?",
+            "answer": "Framing is the process of encapsulating raw bits from the Physical Layer into logical units called 'frames', adding headers (e.g., MAC addresses) and trailers (e.g., FCS)."
+          },
+          {
+            "question": "What is a MAC address?",
+            "answer": "A MAC (Media Access Control) address is a unique hardware identifier assigned to network interfaces (like Ethernet cards), used for addressing within a local network segment."
+          },
+          {
+            "question": "How does the Data Link Layer handle error control?",
+            "answer": "It typically uses checksums or CRC (Cyclic Redundancy Check) in the Frame Check Sequence (FCS) to detect errors in transmitted frames. Some protocols may also implement retransmission for error correction."
+          },
+          {
+            "question": "What is Media Access Control (MAC)?",
+            "answer": "MAC is a sub-layer of the Data Link Layer that regulates how devices share and access the physical transmission medium, preventing collisions (e.g., CSMA/CD for Ethernet, CSMA/CA for Wi-Fi)."
+          }
+        ]
+      },
+      {
+        "title": "Network Security Fundamentals",
+        "content": {
+          "explanation": "Network security involves measures taken to protect the integrity, confidentiality, and accessibility of computer networks and data. It includes safeguarding against unauthorized access, misuse, modification, destruction, or denial of service. Key aspects include firewalls, intrusion detection/prevention, VPNs, cryptography, and access control.",
+          "explainLikeKid": "Network security is like having super strong locks, alarms, and secret codes for your computer's internet connection. It keeps bad guys out, makes sure your secret messages stay secret, and ensures you can always get to your stuff when you need it!",
+          "code": "# This is a conceptual representation of basic security principles.\n\nSECURITY_PRINCIPLES = {\n    \"Confidentiality\": \"Ensuring data is accessible only to authorized individuals. (e.g., Encryption)\",\n    \"Integrity\": \"Ensuring data has not been altered or corrupted. (e.g., Hashing, Digital Signatures)\",\n    \"Availability\": \"Ensuring authorized users can access resources when needed. (e.g., Redundancy, DDoS protection)\"\n}\n\ndef describe_security_principle(principle):\n    if principle in SECURITY_PRINCIPLES:\n        print(f\"{principle}: {SECURITY_PRINCIPLES[principle]}\")\n    else:\n        print(\"Unknown security principle.\")\n\ndescribe_security_principle(\"Confidentiality\")\ndescribe_security_principle(\"Integrity\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are the three core principles of network security (CIA triad)?",
+            "answer": "Confidentiality, Integrity, and Availability."
+          },
+          {
+            "question": "What is 'confidentiality' in network security?",
+            "answer": "Confidentiality ensures that information is accessible only to those authorized to have access."
+          },
+          {
+            "question": "What is 'integrity' in network security?",
+            "answer": "Integrity ensures that data has not been tampered with or altered, and that it is accurate and complete."
+          },
+          {
+            "question": "What is 'availability' in network security?",
+            "answer": "Availability ensures that authorized users have continuous access to systems and information when needed."
+          },
+          {
+            "question": "What is a 'vulnerability' vs. a 'threat'?",
+            "answer": "A vulnerability is a weakness in a system that can be exploited by a threat. A threat is a potential danger that might exploit a vulnerability."
+          }
+        ]
+      },
+      {
+        "title": "Firewall and their Types",
+        "content": {
+          "explanation": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predefined security rules. It acts as a barrier between a trusted internal network and untrusted external networks (like the Internet). Types include Packet-filtering firewalls, Stateful inspection firewalls, Proxy firewalls (Application-level gateways), and Next-Generation Firewalls (NGFWs).",
+          "explainLikeKid": "A firewall is like a strict security guard at the entrance of your house. It checks everyone coming in and out (data traffic) and only lets in or out who you've approved, keeping bad guys away from your computers!",
+          "code": "# This is a conceptual representation of a firewall's rule-based operation.\n\nclass SimpleFirewall:\n    def __init__(self, name):\n        self.name = name\n        self.rules = []\n\n    def add_rule(self, action, source_ip, dest_ip, port, protocol):\n        self.rules.append({\n            'action': action, 'src': source_ip, 'dst': dest_ip,\n            'port': port, 'proto': protocol\n        })\n        print(f\"[{self.name}] Added rule: {action} {source_ip} -> {dest_ip}:{port}/{protocol}\")\n\n    def allow_traffic(self, packet_src, packet_dst, packet_port, packet_proto):\n        print(f\"[{self.name}] Checking traffic: {packet_src} -> {packet_dst}:{packet_port}/{packet_proto}\")\n        for rule in self.rules:\n            src_match = (rule['src'] == 'any' or rule['src'] == packet_src)\n            dst_match = (rule['dst'] == 'any' or rule['dst'] == packet_dst)\n            port_match = (rule['port'] == 'any' or rule['port'] == packet_port)\n            proto_match = (rule['proto'] == 'any' or rule['proto'] == packet_proto)\n\n            if src_match and dst_match and port_match and proto_match:\n                if rule['action'] == 'allow':\n                    print(f\"  ALLOWED by rule: {rule}\")\n                    return True\n                elif rule['action'] == 'deny':\n                    print(f\"  DENIED by rule: {rule}\")\n                    return False\n        print(\"  DENIED by default (no allow rule matched).\")\n        return False\n\n# Example usage\nmy_firewall = SimpleFirewall(\"Office Firewall\")\nmy_firewall.add_rule(\"allow\", \"any\", \"any\", 80, \"TCP\") # Allow HTTP out\nmy_firewall.add_rule(\"deny\", \"any\", \"192.168.1.10\", 22, \"TCP\") # Deny SSH to specific internal host\n\nmy_firewall.allow_traffic(\"192.168.1.50\", \"1.2.3.4\", 80, \"TCP\") # Allowed HTTP\nmy_firewall.allow_traffic(\"192.168.1.50\", \"192.168.1.10\", 22, \"TCP\") # Denied SSH",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a firewall?",
+            "answer": "A firewall is a network security device (hardware or software) that monitors and controls incoming and outgoing network traffic based on a defined set of security rules."
+          },
+          {
+            "question": "What is the primary purpose of a firewall?",
+            "answer": "To establish a barrier between a trusted internal network and untrusted external networks, preventing unauthorized access and protecting against cyber threats."
+          },
+          {
+            "question": "Differentiate between a packet-filtering firewall and a stateful inspection firewall.",
+            "answer": "Packet-filtering firewalls inspect individual packets in isolation. Stateful inspection firewalls maintain context of active connections, allowing them to make more intelligent decisions based on the state of a conversation."
+          },
+          {
+            "question": "What is an Application-level Gateway (Proxy Firewall)?",
+            "answer": "A proxy firewall acts as an intermediary, inspecting traffic at the application layer. It creates a connection on behalf of the client and another on behalf of the server, providing deep packet inspection."
+          },
+          {
+            "question": "What are Next-Generation Firewalls (NGFWs)?",
+            "answer": "NGFWs combine traditional firewall functions with advanced features like intrusion prevention, application awareness, and integrated threat intelligence, offering more comprehensive security."
+          }
+        ]
+      },
+      {
+        "title": "Intrusion Detection and Prevention Systems (IDS/IPS)",
+        "content": {
+          "explanation": "Intrusion Detection Systems (IDS) are security tools that monitor network traffic for suspicious activity and known threats, alerting administrators when detected. Intrusion Prevention Systems (IPS) go a step further; they not only detect but also actively block or prevent malicious activity in real-time. Both rely on signature-based detection (matching known attack patterns) and anomaly-based detection (identifying deviations from normal behavior).",
+          "explainLikeKid": "An IDS is like a super smart guard dog that barks really loud and warns you if a stranger tries to get into your yard. An IPS is like that guard dog, but it can also *stop* the stranger from getting in, maybe by closing the gate or pushing them away!",
+          "code": "# This is a conceptual representation of IDS/IPS detection methods.\n\nclass SecuritySystem:\n    def __init__(self, name):\n        self.name = name\n        self.known_signatures = {\n            \"SQL_INJECTION_PATTERN\": \"SELECT .* FROM .* --\",\n            \"PORT_SCAN_PATTERN\": \"SYN_FLOOD_ATTEMPT\"\n        }\n        self.normal_traffic_profile = {\"avg_packets_per_sec\": 100, \"avg_conn_per_ip\": 5}\n\n    def detect_and_prevent(self, traffic_data):\n        print(f\"\\n[{self.name}] Analyzing traffic...\")\n        is_malicious = False\n\n        # Signature-based detection\n        for signature_name, pattern in self.known_signatures.items():\n            if pattern in traffic_data['payload']:\n                print(f\"  Detected malicious activity (Signature-based): {signature_name}\")\n                is_malicious = True\n                break\n\n        # Anomaly-based detection (Simplified conceptual)\n        if traffic_data['packets_per_sec'] > (self.normal_traffic_profile['avg_packets_per_sec'] * 2):\n            print(\"  Detected anomalous activity (High packet rate).\")\n            is_malicious = True\n        \n        if is_malicious:\n            print(\"  ACTION: Blocking traffic source and alerting administrator.\") # IPS action\n        else:\n            print(\"  Traffic appears normal.\")\n\n# Example usage\nids_ips = SecuritySystem(\"Network Sentinel\")\n\nids_ips.detect_and_prevent({\n    \"source_ip\": \"1.1.1.1\", \"dest_ip\": \"10.0.0.5\", \"port\": 80,\n    \"payload\": \"GET /index.php?id=1' OR '1'='1 --\", # SQL Injection attempt\n    \"packets_per_sec\": 90\n})\n\nids_ips.detect_and_prevent({\n    \"source_ip\": \"2.2.2.2\", \"dest_ip\": \"10.0.0.6\", \"port\": 443,\n    \"payload\": \"Normal HTTPS traffic\",\n    \"packets_per_sec\": 250 # High packet rate anomaly\n})\n\nids_ips.detect_and_prevent({\n    \"source_ip\": \"3.3.3.3\", \"dest_ip\": \"10.0.0.7\", \"port\": 80,\n    \"payload\": \"Normal web request\",\n    \"packets_per_sec\": 80\n})",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary difference between an IDS and an IPS?",
+            "answer": "An IDS (Intrusion Detection System) primarily monitors and alerts on suspicious activity, while an IPS (Intrusion Prevention System) actively blocks or prevents detected threats in real-time."
+          },
+          {
+            "question": "What are the two main types of detection methods used by IDS/IPS?",
+            "answer": "Signature-based detection (matching known attack patterns) and anomaly-based detection (identifying deviations from normal behavior)."
+          },
+          {
+            "question": "Give an example of an anomaly that an IDS/IPS might detect.",
+            "answer": "Unusually high network traffic from a single source, connections to unusual ports, or repeated failed login attempts from a specific IP address."
+          },
+          {
+            "question": "Where are IDS/IPS typically deployed?",
+            "answer": "They are often deployed at network perimeters, internal network segments, or critical server segments to monitor traffic in and out of these areas."
+          },
+          {
+            "question": "What is a 'false positive' in IDS/IPS?",
+            "answer": "A false positive occurs when an IDS/IPS incorrectly identifies legitimate network activity as malicious, leading to unnecessary alerts or blocking of valid traffic."
+          }
+        ]
+      },
+      {
+        "title": "Virtual Private Networks (VPNs) and Public Key Infrastructure (PKI)",
+        "content": {
+          "explanation": "A VPN (Virtual Private Network) creates a secure, encrypted 'tunnel' over a public network (like the Internet), allowing users to send and receive data as if their computing devices were directly connected to the private network. PKI (Public Key Infrastructure) is a system for creating, managing, distributing, using, storing, and revoking digital certificates. It enables the use of public-key cryptography for secure communication, ensuring authenticity, integrity, and non-repudiation, crucial for VPNs and secure web Browse.",
+          "explainLikeKid": "Imagine you have a secret passage through a busy public park to get to your friend's house safely without anyone seeing or hearing you. That's like a VPN! PKI is like the special 'secret handshake' system that makes sure only you and your friend have the right pieces of the secret code to use that passage and trust each other.",
+          "code": "# This is a conceptual representation of VPN tunneling and PKI for trust.\n\nclass VPNConnection:\n    def __init__(self, client_id, server_id, pki_system):\n        self.client_id = client_id\n        self.server_id = server_id\n        self.pki = pki_system\n        self.is_connected = False\n        print(f\"\\nVPN: Initializing connection for {client_id} to {server_id}\")\n\n    def establish_secure_tunnel(self, data_to_send):\n        print(f\"  Client {self.client_id} attempting to establish secure tunnel...\")\n        if self.pki.authenticate(self.client_id, self.server_id):\n            print(\"  PKI: Authentication successful. Secure tunnel established!\")\n            self.is_connected = True\n            encrypted_data = f\"[Encrypted_VPN_Data:{data_to_send}]\" # Conceptual encryption\n            print(f\"  VPN: Sending encrypted data: '{encrypted_data}'\")\n            return encrypted_data\n        else:\n            print(\"  PKI: Authentication failed. Tunnel NOT established.\")\n            self.is_connected = False\n            return None\n\nclass PKISystem:\n    def __init__(self):\n        self.trusted_certs = {\n            \"Alice\": \"cert_Alice_PUBKEY\",\n            \"VPN_Server\": \"cert_VPN_Server_PUBKEY\"\n        }\n\n    def authenticate(self, entity1, entity2):\n        print(f\"  PKI: Authenticating {entity1} and {entity2} using digital certificates...\")\n        # In real PKI, this involves certificate validation, chain of trust, etc.\n        if entity1 in self.trusted_certs and entity2 in self.trusted_certs:\n            return True # Simplified: assume valid certs exist\n        return False\n\n# Example usage\npki_core = PKISystem()\nvpn_user_laptop = VPNConnection(\"Laptop\", \"VPN_Server\", pki_core)\n\nvpn_user_laptop.establish_secure_tunnel(\"My private document\")\n\nvpn_bad_actor = VPNConnection(\"Bad_Actor\", \"VPN_Server\", pki_core) # Bad_Actor not in PKI trusted_certs\nvpn_bad_actor.establish_secure_tunnel(\"Malicious data\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a VPN?",
+            "answer": "A VPN (Virtual Private Network) creates a secure, encrypted connection over a less secure network (like the Internet), allowing remote users or sites to securely access a private network as if they were directly connected."
+          },
+          {
+            "question": "What are the main benefits of using a VPN?",
+            "answer": "Enhanced security (encryption), privacy (masking IP address), and secure remote access to private networks."
+          },
+          {
+            "question": "What is PKI (Public Key Infrastructure)?",
+            "answer": "PKI is a framework that enables the use of public key cryptography for secure communication by providing a system for managing digital certificates, which bind public keys to entities."
+          },
+          {
+            "question": "What is a 'digital certificate' in PKI?",
+            "answer": "A digital certificate is an electronic document that uses a digital signature to bind a public key with an identity (e.g., person, organization), verifying the authenticity of the public key."
+          },
+          {
+            "question": "How do VPNs use encryption and tunneling?",
+            "answer": "VPNs use encryption to scramble data, making it unreadable to unauthorized parties, and 'tunneling' to encapsulate private network data packets within other packets, creating a secure, isolated path over the public network."
+          }
+        ]
+      },
+      {
+        "title": "Cryptography Basics (Symmetric and Asymmetric Encryption)",
+        "content": {
+          "explanation": "Cryptography is the practice and study of techniques for secure communication in the presence of adversarial behavior. It involves converting readable information (plaintext) into an unreadable format (ciphertext) and vice-versa. Symmetric encryption uses a single, shared secret key for both encryption and decryption. Asymmetric encryption (public-key cryptography) uses a pair of mathematically related keys: a public key for encryption and a private key for decryption. Asymmetric encryption is used for secure key exchange and digital signatures, while symmetric is used for bulk data encryption due to its speed.",
+          "explainLikeKid": "Cryptography is like having secret codes! Symmetric encryption is like you and your friend having the *exact same secret codebook* to write and read messages. Asymmetric encryption is like everyone having two special keys: a 'lock' key that anyone can use to lock a box just for you, and a 'unlock' key that only *you* have to open your boxes.",
+          "code": "# This is a conceptual representation of symmetric and asymmetric encryption.\n\nclass EncryptionConcepts:\n    def __init__(self):\n        pass\n\n    def symmetric_encrypt(self, plaintext, key):\n        print(f\"\\nSymmetric Encryption: Plaintext='{plaintext}', Key='{key}'\")\n        ciphertext = f\"SYM_ENC({plaintext},{key})\" # Conceptual encryption\n        print(f\"  Ciphertext: '{ciphertext}'\")\n        return ciphertext\n\n    def symmetric_decrypt(self, ciphertext, key):\n        print(f\"Symmetric Decryption: Ciphertext='{ciphertext}', Key='{key}'\")\n        # Conceptual decryption (requires the exact same key)\n        if f\"SYM_ENC(\" in ciphertext and f\",{key})\" in ciphertext:\n            plaintext = ciphertext.replace(f\"SYM_ENC(\", \"\").replace(f\",{key})\", \"\").replace(\")\",\"\")\n            print(f\"  Decrypted Plaintext: '{plaintext}'\")\n            return plaintext\n        else:\n            print(\"  Decryption failed (Wrong key or format).\")\n            return None\n\n    def asymmetric_encrypt(self, plaintext, public_key):\n        print(f\"\\nAsymmetric Encryption: Plaintext='{plaintext}', Public Key='{public_key}'\")\n        ciphertext = f\"ASYM_ENC_PUB({plaintext},{public_key})\" # Conceptual encryption\n        print(f\"  Ciphertext: '{ciphertext}'\")\n        return ciphertext\n\n    def asymmetric_decrypt(self, ciphertext, private_key):\n        print(f\"Asymmetric Decryption: Ciphertext='{ciphertext}', Private Key='{private_key}'\")\n        # Conceptual decryption (requires matching private key)\n        if f\"ASYM_ENC_PUB(\" in ciphertext and f\",PUB_KEY_\" in ciphertext and f\"_PRIV_KEY\" in private_key:\n            # Simulate key match\n            plaintext = ciphertext.replace(f\"ASYM_ENC_PUB(\", \"\").replace(f\",PUB_KEY_\" + private_key.split('_')[2] + \")\", \"\")\n            print(f\"  Decrypted Plaintext: '{plaintext}'\")\n            return plaintext\n        else:\n            print(\"  Decryption failed (Wrong private key or format).\")\n            return None\n\n# Example Usage\ncrypto = EncryptionConcepts()\n\n# Symmetric Example\nsecret_key = \"MySecret123\"\nsym_cipher = crypto.symmetric_encrypt(\"Hello World!\", secret_key)\ncrypto.symmetric_decrypt(sym_cipher, secret_key)\ncrypto.symmetric_decrypt(sym_cipher, \"WrongKey\")\n\n# Asymmetric Example (Alice's keys)\nalice_public_key = \"PUB_KEY_ALICE\"\nalice_private_key = \"PRIV_KEY_ALICE\"\n\n# Someone encrypts for Alice using her public key\nasym_cipher = crypto.asymmetric_encrypt(\"Confidential message for Alice\", alice_public_key)\n\n# Alice decrypts using her private key\ncrypto.asymmetric_decrypt(asym_cipher, alice_private_key)\n\n# Someone else tries to decrypt with a wrong private key\ncrypto.asymmetric_decrypt(asym_cipher, \"PRIV_KEY_BOB\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is cryptography?",
+            "answer": "Cryptography is the science of secure communication by converting information into an unreadable format (encryption) and converting it back (decryption) to protect it from unauthorized access."
+          },
+          {
+            "question": "Explain symmetric encryption.",
+            "answer": "Symmetric encryption uses a single, shared secret key for both encrypting and decrypting data. It's fast and efficient for bulk data encryption."
+          },
+          {
+            "question": "Explain asymmetric encryption.",
+            "answer": "Asymmetric encryption uses a pair of mathematically related keys: a public key (for encryption) and a private key (for decryption). The public key can be shared, while the private key must be kept secret."
+          },
+          {
+            "question": "When would you use symmetric vs. asymmetric encryption?",
+            "answer": "Symmetric encryption is used for encrypting large amounts of data due to its speed. Asymmetric encryption is used for secure key exchange (of the symmetric key) and digital signatures due to its security properties and the ability to distribute public keys."
+          },
+          {
+            "question": "What is a 'plaintext' and 'ciphertext'?",
+            "answer": "Plaintext is the original, readable message. Ciphertext is the encrypted, unreadable version of the message."
+          }
+        ]
+      },
+      {
+        "title": "Transport Layer Security (TLS) and SSL",
+        "content": {
+          "explanation": "SSL (Secure Sockets Layer) and its successor, TLS (Transport Layer Security), are cryptographic protocols that provide secure communication over a computer network. They are widely used for securing web Browse (HTTPS), email, and other data transfers by establishing an encrypted and authenticated communication channel between a client and a server. TLS is the modern, more secure version of SSL, though the term 'SSL' is still commonly used.",
+          "explainLikeKid": "When you see a little lock icon next to a website address, it means TLS (or SSL) is like a special security guard making sure your secret messages to the website (like your password or credit card) are put in a super secure, unbreakable box before they travel on the internet, and only the website can open that box.",
+          "code": "# This is a conceptual representation of TLS/SSL handshaking and data encryption.\n\nclass SecureConnection:\n    def __init__(self, client_name, server_name):\n        self.client = client_name\n        self.server = server_name\n        self.is_secure = False\n        print(f\"\\nTLS/SSL: {self.client} attempting to connect to {self.server}\")\n\n    def handshake(self):\n        print(f\"  [{self.client}] Client Hello (supported versions, cipher suites)\")\n        print(f\"  [{self.server}] Server Hello (chosen version, cipher suite, server certificate)\")\n        print(f\"  [{self.client}] Verifies server certificate, generates pre-master secret, encrypts with server's public key, sends to server.\")\n        print(f\"  [{self.server}] Decrypts pre-master secret with private key, derives master secret.\")\n        print(f\"  [{self.client}/{self.server}] Derive session keys from master secret, exchange Finished messages (encrypted with session keys).\")\n        self.is_secure = True\n        print(\"  TLS/SSL Handshake successful! Secure session established.\")\n\n    def send_secure_data(self, data):\n        if self.is_secure:\n            encrypted_data = f\"[SECURE_TLS:{data}_ENCRYPTED]\" # Conceptual encryption\n            print(f\"  [{self.client}] Sending secure data: '{encrypted_data}'\")\n            print(f\"  [{self.server}] Receiving and decrypting data.\")\n            print(f\"  [{self.server}] Decrypted: '{data}'\")\n        else:\n            print(\"  Cannot send secure data: TLS/SSL session not established.\")\n\n# Example usage\nweb_connection = SecureConnection(\"Browser\", \"Online_Store_Server\")\nweb_connection.handshake()\nweb_connection.send_secure_data(\"CreditCard_Details_1234\")\n\nunsecure_connection = SecureConnection(\"Another_Client\", \"Some_Server\")\nunsecure_connection.send_secure_data(\"Sensitive Info\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is TLS/SSL?",
+            "answer": "TLS (Transport Layer Security) and its predecessor SSL (Secure Sockets Layer) are cryptographic protocols that provide secure communication over a computer network by establishing encrypted and authenticated links between a client and a server."
+          },
+          {
+            "question": "What is the relationship between SSL and TLS?",
+            "answer": "TLS is the successor and more secure version of SSL. SSL versions are now deprecated due to vulnerabilities, but the term 'SSL' is still commonly used to refer to TLS-protected connections."
+          },
+          {
+            "question": "What are the key security services provided by TLS/SSL?",
+            "answer": "Confidentiality (encryption), integrity (data authentication), and authentication (verifying server's identity, sometimes client's)."
+          },
+          {
+            "question": "How does TLS/SSL work at a high level (handshake)?",
+            "answer": "During the handshake, the client and server exchange greetings, agree on cryptographic parameters, exchange digital certificates, and securely establish session keys for subsequent data encryption."
+          },
+          {
+            "question": "What is HTTPS?",
+            "answer": "HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, using TLS/SSL to encrypt communication between a web browser and a website, ensuring privacy and data integrity."
+          }
+        ]
+      },
+      {
+        "title": "Network Layer Security",
+        "content": {
+          "explanation": "Network Layer Security primarily focuses on securing data as it travels across networks, often involving IPsec (Internet Protocol Security). IPsec is a suite of protocols that provides cryptographic security for IP packets at the Network Layer. It includes authentication, integrity, and confidentiality services, commonly used for VPNs and secure routing.",
+          "explainLikeKid": "This is like putting a super tough, secret armored truck around your data letters *before* they even leave your building's mailing room. It makes sure no one can see or change your letters as they travel on the big, public highways (internet) to another city!",
+          "code": "# This is a conceptual representation of IPsec at the Network Layer.\n\nclass IPSecTunnel:\n    def __init__(self, endpoint1, endpoint2):\n        self.endpoint1 = endpoint1\n        self.endpoint2 = endpoint2\n        self.is_secured = False\n\n    def establish_ipsec_security_association(self):\n        print(f\"\\nIPSec: Establishing Security Association between {self.endpoint1} and {self.endpoint2}\")\n        # Conceptual IKE (Internet Key Exchange) phase 1 & 2\n        print(\"  Negotiating encryption algorithms, hashing, and key exchange.\")\n        print(\"  Establishing IPsec SAs for Authentication Header (AH) and Encapsulating Security Payload (ESP).\")\n        self.is_secured = True\n        print(\"  IPSec SA established. Secure tunnel ready for IP packets.\")\n\n    def process_ip_packet(self, packet_data, source_ip, dest_ip):\n        if self.is_secured:\n            print(f\"  IPSec: Encapsulating/encrypting IP packet from {source_ip} to {dest_ip}\")\n            secure_packet = f\"[IPSec_ENCAPSULATED: {packet_data}]\"\n            print(f\"  Sending secure packet: '{secure_packet}'\")\n            # On receiver side:\n            print(f\"  IPSec: Receiving and decrypting secure packet: '{secure_packet}'\")\n            print(f\"  Decrypted original IP packet data: '{packet_data}'\")\n        else:\n            print(f\"  IPSec: No SA. Sending raw IP packet: '{packet_data}' (NOT SECURE)\")\n\n# Example usage\nipsec_gateway = IPSecTunnel(\"Office_Gateway\", \"Branch_Office_Gateway\")\nipsec_gateway.establish_ipsec_security_association()\n\nipsec_gateway.process_ip_packet(\"Sensitive Internal Data\", \"192.168.1.10\", \"172.16.1.5\")\n\nunsecured_comm = IPSecTunnel(\"PC\", \"Server\")\nunsecured_comm.process_ip_packet(\"Public Data\", \"10.0.0.1\", \"1.1.1.1\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the primary goal of Network Layer Security?",
+            "answer": "To provide security services (confidentiality, integrity, authentication) for IP packets as they traverse networks, often between different networks."
+          },
+          {
+            "question": "What is IPsec?",
+            "answer": "IPsec (Internet Protocol Security) is a suite of protocols that provides cryptographic protection for IP packets at the Network Layer (Layer 3 of OSI), offering authentication, integrity, and confidentiality services."
+          },
+          {
+            "question": "What are the two main IPsec protocols?",
+            "answer": "Authentication Header (AH) for integrity and authentication, and Encapsulating Security Payload (ESP) for confidentiality (encryption), integrity, and authentication."
+          },
+          {
+            "question": "What is the difference between IPsec Tunnel Mode and Transport Mode?",
+            "answer": "Tunnel mode encrypts and authenticates the *entire* IP packet (including its header), often used for VPNs between networks. Transport mode only encrypts and authenticates the *payload* of the IP packet, used for end-to-end communication between hosts."
+          },
+          {
+            "question": "What is 'Security Association' (SA) in IPsec?",
+            "answer": "A Security Association (SA) is a logical connection that defines the security parameters (e.g., encryption algorithms, keys) used for secure communication between two IPsec peers. It's established during the IKE (Internet Key Exchange) phase."
+          }
+        ]
+      },
+      {
+        "title": "Traffic Management Techniques",
+        "content": {
+          "explanation": "Traffic management techniques optimize network performance by controlling how data flows. This includes: Quality of Service (QoS) which prioritizes certain types of traffic (e.g., voice, video) over others; Bandwidth management to allocate available capacity; Latency reduction to minimize delays; and Congestion Control Mechanisms to prevent network overload and ensure fair resource allocation. These techniques are vital for delivering a good user experience.",
+          "explainLikeKid": "Imagine a highway with lots of cars. Traffic management is like having smart traffic lights and police officers. QoS is like giving emergency vehicles a fast lane. Bandwidth is how many lanes the highway has. Latency is how long it takes for a car to go from start to end. Congestion control is like making sure too many cars don't get stuck in a jam!",
+          "code": "# This is a conceptual representation of Quality of Service (QoS).\n\nclass QosManager:\n    def __init__(self):\n        self.traffic_types = {\n            \"Voice\": {\"priority\": 1, \"delay_sensitive\": True},\n            \"Video\": {\"priority\": 2, \"delay_sensitive\": True},\n            \"Data\": {\"priority\": 3, \"delay_sensitive\": False}\n        }\n\n    def classify_and_prioritize(self, packet_info):\n        packet_type = packet_info.get(\"type\", \"Data\")\n        packet_size = packet_info.get(\"size\", 100)\n\n        if packet_type in self.traffic_types:\n            qos_attrs = self.traffic_types[packet_type]\n            print(f\"\\nProcessing {packet_type} packet (Size: {packet_size} bytes):\")\n            print(f\"  Priority: {qos_attrs['priority']}\")\n            print(f\"  Delay Sensitive: {qos_attrs['delay_sensitive']}\")\n            if qos_attrs['priority'] <= 2:\n                print(\"  ACTION: Giving preferential treatment (e.g., dedicated queue, less delay).\")\n            else:\n                print(\"  ACTION: Standard queueing.\")\n        else:\n            print(f\"Unknown packet type: {packet_type}. Standard handling.\")\n\n# Example usage\nqos_system = QosManager()\nqos_system.classify_and_prioritize({\"type\": \"Voice\", \"size\": 50})\nqos_system.classify_and_prioritize({\"type\": \"Data\", \"size\": 1500})\nqos_system.classify_and_prioritize({\"type\": \"Video\", \"size\": 1000})\nqos_system.classify_and_prioritize({\"type\": \"Game\", \"size\": 75})",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is Quality of Service (QoS)?",
+            "answer": "QoS is a set of technologies that guarantee a certain level of performance for selected network traffic, prioritizing important data (e.g., voice, video) over less critical traffic."
+          },
+          {
+            "question": "Why is bandwidth management important?",
+            "answer": "Bandwidth management ensures that network resources are allocated efficiently among different users and applications, preventing congestion and ensuring fair access."
+          },
+          {
+            "question": "What is network latency?",
+            "answer": "Network latency is the time delay between the transmission of a data packet and its reception at the destination."
+          },
+          {
+            "question": "What is network congestion, and how is it typically handled?",
+            "answer": "Network congestion occurs when more data traffic is offered to a network link or node than it can handle. It's handled by mechanisms like flow control, error control, and congestion avoidance algorithms (e.g., TCP congestion control)."
+          },
+          {
+            "question": "Give an example of traffic that requires high QoS.",
+            "answer": "Voice over IP (VoIP), video conferencing, and online gaming, due to their sensitivity to delay and jitter."
+          }
+        ]
+      },
+      {
+        "title": "Network Performance Metrics",
+        "content": {
+          "explanation": "Network performance metrics are quantifiable measures used to evaluate the efficiency and quality of a network. Key metrics include: Bandwidth (maximum data transfer rate), Throughput (actual data transfer rate), Latency (delay), Jitter (variation in delay), Packet Loss (percentage of lost packets), and Uptime/Availability. Monitoring these metrics is crucial for network troubleshooting and optimization.",
+          "explainLikeKid": "These are like the report card for your internet connection. Bandwidth is how wide your internet road is. Throughput is how many data cars actually get through in a minute. Latency is how long it takes a car to go from one side to the other. Jitter is how shaky or wobbly the ride is for the cars.",
+          "code": "# This is a conceptual representation of network performance metrics.\n\nNETWORK_METRICS = {\n    \"Bandwidth\": \"Maximum data transfer rate (e.g., Mbps, Gbps).\",\n    \"Throughput\": \"Actual data transfer rate over a period of time. (often lower than bandwidth)\",\n    \"Latency\": \"Delay from source to destination (e.g., milliseconds).\",\n    \"Jitter\": \"Variation in delay of received packets.\",\n    \"Packet Loss\": \"Percentage of data packets that fail to reach their destination.\",\n    \"Uptime/Availability\": \"Percentage of time a network or service is operational.\"\n}\n\ndef display_network_metric(metric_name, value, unit=\"N/A\"):\n    if metric_name in NETWORK_METRICS:\n        print(f\"{metric_name}: {value}{unit} - {NETWORK_METRICS[metric_name]}\")\n    else:\n        print(f\"Unknown metric: {metric_name}\")\n\n# Example usage\ndisplay_network_metric(\"Bandwidth\", 100, \"Mbps\")\ndisplay_network_metric(\"Latency\", 25, \"ms\")\ndisplay_network_metric(\"Packet Loss\", 0.1, \"%\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the difference between bandwidth and throughput?",
+            "answer": "Bandwidth is the theoretical maximum data transfer rate of a network connection, while throughput is the actual amount of data successfully transferred over a period of time, which is usually less than the bandwidth."
+          },
+          {
+            "question": "What is latency, and how does it affect network performance?",
+            "answer": "Latency is the delay incurred during data transmission from source to destination. High latency can lead to slow response times and poor performance for real-time applications."
+          },
+          {
+            "question": "What is 'jitter' in networking?",
+            "answer": "Jitter is the variation in the delay of received packets. High jitter can lead to choppiness or distortion in real-time applications like VoIP or video conferencing."
+          },
+          {
+            "question": "What does 'packet loss' indicate?",
+            "answer": "Packet loss indicates the percentage of data packets that fail to reach their destination. It often signals network congestion, faulty hardware, or poor signal quality."
+          },
+          {
+            "question": "Why is 'uptime' a critical network performance metric?",
+            "answer": "Uptime (or availability) measures the percentage of time a network or its components are operational. It's critical because it directly impacts users' ability to access services and data."
+          }
+        ]
+      },
+      {
+        "title": "Network Troubleshooting Techniques",
+        "content": {
+          "explanation": "Network troubleshooting involves identifying, diagnosing, and resolving problems that affect network connectivity and performance. Common techniques include: checking physical connections, verifying IP configurations (ping, ipconfig/ifconfig), testing connectivity (traceroute, nslookup), analyzing network traffic (packet sniffers), and checking device logs. A systematic approach, like the OSI model layers, helps in pinpointing issues.",
+          "explainLikeKid": "If your internet suddenly stops working, troubleshooting is like being a detective! You check the plug (physical connection), then you ask your computer if it has the right address (IP config), then you send test messages to see how far they go (ping/traceroute), and finally, you might look for clues in the computer's diary (logs).",
+          "code": "# This is a conceptual representation of common network troubleshooting commands.\n\nTROUBLESHOOTING_COMMANDS = {\n    \"ping\": \"Tests basic connectivity and measures round-trip time to a host. (ICMP)\",\n    \"ipconfig / ifconfig\": \"Displays network interface configuration (IP address, subnet mask, gateway).\",\n    \"traceroute / tracert\": \"Traces the path a packet takes to a destination, showing intermediate hops and their delays.\",\n    \"nslookup / dig\": \"Queries DNS servers to resolve hostnames to IP addresses and vice versa.\",\n    \"netstat\": \"Displays active network connections, routing tables, and interface statistics.\"\n}\n\ndef run_troubleshooting_command(command, target):\n    if command in TROUBLESHOOTING_COMMANDS:\n        description = TROUBLESHOOTING_COMMANDS[command]\n        print(f\"\\nRunning '{command} {target}' - {description}\")\n        print(\"  (Simulating command output...)\")\n        if command == \"ping\":\n            print(f\"    Pinging {target} with 32 bytes of data:\")\n            print(f\"    Reply from {target}: bytes=32 time=5ms TTL=64\")\n            print(f\"    Reply from {target}: bytes=32 time=6ms TTL=64\")\n        elif command == \"traceroute / tracert\":\n            print(f\"    Tracing route to {target} over a maximum of 30 hops:\")\n            print(f\"    1 <1 ms <1 ms <1 ms 192.168.1.1\")\n            print(f\"    2 10 ms 12 ms 11 ms internet_provider_router\")\n            print(f\"    3 25 ms 26 ms 24 ms destination_network_router\")\n        elif command == \"nslookup / dig\":\n            print(f\"    Server:  dns.google\")\n            print(f\"    Address:  8.8.8.8\")\n            print(f\"    Name:    {target}\")\n            print(f\"    Address:  1.2.3.4\")\n        else:\n            print(f\"    Output for '{command}' would appear here.\")\n    else:\n        print(f\"Unknown troubleshooting command: {command}\")\n\n# Example usage\nrun_troubleshooting_command(\"ping\", \"google.com\")\nrun_troubleshooting_command(\"traceroute / tracert\", \"example.com\")\nrun_troubleshooting_command(\"nslookup / dig\", \"www.google.com\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the first step in network troubleshooting?",
+            "answer": "Checking physical connections (cables, power) and verifying basic network configuration (IP address, subnet mask, gateway)."
+          },
+          {
+            "question": "What is the purpose of the `ping` command?",
+            "answer": "The `ping` command is used to test reachability of a host on an Internet Protocol (IP) network and to measure the round-trip time for messages sent from the originating host to a destination computer."
+          },
+          {
+            "question": "What information does `ipconfig` (Windows) or `ifconfig` (Linux) provide?",
+            "answer": "It displays network interface configuration details such as IP address, subnet mask, default gateway, and MAC address."
+          },
+          {
+            "question": "When would you use `traceroute` or `tracert`?",
+            "answer": "To trace the path a packet takes to reach a destination, identifying intermediate routers (hops) and delays along the path, useful for pinpointing where connectivity issues occur."
+          },
+          {
+            "question": "What is the role of DNS in troubleshooting, and which command helps?",
+            "answer": "DNS (Domain Name System) translates human-readable domain names into IP addresses. `nslookup` or `dig` commands help troubleshoot DNS resolution issues by querying DNS servers."
+          }
+        ]
+      },
+      {
+        "title": "Network Monitoring and Management",
+        "content": {
+          "explanation": "Network monitoring involves continuously observing network components and traffic to identify performance issues, security threats, and abnormal behavior. Network management encompasses a broader set of activities, including monitoring, configuration, planning, and troubleshooting, to ensure the network operates efficiently and reliably. Tools like SNMP, NetFlow, and specialized Network Performance Monitoring (NPM) software are used.",
+          "explainLikeKid": "Network monitoring is like having many little cameras and sensors all over your network roads, watching how the data cars are moving and if anything looks weird. Network management is like being the main traffic controller, not just watching, but also changing traffic lights, fixing broken roads, and planning new ones to keep everything running smoothly!",
+          "code": "# This is a conceptual representation of network monitoring.\n\nclass NetworkMonitor:\n    def __init__(self, network_name):\n        self.network_name = network_name\n        self.device_status = {}\n        self.traffic_logs = []\n\n    def update_device_status(self, device_id, status):\n        self.device_status[device_id] = status\n        print(f\"\\n[{self.network_name} Monitor] Device {device_id} status: {status}\")\n        if status == \"down\":\n            print(\"  ALERT: Device is down!\")\n\n    def log_traffic(self, source, destination, protocol, size):\n        traffic_record = {\"src\": source, \"dst\": destination, \"proto\": protocol, \"size\": size}\n        self.traffic_logs.append(traffic_record)\n        print(f\"  Logged traffic: {source} -> {destination} ({protocol}, {size} bytes)\")\n        if size > 1000 and protocol == \"HTTP\": # Example anomaly detection\n            print(\"  WARNING: Large HTTP transfer detected!\")\n\n    def show_summary(self):\n        print(f\"\\n[{self.network_name} Monitor] Current Summary:\")\n        print(f\"  Devices: {self.device_status}\")\n        print(f\"  Total traffic logs: {len(self.traffic_logs)}\")\n\n# Example usage\noffice_network_monitor = NetworkMonitor(\"OfficeNet\")\noffice_network_monitor.update_device_status(\"Router1\", \"up\")\noffice_network_monitor.update_device_status(\"ServerA\", \"down\")\n\noffice_network_monitor.log_traffic(\"User1\", \"Google.com\", \"HTTP\", 200)\noffice_network_monitor.log_traffic(\"ServerA\", \"Backup_Server\", \"FTP\", 5000)\n\noffice_network_monitor.show_summary()",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the difference between network monitoring and network management?",
+            "answer": "Network monitoring is the process of collecting data on network activity and performance. Network management is a broader discipline that uses monitoring data for planning, configuration, optimization, and troubleshooting of the network."
+          },
+          {
+            "question": "Why is network monitoring important?",
+            "answer": "It helps identify performance bottlenecks, detect security threats, predict potential issues, and ensure network availability and reliability."
+          },
+          {
+            "question": "What is SNMP used for in network monitoring?",
+            "answer": "SNMP (Simple Network Management Protocol) is a standard protocol used to collect and organize information about devices on IP networks and to modify that information to change device behavior."
+          },
+          {
+            "question": "What is NetFlow (or IPFIX)?",
+            "answer": "NetFlow (and IPFIX - IP Flow Information Export) is a feature developed by Cisco that provides statistics on network traffic flows, including source/destination IP, ports, protocols, and volume, used for traffic analysis and security."
+          },
+          {
+            "question": "What are some common types of data collected by network monitoring tools?",
+            "answer": "Bandwidth utilization, CPU/memory usage of devices, interface errors, packet loss, latency, device status (up/down), and application response times."
+          }
+        ]
+      },
+      {
+        "title": "Client-Server Vs Peer-to-Peer Architectures",
+        "content": {
+          "explanation": "Network architectures define how network components interact. In Client-Server architecture, clients (devices requesting services) communicate with a central server (a device providing services). This is common for web Browse, email, and databases. In Peer-to-Peer (P2P) architecture, devices (peers) act as both clients and servers, directly sharing resources with each other without a central server. This is seen in file sharing and some communication apps.",
+          "explainLikeKid": "Imagine you want a toy from a big toy store. Client-Server is like you (client) going to the toy store (server) to get your toy. Peer-to-Peer is like you and your friends just swapping toys directly with each other, without needing a big toy store in the middle!",
+          "code": "# This is a conceptual representation of Client-Server vs Peer-to-Peer.\n\nclass ClientServerArchitecture:\n    def __init__(self):\n        pass\n\n    def start_server(self):\n        print(\"\\n[Client-Server] Server is running, waiting for requests.\")\n\n    def client_request(self, client_name, server_name, service):\n        print(f\"  [{client_name}] Requesting '{service}' from [{server_name}].\")\n        # Simulate server processing\n        response = f\"Service '{service}' provided by {server_name}.\"\n        print(f\"  [{server_name}] Providing response: '{response}'.\")\n        return response\n\nclass PeerToPeerArchitecture:\n    def __init__(self):\n        self.peers = {}\n\n    def register_peer(self, peer_name):\n        self.peers[peer_name] = True\n        print(f\"\\n[Peer-to-Peer] Peer '{peer_name}' joined the network.\")\n\n    def share_resource(self, sender_peer, receiver_peer, resource):\n        if sender_peer in self.peers and receiver_peer in self.peers:\n            print(f\"  [{sender_peer}] Sharing '{resource}' directly with [{receiver_peer}].\")\n            print(f\"  [{receiver_peer}] Received '{resource}' from [{sender_peer}].\")\n        else:\n            print(\"  One or both peers not in network.\")\n\n# Example usage\ncs_system = ClientServerArchitecture()\ncs_system.start_server()\ncs_system.client_request(\"WebBrowser\", \"WebServer\", \"Web Page\")\n\np2p_system = PeerToPeerArchitecture()\np2p_system.register_peer(\"FriendA\")\np2p_system.register_peer(\"FriendB\")\np2p_system.share_resource(\"FriendA\", \"FriendB\", \"MyCoolFile.txt\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the main characteristic of Client-Server architecture?",
+            "answer": "It involves dedicated servers that provide services to multiple clients, with a centralized control and data storage."
+          },
+          {
+            "question": "What is the main characteristic of Peer-to-Peer architecture?",
+            "answer": "In P2P, all connected devices (peers) can act as both clients and servers, directly sharing resources and communicating with each other without a central server."
+          },
+          {
+            "question": "Give an example of an application that uses Client-Server architecture.",
+            "answer": "Web Browse (web server and web browser), email, online banking, and most corporate databases."
+          },
+          {
+            "question": "Give an example of an application that uses Peer-to-Peer architecture.",
+            "answer": "BitTorrent, some online gaming, and certain voice/video communication apps (e.g., Skype for some calls)."
+          },
+          {
+            "question": "What are the advantages of Client-Server architecture?",
+            "answer": "Centralized control, easier management, better security, and scalability for large numbers of users."
+          },
+          {
+            "question": "What are the advantages of Peer-to-Peer architecture?",
+            "answer": "Decentralization, resilience (no single point of failure), lower setup costs, and direct resource sharing."
+          }
+        ]
+      },
+      {
+        "title": "Network Design Principles and Considerations",
+        "content": {
+          "explanation": "Effective network design involves applying principles to build efficient, scalable, secure, and reliable networks. Key considerations include: Scalability (ability to grow), Redundancy (fault tolerance), Security (protection from threats), Performance (speed, latency), Manageability (ease of operation), and Cost. Design often follows a hierarchical model (core, distribution, access layers) for large networks.",
+          "explainLikeKid": "Designing a network is like planning how to build the best, safest, and fastest roads for your toy cars. You need to think: Can we add more roads later (scalability)? What if one road breaks (redundancy)? Are bad guys going to put bumps on our roads (security)? How fast can the cars go (performance)? Is it easy to fix problems (manageability)? How much does it cost to build (cost)?",
+          "code": "# This is a conceptual representation of network design principles.\n\nNETWORK_DESIGN_PRINCIPLES = {\n    \"Scalability\": \"Ability of the network to expand and handle increasing demands without significant re-design.\",\n    \"Redundancy\": \"Including backup components or paths to prevent single points of failure and ensure high availability.\",\n    \"Security\": \"Protecting network resources and data from unauthorized access, misuse, or attacks.\",\n    \"Performance\": \"Ensuring high speed, low latency, and minimal packet loss for optimal user experience.\",\n    \"Manageability\": \"Ease of configuration, monitoring, and troubleshooting the network.\"\n}\n\ndef describe_design_principle(principle):\n    if principle in NETWORK_DESIGN_PRINCIPLES:\n        print(f\"{principle}: {NETWORK_DESIGN_PRINCIPLES[principle]}\")\n    else:\n        print(\"Unknown design principle.\")\n\ndescribe_design_principle(\"Scalability\")\ndescribe_design_principle(\"Redundancy\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are the key goals of good network design?",
+            "answer": "To create a network that is scalable, reliable, secure, performs well, and is manageable and cost-effective."
+          },
+          {
+            "question": "Why is 'scalability' important in network design?",
+            "answer": "Scalability ensures that the network can grow to accommodate more users, devices, and traffic without requiring a complete overhaul or significant performance degradation."
+          },
+          {
+            "question": "What does 'redundancy' mean in networking?",
+            "answer": "Redundancy involves having duplicate components or alternative paths in a network to ensure that if one component fails, there's a backup to maintain service availability."
+          },
+          {
+            "question": "Explain the concept of a hierarchical network design.",
+            "answer": "A hierarchical design divides a network into layers (typically access, distribution, and core) to improve scalability, redundancy, and manageability."
+          },
+          {
+            "question": "What role does security play in network design?",
+            "answer": "Security must be integrated into the design from the start, considering firewalls, intrusion detection, access controls, and encryption to protect network assets and data."
+          }
+        ]
+      },
+      {
+        "title": "Load Balancing Techniques, Content Delivery Networks (CDNs)",
+        "content": {
+          "explanation": "Load balancing distributes network traffic across multiple servers or resources to optimize resource utilization, maximize throughput, minimize response time, and avoid overload. CDNs (Content Delivery Networks) are geographically distributed networks of proxy servers and their data centers. Their purpose is to provide high availability and performance by distributing content (web pages, videos, images) closer to end-users, reducing latency and bandwidth consumption from the origin server.",
+          "explainLikeKid": "Load balancing is like having many chefs in a kitchen; when lots of orders come in, a smart manager sends each order to the next available chef so no one chef gets too busy. CDNs are like having copies of your favorite toys in many different toy stores all over the world, so when a kid wants a toy, they get it from the closest store, making it super fast!",
+          "code": "# This is a conceptual representation of load balancing.\n\nclass LoadBalancer:\n    def __init__(self, servers):\n        self.servers = servers\n        self.next_server_index = 0\n\n    def distribute_request(self, request):\n        if not self.servers:\n            print(\"No servers available for load balancing.\")\n            return\n        \n        # Simple Round Robin load balancing\n        target_server = self.servers[self.next_server_index]\n        self.next_server_index = (self.next_server_index + 1) % len(self.servers)\n        \n        print(f\"\\nLoad Balancer: Distributing '{request}' to {target_server}\")\n        # Simulate server response\n        print(f\"  [{target_server}] Processing request: '{request}'\")\n\n# Example usage\nweb_servers = [\"WebServer1\", \"WebServer2\", \"WebServer3\"]\nlb = LoadBalancer(web_servers)\n\nlb.distribute_request(\"UserA_Web_Request\")\nlb.distribute_request(\"UserB_Web_Request\")\nlb.distribute_request(\"UserC_Web_Request\")\nlb.distribute_request(\"UserD_Web_Request\")\n\n# Conceptual CDN - closer server serves content\nclass CDNService:\n    def get_content(self, user_location, content_id):\n        # Simulate finding closest server\n        if user_location == \"Asia\":\n            server = \"Asia_CDN_Server\"\n        elif user_location == \"Europe\":\n            server = \"Europe_CDN_Server\"\n        else:\n            server = \"USA_CDN_Server\"\n        print(f\"\\nCDN: User in {user_location} requesting '{content_id}' from {server}\")\n\ncdn = CDNService()\ncdn.get_content(\"Europe\", \"Video_123.mp4\")\ncdn.get_content(\"Asia\", \"Image_XYZ.jpg\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is the purpose of load balancing?",
+            "answer": "Load balancing distributes incoming network traffic across multiple servers or resources to prevent overload on any single server, optimize resource utilization, and improve application responsiveness and availability."
+          },
+          {
+            "question": "Name some common load balancing algorithms.",
+            "answer": "Round Robin, Least Connections, Weighted Round Robin, IP Hash."
+          },
+          {
+            "question": "What is a Content Delivery Network (CDN)?",
+            "answer": "A CDN is a geographically distributed network of proxy servers and data centers that caches content closer to end-users, reducing latency and improving content delivery speed."
+          },
+          {
+            "question": "What are the benefits of using a CDN?",
+            "answer": "Faster content loading times, reduced bandwidth costs for the origin server, improved website reliability, and better performance during traffic spikes."
+          },
+          {
+            "question": "How do load balancers and CDNs improve network performance and reliability?",
+            "answer": "Load balancers ensure efficient distribution of workload and prevent single points of failure within a data center. CDNs optimize content delivery by bringing content geographically closer to users, reducing latency and network congestion across wider areas."
+          }
+        ]
+      },
+      {
+        "title": "Network Virtualization",
+        "content": {
+          "explanation": "Network virtualization is the process of combining hardware and software network resources and network functionality into a single, software-based administrative entity – a virtual network. This allows for creation of virtual networks that are logically separated but physically share the same underlying hardware. It improves flexibility, scalability, and resource utilization in data centers and cloud environments.",
+          "explainLikeKid": "Imagine you have one big computer, but you can make it act like many separate computers for different games or tasks, all without buying new machines. Network virtualization is like that, but for whole networks! You can make many 'pretend' networks on one real network, each working independently.",
+          "code": "# This is a conceptual representation of network virtualization.\n\nclass VirtualNetworkManager:\n    def __init__(self):\n        self.virtual_networks = {}\n\n    def create_virtual_network(self, vn_id, subnet, gateway):\n        if vn_id not in self.virtual_networks:\n            self.virtual_networks[vn_id] = {\n                \"subnet\": subnet,\n                \"gateway\": gateway,\n                \"virtual_devices\": []\n            }\n            print(f\"\\nCreated Virtual Network '{vn_id}' (Subnet: {subnet}, Gateway: {gateway})\")\n        else:\n            print(f\"Virtual Network '{vn_id}' already exists.\")\n\n    def add_virtual_device(self, vn_id, device_name, ip_address):\n        if vn_id in self.virtual_networks:\n            self.virtual_networks[vn_id][\"virtual_devices\"].append({\n                \"name\": device_name, \"ip\": ip_address\n            })\n            print(f\"  Added device '{device_name}' ({ip_address}) to VN '{vn_id}'\")\n        else:\n            print(f\"Virtual Network '{vn_id}' does not exist.\")\n\n    def show_virtual_networks(self):\n        print(\"\\n--- Current Virtual Networks ---\")\n        for vn_id, config in self.virtual_networks.items():\n            print(f\"VN ID: {vn_id}, Subnet: {config['subnet']}, Gateway: {config['gateway']}\")\n            if config['virtual_devices']:\n                for dev in config['virtual_devices']:\n                    print(f\"  - Device: {dev['name']} ({dev['ip']})\")\n            else:\n                print(\"  (No virtual devices yet)\")\n\n# Example usage\nvn_manager = VirtualNetworkManager()\nvn_manager.create_virtual_network(\"Dev_Env_VN\", \"10.0.1.0/24\", \"10.0.1.1\")\nvn_manager.add_virtual_device(\"Dev_Env_VN\", \"Dev_Server\", \"10.0.1.100\")\nvn_manager.add_virtual_device(\"Dev_Env_VN\", \"Dev_Client\", \"10.0.1.101\")\n\nvn_manager.create_virtual_network(\"Prod_Env_VN\", \"192.168.10.0/24\", \"192.168.10.1\")\nvn_manager.add_virtual_device(\"Prod_Env_VN\", \"Prod_Web_Server\", \"192.168.10.50\")\n\nvn_manager.show_virtual_networks()",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is network virtualization?",
+            "answer": "Network virtualization is the creation of a software-based, logical network that is decoupled from the underlying physical network hardware, allowing for flexible and efficient resource allocation."
+          },
+          {
+            "question": "What are the main benefits of network virtualization?",
+            "answer": "Increased flexibility, improved resource utilization, faster deployment of networks, reduced hardware dependency, and enhanced security through network segmentation."
+          },
+          {
+            "question": "What is the relationship between network virtualization and cloud computing?",
+            "answer": "Network virtualization is a foundational technology for cloud computing, enabling cloud providers to create isolated virtual networks for multiple tenants on shared physical infrastructure."
+          },
+          {
+            "question": "What is an overlay network in the context of virtualization?",
+            "answer": "An overlay network is a virtual network built on top of an existing physical network (the underlay network). Traffic on the overlay is encapsulated and transported by the underlay without the underlay needing to understand the overlay's logical structure."
+          },
+          {
+            "question": "How does network virtualization contribute to network agility?",
+            "answer": "It allows network configurations to be rapidly changed, provisioned, and de-provisioned through software, significantly speeding up network deployment and adaptation to business needs."
+          }
+        ]
+      },
+      {
+        "title": "Software-Defined Networking (SDN)",
+        "content": {
+          "explanation": "Software-Defined Networking (SDN) is an architectural approach that separates the network's control plane from the data plane, enabling network control to become directly programmable and abstracting the underlying infrastructure. This allows network administrators to manage network services through high-level software applications, centralizing control and making networks more agile, flexible, and efficient. OpenFlow is a key protocol in SDN.",
+          "explainLikeKid": "Imagine your network is a big train set. Normally, you have to go to each tiny piece of track and physically change switches. SDN is like having a central control panel where you can just press buttons on a screen to tell all the train tracks exactly what to do at once! It makes managing the train set much easier and smarter.",
+          "code": "# This is a conceptual representation of SDN's control and data plane separation.\n\nclass SDNController:\n    def __init__(self, name):\n        self.name = name\n        self.connected_switches = {}\n        print(f\"\\nSDN Controller '{self.name}' started.\")\n\n    def connect_switch(self, switch_id, switch_object):\n        self.connected_switches[switch_id] = switch_object\n        switch_object.set_controller(self)\n        print(f\"  Controller connected to Switch {switch_id}\")\n\n    def configure_flow(self, switch_id, match_criteria, action):\n        if switch_id in self.connected_switches:\n            self.connected_switches[switch_id].add_flow_rule(match_criteria, action)\n            print(f\"  Controller sent flow rule to Switch {switch_id}: Match '{match_criteria}', Action '{action}'\")\n        else:\n            print(f\"  Error: Switch {switch_id} not connected.\")\n\nclass SDNSwitch:\n    def __init__(self, switch_id):\n        self.id = switch_id\n        self.controller = None\n        self.flow_table = []\n        print(f\"SDN Switch {self.id} started.\")\n\n    def set_controller(self, controller_obj):\n        self.controller = controller_obj\n\n    def add_flow_rule(self, match_criteria, action):\n        self.flow_table.append({\"match\": match_criteria, \"action\": action})\n        print(f\"  Switch {self.id}: Added flow rule: Match '{match_criteria}', Action '{action}'\")\n\n    def process_packet(self, packet):\n        print(f\"\\nSwitch {self.id}: Processing packet: '{packet}'\")\n        for rule in self.flow_table:\n            if rule['match'] in packet: # Simplified match\n                print(f\"  Switch {self.id}: Packet matched rule: {rule['match']} -> {rule['action']}\")\n                return rule['action']\n        print(f\"  Switch {self.id}: No match found. Forwarding to controller (or default action).\")\n        if self.controller:\n            # In real SDN, packet_in message sent to controller for new flow decision\n            print(f\"  Switch {self.id}: Requesting decision from controller for: '{packet}'\")\n            # Controller would then push a new flow rule\n        return \"DROP\"\n\n# Example usage\ncontroller = SDNController(\"Main_SDN_Controller\")\nswitch1 = SDNSwitch(\"SW1\")\nswitch2 = SDNSwitch(\"SW2\")\n\ncontroller.connect_switch(\"SW1\", switch1)\ncontroller.connect_switch(\"SW2\", switch2)\n\ncontroller.configure_flow(\"SW1\", \"DestIP:10.0.0.10\", \"FORWARD_PORT_5\")\ncontroller.configure_flow(\"SW2\", \"SourceIP:192.168.1.5\", \"DROP\")\n\nswitch1.process_packet(\"Packet from 192.168.1.1 to DestIP:10.0.0.10\")\nswitch2.process_packet(\"Packet from SourceIP:192.168.1.5 to DestIP:8.8.8.8\")\nswitch1.process_packet(\"Packet from 192.168.1.2 to DestIP:20.0.0.20\")",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is Software-Defined Networking (SDN)?",
+            "answer": "SDN is an architectural approach that separates the network's control plane (decision-making) from the data plane (packet forwarding), making the network programmable and centrally managed through software."
+          },
+          {
+            "question": "What are the two main planes in SDN, and what are their roles?",
+            "answer": "The Control Plane (e.g., SDN Controller) makes routing and forwarding decisions, and the Data Plane (e.g., SDN-enabled switches/routers) executes those decisions by forwarding packets."
+          },
+          {
+            "question": "What are the key benefits of SDN?",
+            "answer": "Increased network agility, simplified management, centralized control, improved scalability, and better resource utilization."
+          },
+          {
+            "question": "What is OpenFlow?",
+            "answer": "OpenFlow is a foundational protocol in SDN that enables the SDN controller to directly program the forwarding behavior of network devices (switches and routers)."
+          },
+          {
+            "question": "How does SDN improve network automation?",
+            "answer": "By centralizing control and abstracting the underlying hardware, SDN allows network policies and configurations to be automated programmatically, reducing manual intervention and human error."
+          }
+        ]
+      },
+      {
+        "title": "Network Reliability",
+        "content": {
+          "explanation": "Network reliability refers to the ability of a network to perform its intended function without failure for a specified period and under specific conditions. It encompasses concepts like fault tolerance (ability to withstand failures), redundancy (having backup components), resilience (ability to recover quickly from disruptions), and availability (percentage of time the network is operational). Achieving high reliability is critical for business continuity and user satisfaction.",
+          "explainLikeKid": "Network reliability is like making sure your toy car race track *almost never breaks*! It means if one piece of track gets wobbly, there's a backup piece ready (redundancy), and if a toy car crashes, the track quickly gets fixed (resilience) so the race can keep going!",
+          "code": "# This is a conceptual representation of network reliability measures.\n\nclass NetworkReliabilityMonitor:\n    def __init__(self, network_name):\n        self.name = network_name\n        self.components = {\n            \"Main Router\": {\"status\": \"up\", \"backup_available\": True},\n            \"Server Farm\": {\"status\": \"up\", \"backup_available\": True},\n            \"Core Switch\": {\"status\": \"up\", \"backup_available\": True},\n            \"Access Point\": {\"status\": \"up\", \"backup_available\": False}\n        }\n\n    def report_status(self):\n        print(f\"\\n[{self.name} Reliability Report]\")\n        total_components = len(self.components)\n        failed_components = 0\n        for comp, info in self.components.items():\n            print(f\"  {comp}: Status - {info['status']}, Backup - {info['backup_available']}\")\n            if info['status'] == \"down\":\n                failed_components += 1\n        \n        if failed_components == 0:\n            print(\"  Network is fully operational.\")\n        else:\n            print(f\"  WARNING: {failed_components} component(s) are down. Checking redundancy...\")\n            # Simple check for redundancy mitigating failure\n            for comp, info in self.components.items():\n                if info['status'] == \"down\" and info['backup_available']:\n                    print(f\"    {comp} is down, but backup is available. Service likely maintained.\")\n                elif info['status'] == \"down\" and not info['backup_available']:\n                    print(f\"    CRITICAL: {comp} is down with NO backup. Service disruption likely!\")\n\n# Example usage\nprod_network = NetworkReliabilityMonitor(\"Production_Network\")\nprod_network.report_status()\n\n# Simulate a failure\nprod_network.components[\"Main Router\"][\"status\"] = \"down\"\nprod_network.report_status()\n\n# Simulate critical failure\nprod_network.components[\"Access Point\"][\"status\"] = \"down\"\nprod_network.report_status()",
+          "input": "i.p not avaiable",
+          "output": "o/p not avauilnle"
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is network reliability?",
+            "answer": "Network reliability is the probability that a network will perform its intended function without failure for a specified period of time under given conditions."
+          },
+          {
+            "question": "Differentiate between 'fault tolerance' and 'resilience'.",
+            "answer": "Fault tolerance is the ability of a system to continue operating without interruption even if one or more components fail. Resilience is the ability to recover quickly and effectively from disruptions."
+          },
+          {
+            "question": "How does redundancy contribute to network reliability?",
+            "answer": "Redundancy provides backup components or alternative paths, ensuring that if a primary component or path fails, traffic can be rerouted, preventing service outages."
+          },
+          {
+            "question": "What is 'single point of failure'?",
+            "answer": "A single point of failure (SPOF) is a part of a system that, if it fails, will stop the entire system from working. Good network design aims to eliminate SPOFs through redundancy."
+          },
+          {
+            "question": "What is 'Mean Time Between Failures (MTBF)' in network reliability?",
+            "answer": "MTBF is a metric indicating the predicted elapsed time between inherent failures of a system during operation. A higher MTBF indicates greater reliability."
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Project: Simple Chat Application",
+        "description": "Develop a basic client-server chat application where multiple clients can connect to a central server and exchange messages. This project demonstrates socket programming, multithreading on the server-side, and fundamental network communication principles.",
+        "code": "# Python Conceptual Code for a Simple Chat Application (Client-Server)\n\n# --- Server Side (Conceptual) ---\n# import socket\n# import threading\n\n# HOST = '127.0.0.1'\n# PORT = 12345\n\n# server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# server.bind((HOST, PORT))\n# server.listen()\n\n# clients = []\n# nicknames = []\n\n# def broadcast(message):\n#     for client in clients:\n#         client.send(message)\n\n# def handle(client):\n#     while True:\n#         try:\n#             message = client.recv(1024)\n#             broadcast(message)\n#         except:\n#             index = clients.index(client)\n#             clients.remove(client)\n#             client.close()\n#             nickname = nicknames[index]\n#             broadcast(f'{nickname} left the chat!'.encode('ascii'))\n#             nicknames.remove(nickname)\n#             break\n\n# def receive():\n#     while True:\n#         client, address = server.accept()\n#         print(f\"Connected with {str(address)}\")\n\n#         client.send('NICK'.encode('ascii'))\n#         nickname = client.recv(1024).decode('ascii')\n#         nicknames.append(nickname)\n#         clients.append(client)\n\n#         print(f\"Nickname of the client is {nickname}!\")\n#         broadcast(f'{nickname} joined the chat!'.encode('ascii'))\n#         client.send('Connected to the server!'.encode('ascii'))\n\n#         thread = threading.Thread(target=handle, args=(client,))\n#         thread.start()\n\n# print(\"Server is listening...\")\n# receive()\n\n# --- Client Side (Conceptual) ---\n# import socket\n# import threading\n\n# NICKNAME = input(\"Choose your nickname: \")\n\n# client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n# client.connect(('127.0.0.1', 12345))\n\n# def receive():\n#     while True:\n#         try:\n#             message = client.recv(1024).decode('ascii')\n#             if message == 'NICK':\n#                 client.send(NICKNAME.encode('ascii'))\n#             else:\n#                 print(message)\n#         except:\n#             print(\"An error occurred!\")\n#             client.close()\n#             break\n\n# def write():\n#     while True:\n#         message = f'{NICKNAME}: {input(\" \")}'\n#         client.send(message.encode('ascii'))\n\n# receive_thread = threading.Thread(target=receive)\n# receive_thread.start()\n\n# write_thread = threading.Thread(target=write)\n# write_thread.start()\n\n# Instructions:\n# 1. Save the Server code as `server.py` and Client code as `client.py`.\n# 2. Run `python server.py` in one terminal.\n# 3. Run `python client.py` in one or more other terminals to connect."
+
+      },
+      {
+        "title": "Project: Network Scanner (Port and Host Discovery)",
+        "description": "Build a basic network scanner that can discover active hosts on a local network and identify open ports on those hosts. This project utilizes socket programming to attempt connections to specified ports, demonstrating network reconnaissance techniques.",
+        "code": "# Python Conceptual Code for a Network Scanner\n\n# import socket\n# import ipaddress\n\n# def scan_port(ip, port):\n#     try:\n#         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n#         sock.settimeout(1) # Timeout for connection attempt\n#         result = sock.connect_ex((ip, port))\n#         if result == 0:\n#             print(f\"Port {port} on {ip} is OPEN\")\n#         sock.close()\n#     except socket.error as e:\n#         print(f\"Could not connect to {ip}:{port} - {e}\")\n\n# def scan_host(ip, common_ports):\n#     print(f\"\\nScanning host: {ip}\")\n#     for port in common_ports:\n#         scan_port(ip, port)\n\n# def discover_hosts(network_prefix, common_ports):\n#     print(f\"Scanning network: {network_prefix}\")\n#     try:\n#         network = ipaddress.ip_network(network_prefix, strict=False)\n#         for host_ip in network.hosts():\n#             target_ip = str(host_ip)\n#             # A basic ping or ICMP check could go here for host discovery first\n#             # For simplicity, we'll try ports directly\n#             scan_host(target_ip, common_ports)\n#     except ValueError as e:\n#         print(f\"Invalid network prefix: {e}\")\n\n# if __name__ == \"__main__\":\n#     # Example: Scan your local network (adjust prefix as needed, e.g., '192.168.1.0/24')\n#     local_network_prefix = '192.168.1.0/24' \n#     common_ports_to_scan = [21, 22, 23, 80, 443, 8080]\n    \n#     discover_hosts(local_network_prefix, common_ports_to_scan)\n\n# Instructions:\n# 1. Save the code as `net_scanner.py`.\n# 2. Adjust `local_network_prefix` to match your local network's CIDR (e.g., if your IP is 192.168.1.50, use '192.168.1.0/24').\n# 3. Run `python net_scanner.py`.\n#    Note: Port scanning can be slow. Common ports are used for quick examples. \n#    Requires appropriate network permissions to run effectively."
+      },
+      {
+        "title": "Project: Packet Sniffer (Basic)",
+        "description": "Create a simple packet sniffer that captures and displays network packets. This project introduces the concept of raw sockets and allows observation of real-time network traffic headers (e.g., Ethernet, IP, TCP/UDP headers), providing insight into how data traverses the network.",
+        "code": "# Python Conceptual Code for a Basic Packet Sniffer\n\n# import socket\n# import struct\n# import binascii\n\n# def eth_header(data):\n#     # Ethernet Header: 14 bytes\n#     # Dest MAC (6), Src MAC (6), EtherType (2)\n#     dest_mac, src_mac, eth_type = struct.unpack('!6s6sH', data[:14])\n#     return (binascii.hexlify(dest_mac).decode('ascii'),\n#             binascii.hexlify(src_mac).decode('ascii'),\n#             socket.ntohs(eth_type), data[14:])\n\n# def ip_header(data):\n#     # IP Header: usually 20 bytes\n#     # Version/IHL (1), Type of Service (1), Total Length (2), ID (2), Flags/Frag Offset (2),\n#     # TTL (1), Protocol (1), Header Checksum (2), Source IP (4), Dest IP (4)\n#     ip_vhl = data[0]\n#     version = ip_vhl >> 4\n#     ihl = (ip_vhl & 0xF) * 4 # Internet Header Length (in 4-byte words)\n\n#     ttl, proto, src_ip, dest_ip = struct.unpack('!BBH4s4s', data[8:20])\n#     return (version, ihl, ttl, proto,\n#             socket.inet_ntoa(src_ip), socket.inet_ntoa(dest_ip), data[ihl:])\n\n# def tcp_header(data):\n#     # TCP Header: usually 20 bytes\n#     # Source Port (2), Dest Port (2), Sequence (4), Ack Number (4), Data Offset/Reserved/Flags (2),\n#     # Window (2), Checksum (2), Urgent Pointer (2)\n#     (src_port, dest_port, sequence, acknowledgement, offset_reserved_flags) = struct.unpack('!HHLLH', data[:14])\n#     offset = (offset_reserved_flags >> 12) * 4\n#     # Flags (e.g., URG, ACK, PSH, RST, SYN, FIN)\n#     return (src_port, dest_port, sequence, acknowledgement, offset, data[offset:])\n\n# def udp_header(data):\n#     # UDP Header: 8 bytes\n#     # Source Port (2), Dest Port (2), Length (2), Checksum (2)\n#     src_port, dest_port, length, checksum = struct.unpack('!HHHH', data[:8])\n#     return (src_port, dest_port, length, data[8:])\n\n# def start_sniffer():\n#     # Create a raw socket - requires root/admin privileges\n#     try:\n#         s = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0003))\n#     except socket.error as e:\n#         print(f\"Socket creation error: {e}. You might need root/administrator privileges.\")\n#         return\n\n#     print(\"Starting packet sniffer...\")\n#     while True:\n#         raw_data, addr = s.recvfrom(65535)\n\n#         # Parse Ethernet header\n#         dest_mac, src_mac, eth_proto, eth_payload = eth_header(raw_data)\n\n#         print(f\"\\nEthernet Frame: Source: {src_mac}, Dest: {dest_mac}, Protocol: {eth_proto}\")\n\n#         # IPv4 (eth_proto == 8) or IPv6 (eth_proto == 34525)\n#         if eth_proto == 8: # IPv4\n#             version, ihl, ttl, proto, src_ip, dest_ip, ip_payload = ip_header(eth_payload)\n#             print(f\"  IP Packet: Version: {version}, Header Length: {ihl}, TTL: {ttl}, Protocol: {proto}, Source IP: {src_ip}, Dest IP: {dest_ip}\")\n\n#             if proto == 6: # TCP\n#                 src_port, dest_port, sequence, acknowledgement, offset, tcp_payload = tcp_header(ip_payload)\n#                 print(f\"    TCP Segment: Source Port: {src_port}, Dest Port: {dest_port}, Sequence: {sequence}, ACK: {acknowledgement}\")\n#             elif proto == 17: # UDP\n#                 src_port, dest_port, length, udp_payload = udp_header(ip_payload)\n#                 print(f\"    UDP Datagram: Source Port: {src_port}, Dest Port: {dest_port}, Length: {length}\")\n\n# if __name__ == \"__main__\":\n#     start_sniffer()\n\n# Instructions:\n# 1. Save the code as `packet_sniffer.py`.\n# 2. Run from a terminal using `sudo python packet_sniffer.py` (Linux) or as Administrator (Windows).\n#    This is because raw sockets require elevated privileges to capture all network traffic.\n# 3. You will see raw packet information. The output will be continuous as long as traffic passes through your network interface."
+      },
+      {
+        "title": "Project: Basic HTTP Server",
+        "description": "Implement a simple HTTP server that can serve static HTML files. This project demonstrates basic socket programming for network communication, understanding of the HTTP protocol, and handling of client requests.",
+        "code": "# Python Conceptual Code for a Basic HTTP Server\n\n# import socket\n\n# HOST = '127.0.0.1' # Listen on localhost\n# PORT = 8080      # Port to listen on\n\n# def handle_request(client_socket):\n#     request_data = client_socket.recv(1024).decode('utf-8')\n#     print(f\"\\nReceived Request:\\n{request_data[:200]}...\") # Print first 200 chars\n\n#     # Parse the HTTP request line (e.g., GET /index.html HTTP/1.1)\n#     request_line = request_data.split('\\n')[0]\n#     method, path, http_version = request_line.split(' ')\n\n#     response_content = \"\"\n#     status_code = 200\n#     status_message = \"OK\"\n#     content_type = \"text/html\"\n\n#     if method == 'GET':\n#         if path == '/' or path == '/index.html':\n#             try:\n#                 with open('index.html', 'r') as f:\n#                     response_content = f.read()\n#             except FileNotFoundError:\n#                 status_code = 404\n#                 status_message = \"Not Found\"\n#                 response_content = \"<h1>404 Not Found</h1><p>The requested file was not found.</p>\"\n#         else:\n#             status_code = 404\n#             status_message = \"Not Found\"\n#             response_content = \"<h1>404 Not Found</h1><p>The requested URL was not found on this server.</p>\"\n#     else:\n#         status_code = 405\n#         status_message = \"Method Not Allowed\"\n#         response_content = \"<h1>405 Method Not Allowed</h1><p>Only GET requests are supported.</p>\"\n\n#     # Construct HTTP response\n#     response_headers = [\n#         f\"HTTP/1.1 {status_code} {status_message}\",\n#         \"Server: SimplePythonHttpServer\",\n#         f\"Content-Type: {content_type}\",\n#         f\"Content-Length: {len(response_content.encode('utf-8'))}\",\n#         \"Connection: close\",\n#         \"\\n\"\n#     ]\n#     response = \"\\r\\n\".join(response_headers) + response_content\n#     client_socket.sendall(response.encode('utf-8'))\n#     client_socket.close()\n#     print(f\"Sent response with status: {status_code}\")\n\n# def start_server():\n#     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n#     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Allow reusing address\n#     server_socket.bind((HOST, PORT))\n#     server_socket.listen(5) # Max 5 pending connections\n#     print(f\"Server listening on http://{HOST}:{PORT}\")\n\n#     while True:\n#         client_sock, address = server_socket.accept()\n#         print(f\"Accepted connection from {address[0]}:{address[1]}\")\n#         handle_request(client_sock) # For simplicity, not using threading here\n\n# if __name__ == \"__main__\":\n#     # Create a dummy index.html file for testing\n#     with open('index.html', 'w') as f:\n#         f.write(\"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n    <meta charset=\\\"UTF-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n    <title>Simple HTTP Server</title>\\n</head>\\n<body>\\n    <h1>Welcome to My Simple Server!</h1>\\n    <p>This is a test HTML page.</p>\\n</body>\\n</html>\")\n#     start_server()\n\n# Instructions:\n# 1. Save the code as `http_server.py`.\n# 2. Run `python http_server.py`.\n# 3. Open your web browser and go to `http://127.0.0.1:8080/` or `http://localhost:8080/`.\n#    You should see the content of `index.html`. Try `http://localhost:8080/nonexistent.html` for 404."
+      },
+      {
+        "title": "Project: DNS Resolver (Simple)",
+        "description": "Develop a basic DNS resolver that can perform DNS queries for A (IPv4) records. This project helps understand how DNS works at a fundamental level, including UDP socket programming and parsing DNS response formats.",
+        "code": "# Python Conceptual Code for a Basic DNS Resolver\n\n# import socket\n# import struct\n\n# # Basic DNS Header Structure (conceptual)\n# # ID (2), Flags (2), QDCOUNT (2), ANCOUNT (2), NSCOUNT (2), ARCOUNT (2)\n\n# def build_dns_query(domain_name):\n#     # Transaction ID\n#     transaction_id = 0x1234 # Can be random\n\n#     # Flags: Standard query (0100 0000 0000 0000 = 0x0100)\n#     flags = 0x0100\n\n#     # QDCOUNT: 1 query\n#     qdcount = 1\n\n#     # Pack header fields\n#     header = struct.pack('!HHHHHH', transaction_id, flags, qdcount, 0, 0, 0)\n\n#     # Build Question Section:\n#     # QNAME (variable length for domain name)\n#     qname_parts = domain_name.split('.')\n#     qname_bytes = b''\n#     for part in qname_parts:\n#         qname_bytes += struct.pack('!B', len(part)) + part.encode('ascii')\n#     qname_bytes += b'\\x00' # Null terminator for QNAME\n\n#     # QTYPE: A record (1), QCLASS: IN (1)\n#     qtype = 1 # A record\n#     qclass = 1 # Internet\n#     question = qname_bytes + struct.pack('!HH', qtype, qclass)\n\n#     return header + question\n\n# def parse_dns_response(response_data):\n#     # Conceptual parsing (highly simplified)\n#     # In reality, this involves complex parsing of RRs, compression, etc.\n#     header = response_data[:12]\n#     _, flags, qdcount, ancount, _, _ = struct.unpack('!HHHHHH', header)\n\n#     if ancount > 0:\n#         print(f\"\\nDNS Response (Answer Count: {ancount}):\")\n#         # Find answers (skip header and questions)\n#         # This part is highly simplified and won't work for all cases\n#         # A real parser would need to iterate through QNAME, QTYPE, QCLASS in question section\n#         # then parse Resource Records (Name, Type, Class, TTL, RDLENGTH, RDATA)\n#         # For simplicity, we'll just try to extract first IPv4 address if available\n#         try:\n#             # A very basic attempt to find an A record RDATA (4 bytes for IPv4)\n#             # This assumes specific offset and won't work if QNAME is long or compression is used.\n#             # It's purely illustrative.\n#             # A real parser would track pointer offsets and handle compression.\n#             ip_start_index = response_data.find(b'\\x00\\x01\\x00\\x01', 12) # Find QTYPE=A, QCLASS=IN after header/QNAME\n#             if ip_start_index != -1:\n#                 # RDLENGTH is 4 bytes for A record\n#                 # Skip QNAME, QTYPE, QCLASS, TTL (4 bytes), RDLENGTH (2 bytes)\n#                 rdata_start = ip_start_index + 10 # This is a guess, depends on QNAME length\n#                 if len(response_data) >= rdata_start + 4:\n#                     ip_address = socket.inet_ntoa(response_data[rdata_start : rdata_start + 4])\n#                     print(f\"  Resolved IP Address: {ip_address}\")\n#                 else:\n#                     print(\"  Could not parse IP address (RDLENGTH mismatch or bad offset).\")\n#             else:\n#                 print(\"  No A record found in simplified parse.\")\n#         except Exception as e:\n#             print(f\"  Error parsing response: {e}\")\n#     else:\n#         print(\"\\nDNS Response: No answers found.\")\n\n# def resolve_dns(domain, dns_server='8.8.8.8'):\n#     query = build_dns_query(domain)\n\n#     # Create a UDP socket\n#     udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n#     udp_socket.settimeout(5)\n\n#     try:\n#         udp_socket.sendto(query, (dns_server, 53))\n#         response_data, _ = udp_socket.recvfrom(512) # Max UDP DNS packet size\n#         parse_dns_response(response_data)\n#     except socket.timeout:\n#         print(\"DNS query timed out.\")\n#     except Exception as e:\n#         print(f\"An error occurred during DNS query: {e}\")\n#     finally:\n#         udp_socket.close()\n\n# if __name__ == \"__main__\":\n#     resolve_dns(\"www.google.com\")\n#     resolve_dns(\"www.example.com\")\n#     resolve_dns(\"nonexistentdomain12345.com\")\n\n# Instructions:\n# 1. Save the code as `dns_resolver.py`.\n# 2. Run `python dns_resolver.py`.\n#    Note: This is a highly simplified resolver. Real DNS parsing is complex due to various record types, compression, and recursive queries.\n#    The `parse_dns_response` function is particularly conceptual and will likely fail on many real responses."
+      },
+      {
+        "title": "Project: Basic Network Monitoring Tool",
+        "description": "Develop a simple script to monitor network interface statistics (bytes sent/received, packet counts). This project utilizes system-level commands or libraries to collect network data and display it in real-time, providing insights into network activity.",
+        "code": "# Python Conceptual Code for a Basic Network Monitoring Tool\n\n# import time\n# import platform\n# import subprocess\n\n# def get_network_stats_linux():\n#     # Conceptual: Parse /proc/net/dev on Linux\n#     # Requires parsing output like:\n#     # face |bytes    packets errs drop  fifo frame compressed multicast|bytes    packets errs drop  fifo frame compressed multicast\n#     # eth0: 12345    678    0    0       0     0          0         0 67890    987    0    0       0     0          0         0\n#     try:\n#         output = subprocess.check_output(\"cat /proc/net/dev\", shell=True).decode('utf-8')\n#         lines = output.split('\\n')\n#         stats = {}\n#         for line in lines[2:]:\n#             if ':' in line:\n#                 interface, data = line.split(':')\n#                 interface = interface.strip()\n#                 parts = data.strip().split()\n#                 if len(parts) >= 10: # Ensure enough data\n#                     stats[interface] = {\n#                         'rx_bytes': int(parts[0]),\n#                         'rx_packets': int(parts[1]),\n#                         'tx_bytes': int(parts[8]),\n#                         'tx_packets': int(parts[9])\n#                     }\n#         return stats\n#     except Exception as e:\n#         print(f\"Error getting Linux network stats: {e}\")\n#         return {}\n\n# def get_network_stats_windows():\n#     # Conceptual: Parse 'net statistics interface' or 'Get-NetAdapterStatistics' via PowerShell\n#     # For simplicity, returning dummy data as parsing cmd/powershell is complex for cross-platform conceptual code\n#     print(\" (Windows stats retrieval is complex for simple conceptual code. Returning dummy.)\")\n#     return {\n#         'Ethernet': {'rx_bytes': 1234567, 'rx_packets': 9876, 'tx_bytes': 7654321, 'tx_packets': 5432},\n#         'Wi-Fi': {'rx_bytes': 987654, 'rx_packets': 1234, 'tx_bytes': 456789, 'tx_packets': 8765}\n#     }\n\n# def get_network_stats():\n#     os_type = platform.system()\n#     if os_type == \"Linux\":\n#         return get_network_stats_linux()\n#     elif os_type == \"Windows\":\n#         return get_network_stats_windows()\n#     else:\n#         print(\"Unsupported OS for this conceptual monitoring tool.\")\n#         return {}\n\n# def monitor_network(interval=2):\n#     print(f\"\\nStarting network monitor (updates every {interval} seconds)... Press Ctrl+C to stop.\")\n#     try:\n#         while True:\n#             stats = get_network_stats()\n#             print(f\"\\n--- Network Stats ({time.ctime()}) ---\")\n#             if not stats:\n#                 print(\"No network statistics available.\")\n#             else:\n#                 for interface, data in stats.items():\n#                     print(f\"  Interface: {interface}\")\n#                     print(f\"    Rx Bytes: {data.get('rx_bytes', 'N/A')}, Rx Packets: {data.get('rx_packets', 'N/A')}\")\n#                     print(f\"    Tx Bytes: {data.get('tx_bytes', 'N/A')}, Tx Packets: {data.get('tx_packets', 'N/A')}\")\n#             time.sleep(interval)\n#     except KeyboardInterrupt:\n#         print(\"\\nNetwork monitor stopped.\")\n\n# if __name__ == \"__main__\":\n#     monitor_network()\n\n# Instructions:\n# 1. Save the code as `net_monitor.py`.\n# 2. Run `python net_monitor.py`.\n#    Note: For Linux, this script attempts to read from `/proc/net/dev`. For Windows, it's a dummy implementation as native OS calls are more complex in simple Python.\n#    For real-world monitoring, consider using libraries like `psutil` or `scapy`."
+      }
+    ]
+  }

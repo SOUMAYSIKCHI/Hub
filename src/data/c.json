@@ -1,0 +1,643 @@
+{
+  "module": "C Programming Fundamentals",
+  "topics": [
+    {
+      "title": "What is C & History",
+      "content": {
+        "explanation": "C is a powerful, general-purpose programming language developed by Dennis Ritchie at Bell Labs in the early 1970s. It is a procedural language known for its efficiency, low-level memory access, and portability. C forms the bedrock for many modern operating systems (like Unix), system software, and even other programming languages.",
+        "explainLikeKid": "C is like the master builder's language for computers. It helps make the very important parts of programs and even whole operating systems, making them super fast and efficient!",
+        "code": "// A classic 'Hello, World!' program in C\n#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
+        "input": "Compile and run the C code.",
+        "output": "Hello, World!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is C programming language?",
+          "answer": "C is a general-purpose, procedural programming language developed by Dennis Ritchie, known for its efficiency and low-level memory access."
+        },
+        {
+          "question": "Who developed C language?",
+          "answer": "Dennis Ritchie developed the C programming language."
+        },
+        {
+          "question": "Where is C primarily used?",
+          "answer": "C is primarily used for system programming (operating systems, compilers), embedded systems, and high-performance computing."
+        },
+        {
+          "question": "What is a 'procedural' language?",
+          "answer": "A procedural language organizes code into procedures (functions) that perform computations. It follows a top-down approach."
+        },
+        {
+          "question": "Why is C considered a 'middle-level' language?",
+          "answer": "It combines features of both high-level languages (like structured programming) and low-level languages (like direct memory access)."
+        }
+      ]
+    },
+    {
+      "title": "Compiling and Running C Programs",
+      "content": {
+        "explanation": "C is a compiled language, meaning source code written by a programmer must be translated into machine code (an executable file) by a compiler before it can be run. The compilation process typically involves four stages: pre-processing, compilation, assembly, and linking. Common compilers include GCC (GNU Compiler Collection).",
+        "explainLikeKid": "Writing C code is like writing instructions in a secret language. To make the computer understand, you need a special translator (the compiler) to turn it into commands the computer can follow. Then, the computer can 'run' those commands!",
+        "code": "// save this as my_program.c\n#include <stdio.h>\n\nint main() {\n    int a = 5;\n    int b = 10;\n    int sum = a + b;\n    printf(\"Sum: %d\\n\", sum);\n    return 0;\n}\n\n// To compile using GCC in terminal:\n// gcc my_program.c -o my_program\n\n// To run:\n// ./my_program",
+        "input": "Compile the 'my_program.c' file using `gcc my_program.c -o my_program` and then execute it using `./my_program` in a terminal.",
+        "output": "Sum: 15"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the difference between a compiler and an interpreter?",
+          "answer": "A compiler translates the entire source code into machine code before execution, while an interpreter translates and executes code line by line."
+        },
+        {
+          "question": "What is GCC?",
+          "answer": "GCC (GNU Compiler Collection) is a free and open-source compiler system supporting various programming languages, including C."
+        },
+        {
+          "question": "What are the steps in the compilation process of a C program?",
+          "answer": "Pre-processing, compilation, assembly, and linking."
+        },
+        {
+          "question": "What is an 'executable file'?",
+          "answer": "It's a file containing machine code that can be directly run by the computer's operating system."
+        },
+        {
+          "question": "What does `#include <stdio.h>` do?",
+          "answer": "It includes the standard input/output library, providing functions like `printf` for output and `scanf` for input."
+        }
+      ]
+    },
+    {
+      "title": "Data Types",
+      "content": {
+        "explanation": "Data types in C define the type of data a variable can hold, such as integer, floating-point number, character, etc. They determine the size and range of values a variable can store and the operations that can be performed on them. C has basic data types and derived data types.",
+        "explainLikeKid": "Data types are like different kinds of containers for numbers and letters. Some containers are for whole numbers, some for numbers with decimals, and some for single letters!",
+        "code": "#include <stdio.h>\n\nint main() {\n    int age = 30;         // Integer type\n    float price = 19.99;  // Floating-point type\n    char initial = 'J';   // Character type\n    double pi = 3.1415926535; // Double precision floating-point\n    \n    printf(\"Age: %d\\n\", age);\n    printf(\"Price: %.2f\\n\", price);\n    printf(\"Initial: %c\\n\", initial);\n    printf(\"Pi: %.10lf\\n\", pi);\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Age: 30\nPrice: 19.99\nInitial: J\nPi: 3.1415926535"
+      },
+      "interviewQuestions": [
+        {
+          "question": "Name some basic data types in C.",
+          "answer": "Basic data types include `int`, `float`, `char`, `double`, `short`, `long`."
+        },
+        {
+          "question": "What is the difference between `float` and `double`?",
+          "answer": "`double` offers higher precision (more decimal places) and typically occupies more memory than `float`."
+        },
+        {
+          "question": "What is the purpose of the `char` data type?",
+          "answer": "The `char` data type is used to store single characters."
+        },
+        {
+          "question": "What is the size of `int` in C?",
+          "answer": "It is typically 2 or 4 bytes, depending on the architecture and compiler, but guaranteed to be at least 16 bits."
+        },
+        {
+          "question": "Can you define `void` data type?",
+          "answer": "`void` means 'no type' or 'generic type'. It's used for functions that return no value, or for generic pointers."
+        }
+      ]
+    },
+    {
+      "title": "Variables",
+      "content": {
+        "explanation": "Variables are named storage locations in memory used to store data. Before using a variable, it must be declared with a specific data type. Variables can be initialized at the time of declaration or later assigned values. Their values can change during program execution.",
+        "explainLikeKid": "Variables are like special boxes with labels on them. You can put different things inside these boxes (numbers, letters), and you can change what's inside whenever you want!",
+        "code": "#include <stdio.h>\n\nint main() {\n    // Declaration\n    int quantity;\n    \n    // Initialization\n    float unit_price = 12.50;\n    \n    // Assignment\n    quantity = 7;\n    \n    printf(\"Quantity: %d\\n\", quantity);\n    printf(\"Unit Price: %.2f\\n\", unit_price);\n    \n    // Changing value\n    quantity = 10;\n    printf(\"New Quantity: %d\\n\", quantity);\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Quantity: 7\nUnit Price: 12.50\nNew Quantity: 10"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a variable in C?",
+          "answer": "A variable is a named storage location in memory used to store data of a specific type."
+        },
+        {
+          "question": "How do you declare a variable in C?",
+          "answer": "You declare a variable by specifying its data type followed by its name, e.g., `int count;`"
+        },
+        {
+          "question": "What is variable initialization?",
+          "answer": "It's the process of assigning an initial value to a variable at the time of its declaration."
+        },
+        {
+          "question": "Can you declare multiple variables of the same type in one line?",
+          "answer": "Yes, by separating them with commas, e.g., `int a, b, c;`"
+        },
+        {
+          "question": "What happens if you use an uninitialized local variable?",
+          "answer": "It will contain a 'garbage' value (random data from memory), leading to undefined behavior."
+        }
+      ]
+    },
+    {
+      "title": "Operators",
+      "content": {
+        "explanation": "Operators are symbols that perform operations on variables and values. C provides a rich set of operators, including arithmetic, relational, logical, bitwise, assignment, and special operators. Understanding operator precedence and associativity is crucial for writing correct expressions.",
+        "explainLikeKid": "Operators are like special buttons that make things happen with your numbers or words. Like a '+' button to add, or a '>' button to check if something is bigger!",
+        "code": "#include <stdio.h>\n\nint main() {\n    int a = 10, b = 4;\n    int sum = a + b;     // Arithmetic: Addition\n    int diff = a - b;    // Arithmetic: Subtraction\n    int prod = a * b;    // Arithmetic: Multiplication\n    int div = a / b;     // Arithmetic: Division (integer division)\n    int mod = a % b;     // Arithmetic: Modulus\n    \n    printf(\"Sum: %d\\n\", sum);\n    printf(\"Difference: %d\\n\", diff);\n    printf(\"Product: %d\\n\", prod);\n    printf(\"Division: %d\\n\", div);\n    printf(\"Modulus: %d\\n\", mod);\n    \n    // Relational and Logical Operators\n    int x = 5, y = 7;\n    if (x < y && x != y) { // Less than, Not equal, Logical AND\n        printf(\"x is less than y and not equal to y\\n\");\n    }\n    \n    // Assignment Operators\n    int count = 0;\n    count += 5; // Same as count = count + 5;\n    printf(\"Count: %d\\n\", count);\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Sum: 14\nDifference: 6\nProduct: 40\nDivision: 2\nModulus: 2\nx is less than y and not equal to y\nCount: 5"
+      },
+      "interviewQuestions": [
+        {
+          "question": "List different types of operators in C.",
+          "answer": "Arithmetic, relational, logical, bitwise, assignment, and special operators."
+        },
+        {
+          "question": "What is the difference between `==` and `=`?",
+          "answer": "`==` is a relational operator for comparison (equality check), while `=` is an assignment operator for assigning a value."
+        },
+        {
+          "question": "Explain the logical AND (`&&`) and OR (`||`) operators.",
+          "answer": "Logical AND returns true if both operands are true; logical OR returns true if at least one operand is true."
+        },
+        {
+          "question": "What is operator precedence?",
+          "answer": "It determines the order in which operators are evaluated in an expression (e.g., multiplication before addition)."
+        },
+        {
+          "question": "Give an example of a unary operator.",
+          "answer": "Increment (`++`), decrement (`--`), sizeof, address-of (`&`), dereference (`*`)."
+        }
+      ]
+    },
+    {
+      "title": "if, else if, else",
+      "content": {
+        "explanation": "Conditional statements allow a program to make decisions and execute different blocks of code based on whether a specified condition is true or false. The `if` statement executes code if a condition is true, `else if` provides alternative conditions, and `else` executes if none of the preceding conditions are met.",
+        "explainLikeKid": "It's like telling the computer: 'IF it's sunny, THEN play outside. ELSE IF it's rainy, THEN read a book. ELSE (if it's neither), THEN do your homework!'",
+        "code": "#include <stdio.h>\n\nint main() {\n    int score = 85;\n\n    if (score >= 90) {\n        printf(\"Grade: A\\n\");\n    } else if (score >= 80) {\n        printf(\"Grade: B\\n\");\n    } else if (score >= 70) {\n        printf(\"Grade: C\\n\");\n    } else {\n        printf(\"Grade: F\\n\");\n    }\n    return 0;\n}",
+        "input": "Run the C code with `score = 85`.",
+        "output": "Grade: B"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the purpose of an `if` statement?",
+          "answer": "To execute a block of code only if a specified condition evaluates to true."
+        },
+        {
+          "question": "When would you use `else if`?",
+          "answer": "When you have multiple conditions to check, and each condition depends on the previous ones being false."
+        },
+        {
+          "question": "Can an `if` statement exist without an `else`?",
+          "answer": "Yes, an `if` statement can stand alone if there's no specific action required when the condition is false."
+        },
+        {
+          "question": "What is a common mistake when using `if` statements?",
+          "answer": "Using the assignment operator `=` instead of the comparison operator `==`."
+        },
+        {
+          "question": "What is the ternary operator?",
+          "answer": "A shorthand conditional operator `? :` that provides a concise way to write simple `if-else` statements, e.g., `result = (condition) ? value_if_true : value_if_false;`"
+        }
+      ]
+    },
+    {
+      "title": "switch Statement",
+      "content": {
+        "explanation": "The `switch` statement is a multi-way branch statement that provides an alternative to a long chain of `if-else if` statements when you need to compare a single variable against multiple constant values. It evaluates an expression and then executes the code block associated with a matching `case` label.",
+        "explainLikeKid": "Imagine a toy machine where you press a button (like 'red' or 'blue'). The machine 'switches' to give you the toy that matches the button you pressed!",
+        "code": "#include <stdio.h>\n\nint main() {\n    char grade = 'B';\n\n    switch (grade) {\n        case 'A':\n            printf(\"Excellent!\\n\");\n            break;\n        case 'B':\n            printf(\"Very Good!\\n\");\n            break;\n        case 'C':\n            printf(\"Good!\\n\");\n            break;\n        default:\n            printf(\"Needs Improvement.\\n\");\n    }\n    return 0;\n}",
+        "input": "Run the C code with `grade = 'B'`.",
+        "output": "Very Good!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "When is a `switch` statement preferred over `if-else if`?",
+          "answer": "When comparing a single variable against multiple fixed, constant values, a `switch` statement is often more readable and efficient."
+        },
+        {
+          "question": "What is the `break` keyword used for in a `switch` statement?",
+          "answer": "The `break` statement terminates the `switch` block and prevents 'fall-through' to subsequent `case` labels."
+        },
+        {
+          "question": "What is 'fall-through' in a `switch` statement?",
+          "answer": "If a `break` statement is omitted, execution 'falls through' to the next `case` label, executing its code as well, until a `break` or the end of the `switch` is reached."
+        },
+        {
+          "question": "What is the purpose of the `default` case?",
+          "answer": "The `default` case is executed if none of the `case` labels match the expression's value. It's optional."
+        },
+        {
+          "question": "What data types can be used in a `switch` statement's expression?",
+          "answer": "Integer types (including `char`), and enumeration types. Floating-point types are not allowed."
+        }
+      ]
+    },
+    {
+      "title": "for Loop",
+      "content": {
+        "explanation": "The `for` loop is used for iterating over a sequence, such as a range of numbers, a fixed number of times. It's ideal when you know exactly how many times you want to repeat a block of code. It consists of initialization, condition, and increment/decrement parts.",
+        "explainLikeKid": "The 'for' loop is like telling a robot to do something a certain number of times. 'FOR 5 times, say hello!'",
+        "code": "#include <stdio.h>\n\nint main() {\n    printf(\"Counting from 1 to 5:\\n\");\n    for (int i = 1; i <= 5; i++) {\n        printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Counting from 1 to 5:\n1 2 3 4 5 "
+      },
+      "interviewQuestions": [
+        {
+          "question": "When is a `for` loop most appropriate?",
+          "answer": "When the number of iterations is known in advance or can be easily determined before the loop starts."
+        },
+        {
+          "question": "What are the three parts of a `for` loop's header?",
+          "answer": "Initialization, condition, and increment/decrement (or update expression)."
+        },
+        {
+          "question": "Can any of the parts in a `for` loop's header be omitted?",
+          "answer": "Yes, they can be omitted, but the semicolons must remain. For example, `for (;;)` is an infinite loop."
+        },
+        {
+          "question": "What is an infinite loop?",
+          "answer": "A loop that never terminates because its condition always evaluates to true."
+        },
+        {
+          "question": "Explain the use of `break` and `continue` in loops.",
+          "answer": "`break` terminates the loop entirely, while `continue` skips the current iteration and proceeds to the next one."
+        }
+      ]
+    },
+    {
+      "title": "while Loop",
+      "content": {
+        "explanation": "The `while` loop repeatedly executes a block of code as long as a specified condition remains true. It's a pre-test loop, meaning the condition is evaluated before each iteration. It's suitable when the number of iterations is not known beforehand, and the loop continues until a specific condition is met.",
+        "explainLikeKid": "The 'while' loop is like: 'WHILE the sun is up, keep playing outside!' You keep playing until the sun goes down.",
+        "code": "#include <stdio.h>\n\nint main() {\n    int count = 0;\n    printf(\"Counting from 0 to 4:\\n\");\n    while (count < 5) {\n        printf(\"%d \", count);\n        count++;\n    }\n    printf(\"\\n\");\n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Counting from 0 to 4:\n0 1 2 3 4 "
+      },
+      "interviewQuestions": [
+        {
+          "question": "When is a `while` loop most appropriate?",
+          "answer": "When the number of iterations is unknown and depends on a condition that changes during execution."
+        },
+        {
+          "question": "What is a pre-test loop?",
+          "answer": "A loop where the condition is checked *before* the loop body is executed for each iteration. If the condition is initially false, the body may never execute."
+        },
+        {
+          "question": "Can a `while` loop run zero times?",
+          "answer": "Yes, if the condition is false initially."
+        },
+        {
+          "question": "How can you create an infinite `while` loop?",
+          "answer": "By using a condition that is always true, e.g., `while (1)`."
+        },
+        {
+          "question": "What is the typical use case for a `while` loop?",
+          "answer": "Reading input until a specific sentinel value is entered, or looping until a condition becomes false, like searching in a linked list."
+        }
+      ]
+    },
+    {
+      "title": "do-while Loop",
+      "content": {
+        "explanation": "The `do-while` loop is similar to the `while` loop, but it is a post-test loop, meaning the condition is evaluated *after* the loop body has been executed at least once. This guarantees that the loop body will run at least one time, regardless of the initial condition.",
+        "explainLikeKid": "The 'do-while' loop is like: 'DO your homework, THEN CHECK if you finished. If not, DO it again!' You'll always do it at least once.",
+        "code": "#include <stdio.h>\n\nint main() {\n    int num = 0;\n    do {\n        printf(\"Enter a positive number (0 to exit): \");\n        scanf(\"%d\", &num);\n        if (num > 0) {\n            printf(\"You entered: %d\\n\", num);\n        }\n    } while (num > 0);\n    printf(\"Exited loop.\\n\");\n    return 0;\n}",
+        "input": "Run the C code. First enter `5`, then `10`, then `0`.",
+        "output": "Enter a positive number (0 to exit): 5\nYou entered: 5\nEnter a positive number (0 to exit): 10\nYou entered: 10\nEnter a positive number (0 to exit): 0\nExited loop."
+      },
+      "interviewQuestions": [
+        {
+          "question": "When is a `do-while` loop used?",
+          "answer": "When you need to ensure the loop body executes at least once, before checking the condition."
+        },
+        {
+          "question": "What is a post-test loop?",
+          "answer": "A loop where the condition is checked *after* the loop body has executed. This guarantees at least one execution of the loop body."
+        },
+        {
+          "question": "Can a `do-while` loop run zero times?",
+          "answer": "No, a `do-while` loop is guaranteed to execute its body at least once."
+        },
+        {
+          "question": "What is the syntax for a `do-while` loop?",
+          "answer": "`do { // code } while (condition);`"
+        },
+        {
+          "question": "Provide a common example where `do-while` is suitable.",
+          "answer": "Menu-driven programs where the menu needs to be displayed at least once to get user input."
+        }
+      ]
+    },
+    {
+      "title": "Functions in C",
+      "content": {
+        "explanation": "Functions are self-contained blocks of code that perform a specific task. They promote modularity, reusability, and easier debugging. Every C program has at least one function, `main()`, which is the entry point. Functions can accept arguments and return values.",
+        "explainLikeKid": "Functions are like mini-machines that do one job really well. You can give them stuff (input), they do their job, and sometimes they give you something back (output).",
+        "code": "#include <stdio.h>\n\n// Function declaration (prototype)\nint add(int a, int b);\n\nint main() {\n    int num1 = 10, num2 = 5;\n    int result;\n    \n    // Function call\n    result = add(num1, num2);\n    \n    printf(\"Sum: %d\\n\", result);\n    \n    return 0;\n}\n\n// Function definition\nint add(int a, int b) {\n    int sum = a + b;\n    return sum;\n}",
+        "input": "Compile and run the C code.",
+        "output": "Sum: 15"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a function in C?",
+          "answer": "A self-contained block of code designed to perform a specific task, promoting code reusability and modularity."
+        },
+        {
+          "question": "What is the purpose of the `main()` function?",
+          "answer": "It is the entry point of every C program; execution begins from here."
+        },
+        {
+          "question": "What is a 'function prototype' (or declaration)?",
+          "answer": "It tells the compiler about a function's name, return type, and parameters before its actual definition, usually placed before `main()`."
+        },
+        {
+          "question": "What is the difference between 'call by value' and 'call by reference'?",
+          "answer": "Call by value passes copies of arguments, so changes in the function don't affect original variables. Call by reference passes memory addresses (using pointers), allowing changes in the function to affect originals."
+        },
+        {
+          "question": "Can a function return multiple values in C?",
+          "answer": "Directly, no. A function can return only one value. However, you can use pointers or structures to achieve the effect of returning multiple values."
+        }
+      ]
+    },
+    {
+      "title": "Arrays in C",
+      "content": {
+        "explanation": "An array is a collection of elements of the same data type, stored in contiguous memory locations. Elements are accessed using an index, starting from 0. Arrays are useful for storing lists of similar items, like a list of student scores or names.",
+        "explainLikeKid": "An array is like a row of identical mailboxes, all holding the same type of thing (like only numbers, or only letters). Each mailbox has a number starting from zero, so you know exactly which one to open!",
+        "code": "#include <stdio.h>\n\nint main() {\n    // Declare and initialize an integer array\n    int numbers[5] = {10, 20, 30, 40, 50};\n    \n    printf(\"Elements of the array:\\n\");\n    // Accessing elements using a loop\n    for (int i = 0; i < 5; i++) {\n        printf(\"numbers[%d] = %d\\n\", i, numbers[i]);\n    }\n    \n    // Change an element's value\n    numbers[2] = 35;\n    printf(\"Changed numbers[2] = %d\\n\", numbers[2]);\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Elements of the array:\nnumbers[0] = 10\nnumbers[1] = 20\nnumbers[2] = 30\nnumbers[3] = 40\nnumbers[4] = 50\nChanged numbers[2] = 35"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is an array in C?",
+          "answer": "A collection of elements of the same data type, stored in contiguous memory locations, accessed using an index."
+        },
+        {
+          "question": "How are array elements indexed?",
+          "answer": "Array elements are indexed starting from 0."
+        },
+        {
+          "question": "What is the difference between `int arr[10];` and `int arr[] = {1,2,3};`?",
+          "answer": "`int arr[10];` declares an array of size 10, uninitialized. `int arr[] = {1,2,3};` declares an array whose size is implicitly determined by the number of initializers (here, 3)."
+        },
+        {
+          "question": "What is 'array bounds checking' in C?",
+          "answer": "C does not perform automatic array bounds checking at runtime. Accessing elements outside the defined bounds leads to undefined behavior."
+        },
+        {
+          "question": "How do you pass an array to a function in C?",
+          "answer": "Arrays are typically passed by reference (the address of the first element) implicitly. The array name itself decays into a pointer to its first element when passed as an argument."
+        }
+      ]
+    },
+    {
+      "title": "Strings in C",
+      "content": {
+        "explanation": "In C, strings are sequences of characters terminated by a null character (`\\0`). They are typically implemented as character arrays. C provides a standard library `<string.h>` with functions for string manipulation (e.g., copying, concatenating, comparing).",
+        "explainLikeKid": "Strings are like a train of letters, but at the very end of the train, there's always a special invisible 'stop' sign (`\\0`) so the computer knows where the word finishes!",
+        "code": "#include <stdio.h>\n#include <string.h> // For strlen, strcpy\n\nint main() {\n    // Declaring and initializing a string\n    char greeting[] = \"Hello\";\n    char name[20]; // Character array to hold name, size 20 (including null terminator)\n    \n    printf(\"Greeting: %s\\n\", greeting);\n    \n    // Copying a string\n    strcpy(name, \"Alice\");\n    printf(\"Name: %s\\n\", name);\n    \n    // Concatenating strings\n    strcat(greeting, \" World!\"); // Now greeting is \"Hello World!\"\n    printf(\"Concatenated greeting: %s\\n\", greeting);\n    \n    // String length\n    printf(\"Length of greeting: %zu\\n\", strlen(greeting));\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Greeting: Hello\nName: Alice\nConcatenated greeting: Hello World!\nLength of greeting: 12"
+      },
+      "interviewQuestions": [
+        {
+          "question": "How are strings represented in C?",
+          "answer": "As arrays of characters terminated by a null character (`\\0`)."
+        },
+        {
+          "question": "What is the significance of the null character (`\\0`) in C strings?",
+          "answer": "It marks the end of a string, allowing string-handling functions to know where the string terminates."
+        },
+        {
+          "question": "Name some common string manipulation functions in C.",
+          "answer": "`strlen()` (length), `strcpy()` (copy), `strcat()` (concatenate), `strcmp()` (compare)."
+        },
+        {
+          "question": "What header file is required for string functions?",
+          "answer": "`<string.h>`"
+        },
+        {
+          "question": "What is the potential danger when using `strcpy()`?",
+          "answer": "Buffer overflow if the destination buffer is not large enough to hold the source string plus the null terminator."
+        }
+      ]
+    },
+    {
+      "title": "Pointers: Introduction and Declaration",
+      "content": {
+        "explanation": "A pointer is a variable that stores the memory address of another variable. Instead of storing a data value, it stores the location where a value is stored. Pointers are fundamental in C for tasks like dynamic memory allocation, accessing arrays, and passing arguments by reference.",
+        "explainLikeKid": "Imagine every house on a street has an address. A pointer is like a special piece of paper that doesn't have a house on it, but it has the *address* of a house! So it points to where a house is.",
+        "code": "#include <stdio.h>\n\nint main() {\n    int age = 30; // A normal integer variable\n    int *ptr;     // Pointer declaration: a pointer to an integer\n    \n    ptr = &age;   // Assigning the address of 'age' to 'ptr'\n    \n    printf(\"Value of age: %d\\n\", age);        // Output: 30\n    printf(\"Address of age: %p\\n\", &age);     // Output: e.g., 0x7ffee6123456\n    printf(\"Value of ptr (address it holds): %p\\n\", ptr); // Output: same as address of age\n    printf(\"Value at address held by ptr (*ptr): %d\\n\", *ptr); // Output: 30 (dereferencing)\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Value of age: 30\nAddress of age: 0x7ffe... (actual address will vary)\nValue of ptr (address it holds): 0x7ffe... (same as above)\nValue at address held by ptr (*ptr): 30"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a pointer in C?",
+          "answer": "A pointer is a variable that stores the memory address of another variable."
+        },
+        {
+          "question": "What is the purpose of the `&` operator?",
+          "answer": "The address-of operator (`&`) returns the memory address of a variable."
+        },
+        {
+          "question": "What is the purpose of the `*` operator?",
+          "answer": "The dereference operator (`*`) accesses the value stored at the memory address pointed to by a pointer."
+        },
+        {
+          "question": "Why are pointers important in C?",
+          "answer": "They enable dynamic memory allocation, efficient array manipulation, passing arguments by reference, and direct hardware interaction."
+        },
+        {
+          "question": "What is a 'null pointer'?",
+          "answer": "A pointer that does not point to any valid memory location. It's usually assigned `NULL` (or `0` or `nullptr` in C++)."
+        }
+      ]
+    },
+    {
+      "title": "Pointers and Arrays",
+      "content": {
+        "explanation": "In C, array names often behave like pointers to their first element. This close relationship allows for flexible memory access. Pointer arithmetic can be used to traverse arrays efficiently. Understanding this connection is crucial for mastering C.",
+        "explainLikeKid": "If an array is a row of mailboxes, the array's name itself acts like a shortcut piece of paper that already has the address of the *first* mailbox!",
+        "code": "#include <stdio.h>\n\nint main() {\n    int arr[] = {10, 20, 30, 40, 50};\n    int *p = arr; // p now points to the first element (arr[0])\n    \n    printf(\"arr[0] using array name: %d\\n\", arr[0]);\n    printf(\"arr[0] using pointer: %d\\n\", *p); // Dereference p\n    \n    printf(\"arr[1] using array name: %d\\n\", arr[1]);\n    printf(\"arr[1] using pointer arithmetic: %d\\n\", *(p + 1)); // Moves p to point to next element\n    \n    printf(\"Looping through array using pointer:\\n\");\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", *(p + i)); // Equivalent to p[i] or arr[i]\n    }\n    printf(\"\\n\");\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "arr[0] using array name: 10\narr[0] using pointer: 10\narr[1] using array name: 20\narr[1] using pointer arithmetic: 20\nLooping through array using pointer:\n10 20 30 40 50"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the relationship between arrays and pointers in C?",
+          "answer": "An array name often 'decays' into a pointer to its first element. Pointers can be used to access and traverse array elements."
+        },
+        {
+          "question": "Can you use pointer arithmetic on arrays?",
+          "answer": "Yes, adding an integer to a pointer moves the pointer by that many 'units' of the pointer's base type (e.g., `ptr + 1` moves to the next `int` if `ptr` is `int*`)."
+        },
+        {
+          "question": "Is `arr[i]` equivalent to `*(arr + i)`?",
+          "answer": "Yes, in C, array indexing is syntactical sugar for pointer arithmetic."
+        },
+        {
+          "question": "What is 'pointer decay'?",
+          "answer": "When an array name is used in most expressions, it 'decays' (converts) into a pointer to its first element."
+        },
+        {
+          "question": "Can you declare an array of pointers?",
+          "answer": "Yes, for example, `int *arr_ptr[5];` declares an array of 5 integer pointers."
+        }
+      ]
+    },
+    {
+      "title": "Dynamic Memory Allocation",
+      "content": {
+        "explanation": "Dynamic memory allocation allows a program to request memory during runtime, rather than at compile time. This is essential when the size of data structures (like arrays) is not known in advance. C provides functions like `malloc()`, `calloc()`, `realloc()`, and `free()` for managing dynamic memory on the heap.",
+        "explainLikeKid": "It's like telling the computer: 'Hey, I need some space for a toy, but I don't know how big it will be until I get it!' So the computer gives you space when you need it, and you promise to give it back when you're done.",
+        "code": "#include <stdio.h>\n#include <stdlib.h> // For malloc and free\n\nint main() {\n    int n, i, *arr;\n    \n    printf(\"Enter number of elements: \");\n    scanf(\"%d\", &n);\n    \n    // Allocate memory using malloc\n    arr = (int *) malloc(n * sizeof(int));\n    \n    // Check if malloc was successful\n    if (arr == NULL) {\n        printf(\"Memory allocation failed!\\n\");\n        return 1;\n    }\n    \n    printf(\"Enter %d integers:\\n\", n);\n    for (i = 0; i < n; i++) {\n        scanf(\"%d\", &arr[i]);\n    }\n    \n    printf(\"Elements entered: \");\n    for (i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n    \n    // Free the allocated memory\n    free(arr);\n    printf(\"Memory freed.\\n\");\n    \n    return 0;\n}",
+        "input": "Run the C code. Enter `3` for elements, then `10 20 30`.",
+        "output": "Enter number of elements: 3\nEnter 3 integers:\n10\n20\n30\nElements entered: 10 20 30 \nMemory freed."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is dynamic memory allocation in C?",
+          "answer": "It's the process of allocating memory at runtime from the heap, allowing for flexible memory usage based on program needs."
+        },
+        {
+          "question": "What is the purpose of `malloc()`?",
+          "answer": "`malloc()` (memory allocation) allocates a block of memory of a specified size in bytes and returns a `void` pointer to the beginning of the block."
+        },
+        {
+          "question": "What is the purpose of `free()`?",
+          "answer": "`free()` deallocates the memory block previously allocated by `malloc()`, `calloc()`, or `realloc()`, returning it to the system."
+        },
+        {
+          "question": "What is 'memory leak'?",
+          "answer": "A memory leak occurs when a program allocates memory dynamically but fails to deallocate it using `free()`, leading to unused memory occupying space."
+        },
+        {
+          "question": "What is the difference between `malloc()` and `calloc()`?",
+          "answer": "`malloc()` allocates a single block of memory and doesn't initialize it (contains garbage values). `calloc()` allocates multiple blocks and initializes all bytes to zero."
+        }
+      ]
+    },
+    {
+      "title": "Structures in C",
+      "content": {
+        "explanation": "A structure (`struct`) in C is a user-defined data type that allows you to combine different data types into a single unit. It's useful for representing complex entities that have multiple properties, like a 'student' with a name, roll number, and grade.",
+        "explainLikeKid": "A structure is like a custom-made box where you can put different kinds of small things together, like putting a toy car, a book, and a crayon all into one 'Kids Kit' box.",
+        "code": "#include <stdio.h>\n#include <string.h>\n\n// Define a structure for a student\nstruct Student {\n    int roll_no;\n    char name[50];\n    float marks;\n};\n\nint main() {\n    // Declare a structure variable\n    struct Student s1;\n    \n    // Access and assign values to members\n    s1.roll_no = 101;\n    strcpy(s1.name, \"Alice Wonderland\");\n    s1.marks = 88.5;\n    \n    // Print structure members\n    printf(\"Student Details:\\n\");\n    printf(\"Roll No: %d\\n\", s1.roll_no);\n    printf(\"Name: %s\\n\", s1.name);\n    printf(\"Marks: %.2f\\n\", s1.marks);\n    \n    return 0;\n}",
+        "input": "Run the C code.",
+        "output": "Student Details:\nRoll No: 101\nName: Alice Wonderland\nMarks: 88.50"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a structure in C?",
+          "answer": "A user-defined data type that groups together variables of different data types under a single name."
+        },
+        {
+          "question": "How do you access members of a structure?",
+          "answer": "Using the dot (`.`) operator for structure variables and the arrow (`->`) operator for pointers to structures."
+        },
+        {
+          "question": "What is the difference between a `struct` and a `union`?",
+          "answer": "In a `struct`, each member has its own memory location. In a `union`, all members share the same memory location, and only one member can hold a value at a time."
+        },
+        {
+          "question": "Can a structure contain another structure?",
+          "answer": "Yes, this is known as nested structures."
+        },
+        {
+          "question": "What is `typedef` and how is it used with structures?",
+          "answer": "`typedef` creates an alias for existing data types. With structures, it can be used to avoid repeatedly typing `struct` keyword, e.g., `typedef struct Student { ... } Student;`"
+        }
+      ]
+    },
+    {
+      "title": "File Input/Output",
+      "content": {
+        "explanation": "File I/O (Input/Output) in C allows programs to interact with files on a storage device. This enables persistent storage of data, meaning data remains even after the program terminates. C provides functions like `fopen()`, `fclose()`, `fprintf()`, `fscanf()`, `fgetc()`, `fputc()` for file operations.",
+        "explainLikeKid": "File I/O is like giving the computer a notebook. You can tell it to 'write down' important notes in the notebook (saving data) or 'read out loud' notes from the notebook (loading data).",
+        "code": "#include <stdio.h>\n\nint main() {\n    FILE *fptr; // Pointer to a FILE object\n    char data[50];\n\n    // --- Writing to a file ---\n    fptr = fopen(\"example.txt\", \"w\"); // Open in write mode ('w')\n    if (fptr == NULL) {\n        printf(\"Error opening file for writing!\\n\");\n        return 1;\n    }\n    fprintf(fptr, \"Hello from C program!\\n\");\n    fprintf(fptr, \"This is a second line.\\n\");\n    fclose(fptr); // Close the file\n    printf(\"Data written to example.txt\\n\");\n\n    // --- Reading from a file ---\n    fptr = fopen(\"example.txt\", \"r\"); // Open in read mode ('r')\n    if (fptr == NULL) {\n        printf(\"Error opening file for reading!\\n\");\n        return 1;\n    }\n    printf(\"Reading from example.txt:\\n\");\n    while (fgets(data, 50, fptr) != NULL) { // Read line by line\n        printf(\"%s\", data);\n    }\n    fclose(fptr);\n    \n    return 0;\n}",
+        "input": "Run the C code. It will create `example.txt` and then read from it.",
+        "output": "Data written to example.txt\nReading from example.txt:\nHello from C program!\nThis is a second line."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the purpose of File I/O in C?",
+          "answer": "To allow programs to read data from and write data to files, enabling persistent storage."
+        },
+        {
+          "question": "What is `FILE *`?",
+          "answer": "It's a pointer to a `FILE` structure, which holds information about the file being accessed (e.g., its buffer, position, mode)."
+        },
+        {
+          "question": "Explain the modes `\"r\"`, `\"w\"`, and `\"a\"` for `fopen()`.",
+          "answer": "`\"r\"` (read): Opens for reading. `\"w\"` (write): Opens for writing, creates if not exists, truncates if exists. `\"a\"` (append): Opens for writing, creates if not exists, appends to end if exists."
+        },
+        {
+          "question": "Why is it important to `fclose()` a file?",
+          "answer": "To flush buffered data to the disk, release file resources, and prevent data corruption or resource leaks."
+        },
+        {
+          "question": "What is the difference between `fprintf()` and `fputs()`?",
+          "answer": "`fprintf()` is like `printf()` but writes formatted output to a file. `fputs()` writes a string to a file."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Simple Calculator",
+      "description": "A console-based calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division) based on user input.",
+      "code": "#include <stdio.h>\n\nint main() {\n    char operator;\n    double num1, num2, result;\n\n    printf(\"Enter an operator (+, -, *, /): \");\n    scanf(\"%c\", &operator);\n\n    printf(\"Enter two operands: \");\n    scanf(\"%lf %lf\", &num1, &num2);\n\n    switch (operator) {\n        case '+':\n            result = num1 + num2;\n            break;\n        case '-':\n            result = num1 - num2;\n            break;\n        case '*':\n            result = num1 * num2;\n            break;\n        case '/':\n            if (num2 != 0) {\n                result = num1 / num2;\n            } else {\n                printf(\"Error: Division by zero is not allowed.\\n\");\n                return 1;\n            }\n            break;\n        default:\n            printf(\"Error: Invalid operator.\\n\");\n            return 1;\n    }\n\n    printf(\"Result: %.2lf\\n\", result);\n    return 0;\n}"
+    },
+    {
+      "id": 2,
+      "title": "Number Guessing Game",
+      "description": "A game where the computer generates a random number, and the user tries to guess it within a limited number of attempts.",
+      "code": "#include <stdio.h>\n#include <stdlib.h> // For rand(), srand()\n#include <time.h>   // For time()\n\nint main() {\n    int randomNumber, guess, attempts = 0;\n    srand(time(NULL)); // Seed the random number generator\n    randomNumber = rand() % 100 + 1; // Generate a number between 1 and 100\n\n    printf(\"Welcome to the Number Guessing Game!\\n\");\n    printf(\"I have picked a number between 1 and 100. Can you guess it?\\n\");\n\n    do {\n        printf(\"Enter your guess: \");\n        scanf(\"%d\", &guess);\n        attempts++;\n\n        if (guess > randomNumber) {\n            printf(\"Too high! Try again.\\n\");\n        } else if (guess < randomNumber) {\n            printf(\"Too low! Try again.\\n\");\n        } else {\n            printf(\"Congratulations! You guessed the number %d in %d attempts.\\n\", randomNumber, attempts);\n        }\n    } while (guess != randomNumber);\n\n    return 0;\n}"
+    },
+    {
+      "id": 3,
+      "title": "Basic Student Management System (Console)",
+      "description": "A console-based application to add, display, and search for student records using structures and arrays.",
+      "code": "#include <stdio.h>\n#include <string.h>\n\n#define MAX_STUDENTS 50\n\nstruct Student {\n    int id;\n    char name[50];\n    float marks;\n};\n\nstruct Student students[MAX_STUDENTS];\nint studentCount = 0;\n\nvoid addStudent() {\n    if (studentCount < MAX_STUDENTS) {\n        printf(\"\\n--- Add New Student ---\\n\");\n        printf(\"Enter Student ID: \");\n        scanf(\"%d\", &students[studentCount].id);\n        printf(\"Enter Student Name: \");\n        scanf(\" %49[^\n]s\", students[studentCount].name); // Reads string with spaces\n        printf(\"Enter Student Marks: \");\n        scanf(\"%f\", &students[studentCount].marks);\n        studentCount++;\n        printf(\"Student added successfully!\\n\");\n    } else {\n        printf(\"Maximum number of students reached.\\n\");\n    }\n}\n\nvoid displayStudents() {\n    printf(\"\\n--- All Student Records ---\\n\");\n    if (studentCount == 0) {\n        printf(\"No students to display.\\n\");\n        return;\n    }\n    printf(\"ID\\tName\\t\\tMarks\\n\");\n    printf(\"-------------------------------------\\n\");\n    for (int i = 0; i < studentCount; i++) {\n        printf(\"%d\\t%s\\t\\t%.2f\\n\", students[i].id, students[i].name, students[i].marks);\n    }\n}\n\nvoid searchStudent() {\n    int searchId;\n    printf(\"\\n--- Search Student by ID ---\\n\");\n    printf(\"Enter Student ID to search: \");\n    scanf(\"%d\", &searchId);\n\n    int found = 0;\n    for (int i = 0; i < studentCount; i++) {\n        if (students[i].id == searchId) {\n            printf(\"Student Found:\\n\");\n            printf(\"ID: %d\\n\", students[i].id);\n            printf(\"Name: %s\\n\", students[i].name);\n            printf(\"Marks: %.2f\\n\", students[i].marks);\n            found = 1;\n            break;\n        }\n    }\n    if (!found) {\n        printf(\"Student with ID %d not found.\\n\", searchId);\n    }\n}\n\nint main() {\n    int choice;\n    do {\n        printf(\"\\n--- Student Management System ---\\n\");\n        printf(\"1. Add Student\\n\");\n        printf(\"2. Display All Students\\n\");\n        printf(\"3. Search Student\\n\");\n        printf(\"4. Exit\\n\");\n        printf(\"Enter your choice: \");\n        scanf(\"%d\", &choice);\n\n        switch (choice) {\n            case 1:\n                addStudent();\n                break;\n            case 2:\n                displayStudents();\n                break;\n            case 3:\n                searchStudent();\n                break;\n            case 4:\n                printf(\"Exiting program. Goodbye!\\n\");\n                break;\n            default:\n                printf(\"Invalid choice. Please try again.\\n\");\n        }\n    } while (choice != 4);\n\n    return 0;\n}"
+    },
+    {
+      "id": 4,
+      "title": "Palindrome Checker",
+      "description": "A program that checks if a given string or number is a palindrome (reads the same forwards and backward).",
+      "code": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h> // For bool type\n\n// Function to check if a string is a palindrome\nbool isStringPalindrome(char str[]) {\n    int length = strlen(str);\n    for (int i = 0; i < length / 2; i++) {\n        if (str[i] != str[length - 1 - i]) {\n            return false;\n        }\n    }\n    return true;\n}\n\n// Function to check if an integer is a palindrome\nbool isNumberPalindrome(int num) {\n    int originalNum = num;\n    int reversedNum = 0;\n    while (num > 0) {\n        int remainder = num % 10;\n        reversedNum = reversedNum * 10 + remainder;\n        num /= 10;\n    }\n    return originalNum == reversedNum;\n}\n\nint main() {\n    char str[100];\n    int num;\n\n    printf(\"Enter a string: \");\n    scanf(\"%s\", str);\n    if (isStringPalindrome(str)) {\n        printf(\"%s is a palindrome.\\n\", str);\n    } else {\n        printf(\"%s is not a palindrome.\\n\", str);\n    }\n\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &num);\n    if (isNumberPalindrome(num)) {\n        printf(\"%d is a palindrome.\\n\", num);\n    } else {\n        printf(\"%d is not a palindrome.\\n\", num);\n    }\n\n    return 0;\n}"
+    },
+    {
+      "id": 5,
+      "title": "Tic-Tac-Toe Game (Console)",
+      "description": "A simple two-player Tic-Tac-Toe game implemented in the console, demonstrating arrays, functions, and conditional logic.",
+      "code": "#include <stdio.h>\n#include <stdbool.h>\n\nchar board[3][3];\n\nvoid initializeBoard() {\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            board[i][j] = ' ';\n        }\n    }\n}\n\nvoid printBoard() {\n    printf(\"\\n\");\n    printf(\" %c | %c | %c \\n\", board[0][0], board[0][1], board[0][2]);\n    printf(\"---+---+---\\n\");\n    printf(\" %c | %c | %c \\n\", board[1][0], board[1][1], board[1][2]);\n    printf(\"---+---+---\\n\");\n    printf(\" %c | %c | %c \\n\", board[2][0], board[2][1], board[2][2]);\n    printf(\"\\n\");\n}\n\nbool checkWin(char player) {\n    // Check rows and columns\n    for (int i = 0; i < 3; i++) {\n        if ((board[i][0] == player && board[i][1] == player && board[i][2] == player) ||\n            (board[0][i] == player && board[1][i] == player && board[2][i] == player)) {\n            return true;\n        }\n    }\n    // Check diagonals\n    if ((board[0][0] == player && board[1][1] == player && board[2][2] == player) ||\n        (board[0][2] == player && board[1][1] == player && board[2][0] == player)) {\n        return true;\n    }\n    return false;\n}\n\nbool checkDraw() {\n    for (int i = 0; i < 3; i++) {\n        for (int j = 0; j < 3; j++) {\n            if (board[i][j] == ' ') {\n                return false;\n            }\n        }\n    }\n    return true;\n}\n\nint main() {\n    int row, col;\n    char currentPlayer = 'X';\n    int moves = 0;\n\n    initializeBoard();\n\n    do {\n        printBoard();\n        printf(\"Player %c, enter your move (row and column, e.g., 1 2): \", currentPlayer);\n        scanf(\"%d %d\", &row, &col);\n\n        // Adjust to 0-indexed\n        row--; \n        col--;\n\n        if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == ' ') {\n            board[row][col] = currentPlayer;\n            moves++;\n            if (checkWin(currentPlayer)) {\n                printBoard();\n                printf(\"Player %c wins! Congratulations!\\n\", currentPlayer);\n                break;\n            } else if (checkDraw()) {\n                printBoard();\n                printf(\"It's a draw!\\n\");\n                break;\n            }\n            currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';\n        } else {\n            printf(\"Invalid move. Try again.\\n\");\n        }\n    } while (true);\n\n    return 0;\n}"
+    },
+    {
+      "id": 6,
+      "title": "Simple Contact Management System (File I/O)",
+      "description": "A console application to add, view, and delete contacts, with data persistently stored in a text file using File I/O.",
+      "code": "#include <stdio.h>\n#include <string.h>\n#include <stdlib.h>\n\n#define MAX_NAME_LEN 50\n#define MAX_PHONE_LEN 15\n#define FILENAME \"contacts.txt\"\n\nstruct Contact {\n    char name[MAX_NAME_LEN];\n    char phone[MAX_PHONE_LEN];\n};\n\nvoid addContact() {\n    FILE *fptr;\n    struct Contact newContact;\n\n    fptr = fopen(FILENAME, \"a\"); // Open in append mode\n    if (fptr == NULL) {\n        printf(\"Error opening file for adding contacts.\\n\");\n        return;\n    }\n\n    printf(\"\\n--- Add New Contact ---\\n\");\n    printf(\"Enter Name: \");\n    scanf(\" %49[^\n]s\", newContact.name);\n    printf(\"Enter Phone: \");\n    scanf(\" %14[^\n]s\", newContact.phone);\n\n    fprintf(fptr, \"%s,%s\\n\", newContact.name, newContact.phone);\n    fclose(fptr);\n    printf(\"Contact added successfully!\\n\");\n}\n\nvoid viewContacts() {\n    FILE *fptr;\n    struct Contact contact;\n    char line[MAX_NAME_LEN + MAX_PHONE_LEN + 2]; // For name, phone, comma, newline, null\n\n    fptr = fopen(FILENAME, \"r\"); // Open in read mode\n    if (fptr == NULL) {\n        printf(\"No contacts found. File '%s' does not exist or is empty.\\n\", FILENAME);\n        return;\n    }\n\n    printf(\"\\n--- All Contacts ---\\n\");\n    printf(\"Name\\t\\tPhone\\n\");\n    printf(\"-------------------------------------\\n\");\n\n    while (fgets(line, sizeof(line), fptr) != NULL) {\n        sscanf(line, \"%49[^,],%14[^\n]s\", contact.name, contact.phone);\n        printf(\"%s\\t\\t%s\\n\", contact.name, contact.phone);\n    }\n    fclose(fptr);\n}\n\nint main() {\n    int choice;\n\n    do {\n        printf(\"\\n--- Contact Management System ---\\n\");\n        printf(\"1. Add Contact\\n\");\n        printf(\"2. View Contacts\\n\");\n        printf(\"3. Exit\\n\");\n        printf(\"Enter your choice: \");\n        scanf(\"%d\", &choice);\n\n        switch (choice) {\n            case 1:\n                addContact();\n                break;\n            case 2:\n                viewContacts();\n                break;\n            case 3:\n                printf(\"Exiting program. Goodbye!\\n\");\n                break;\n            default:\n                printf(\"Invalid choice. Please try again.\\n\");\n        }\n    } while (choice != 3);\n\n    return 0;\n}"
+    },
+    {
+      "id": 7,
+      "title": "Factorial Calculator",
+      "description": "Calculates the factorial of a non-negative integer entered by the user using both iterative and recursive approaches.",
+      "code": "#include <stdio.h>\n\n// Iterative approach\nlong long factorialIterative(int n) {\n    long long fact = 1;\n    for (int i = 1; i <= n; i++) {\n        fact *= i;\n    }\n    return fact;\n}\n\n// Recursive approach\nlong long factorialRecursive(int n) {\n    if (n == 0 || n == 1) {\n        return 1;\n    } else {\n        return n * factorialRecursive(n - 1);\n    }\n}\n\nint main() {\n    int num;\n    printf(\"Enter a non-negative integer: \");\n    scanf(\"%d\", &num);\n\n    if (num < 0) {\n        printf(\"Factorial is not defined for negative numbers.\\n\");\n    } else {\n        printf(\"Factorial (Iterative) of %d = %lld\\n\", num, factorialIterative(num));\n        printf(\"Factorial (Recursive) of %d = %lld\\n\", num, factorialRecursive(num));\n    }\n\n    return 0;\n}"
+    },
+    {
+      "id": 8,
+      "title": "Basic Command Line Argument Processor",
+      "description": "A program that processes command-line arguments, demonstrating `argc` and `argv` usage.",
+      "code": "#include <stdio.h>\n\nint main(int argc, char *argv[]) {\n    printf(\"Number of arguments: %d\\n\", argc);\n    printf(\"Program name: %s\\n\", argv[0]);\n\n    if (argc > 1) {\n        printf(\"Arguments passed:\\n\");\n        for (int i = 1; i < argc; i++) {\n            printf(\"Argument %d: %s\\n\", i, argv[i]);\n        }\n    } else {\n        printf(\"No additional arguments passed.\\n\");\n    }\n\n    return 0;\n}\n\n/*\nTo compile and run from terminal:\n\ngcc command_args.c -o command_args\n./command_args hello world 123\n\nExpected Output:\nNumber of arguments: 4\nProgram name: ./command_args\nArguments passed:\nArgument 1: hello\nArgument 2: world\nArgument 3: 123\n*/"
+    },
+    {
+      "id": 9,
+      "title": "Simple Encryption/Decryption (Caesar Cipher)",
+      "description": "Encrypts and decrypts a message using a basic Caesar cipher (shift cipher) algorithm.",
+      "code": "#include <stdio.h>\n#include <string.h>\n#include <ctype.h> // For isalpha, tolower\n\nvoid encrypt(char text[], int key) {\n    for (int i = 0; text[i] != '\\0'; i++) {\n        if (isalpha(text[i])) {\n            char offset = islower(text[i]) ? 'a' : 'A';\n            text[i] = (char)(((text[i] - offset + key) % 26) + offset);\n        }\n    }\n}\n\nvoid decrypt(char text[], int key) {\n    for (int i = 0; text[i] != '\\0'; i++) {\n        if (isalpha(text[i])) {\n            char offset = islower(text[i]) ? 'a' : 'A';\n            text[i] = (char)(((text[i] - offset - key + 26) % 26) + offset);\n        }\n    }\n}\n\nint main() {\n    char message[100];\n    int key;\n\n    printf(\"Enter a message: \");\n    fgets(message, sizeof(message), stdin);\n    message[strcspn(message, \"\\n\")] = 0; // Remove trailing newline\n\n    printf(\"Enter key (1-25): \");\n    scanf(\"%d\", &key);\n\n    char encrypted_message[100];\n    strcpy(encrypted_message, message);\n    encrypt(encrypted_message, key);\n    printf(\"Encrypted message: %s\\n\", encrypted_message);\n\n    char decrypted_message[100];\n    strcpy(decrypted_message, encrypted_message);\n    decrypt(decrypted_message, key);\n    printf(\"Decrypted message: %s\\n\", decrypted_message);\n\n    return 0;\n}"
+    },
+    {
+      "id": 10,
+      "title": "Array Sum and Average",
+      "description": "Calculates the sum and average of elements in an array, demonstrating array traversal and basic arithmetic.",
+      "code": "#include <stdio.h>\n\nint main() {\n    int arr[] = {10, 20, 30, 40, 50};\n    int n = sizeof(arr) / sizeof(arr[0]); // Calculate number of elements\n    int sum = 0;\n    float average;\n\n    printf(\"Array elements: \");\n    for (int i = 0; i < n; i++) {\n        printf(\"%d \", arr[i]);\n        sum += arr[i];\n    }\n    printf(\"\\n\");\n\n    average = (float)sum / n; // Type cast sum to float for accurate average\n\n    printf(\"Sum of elements: %d\\n\", sum);\n    printf(\"Average of elements: %.2f\\n\", average);\n\n    return 0;\n}"
+    }
+  ]
+}

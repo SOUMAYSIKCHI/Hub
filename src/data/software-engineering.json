@@ -1,0 +1,345 @@
+{
+    "module": "Software Engineering Fundamentals",
+    "topics": [
+      {
+        "title": "1. Software Development Life Cycle (SDLC)",
+        "content": {
+          "explanation": "The **Software Development Life Cycle (SDLC)** is a systematic process for planning, creating, testing, and deploying an information system. It provides a structured roadmap for development, ensuring quality and efficient delivery. While various models exist, the general phases are: **1. Requirements Gathering**: Understanding stakeholder needs. **2. Design**: Architecting the solution. **3. Implementation/Coding**: Writing the software. **4. Testing**: Verifying functionality and quality. **5. Deployment**: Releasing the software. **6. Maintenance**: Post-deployment support and enhancements.",
+          "explainLikeKid": "SDLC is like building a complex LEGO castle. First, you figure out exactly what kind of castle you want and how many towers (Requirements). Then you draw plans (Design). Next, you actually build it brick by brick (Coding). After that, you check if all the parts fit and if it stands strong (Testing). Then, you put it on display (Deployment). Finally, you might fix any broken pieces or add new rooms later (Maintenance).",
+          "code": "/* SDLC Phases & Core Activities */\n1. Requirements Analysis:\n   - Elicitation, documentation, validation of user needs.\n2. Design:\n   - High-level architecture, low-level component design.\n3. Implementation (Coding):\n   - Writing source code, unit testing.\n4. Testing:\n   - Integration, system, and acceptance testing.\n5. Deployment:\n   - Release to production environment, user training.\n6. Maintenance:\n   - Bug fixes, updates, performance optimization.",
+          "input": "A company decides to build a new e-commerce website.",
+          "output": "A fully functional and maintained e-commerce website, developed through a series of structured and controlled phases."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is SDLC and its importance?",
+            "answer": "SDLC is a structured process for software development, from inception to retirement. It's important for managing complexity, ensuring quality, improving predictability, and facilitating collaboration."
+          },
+          {
+            "question": "List and briefly describe the phases of SDLC.",
+            "answer": "Requirements (define needs), Design (plan architecture), Implementation (code), Testing (verify quality), Deployment (release), Maintenance (support/enhance)."
+          },
+          {
+            "question": "Which phase comes after 'Design' in most SDLC models?",
+            "answer": "Implementation or Coding."
+          }
+        ]
+      },
+      {
+        "title": "2. Waterfall Model (SDLC Model)",
+        "content": {
+          "explanation": "The **Waterfall model** is a linear, sequential SDLC model where each phase must be completed before the next phase can begin. It's often likened to a cascading waterfall, with progress flowing steadily downwards through the phases: Requirements, Design, Implementation, Testing, Deployment, and Maintenance. It's highly structured and suitable for projects with clear, stable requirements.",
+          "explainLikeKid": "Waterfall is like planning a very long journey where you *must* finish packing all your bags perfectly before you can even think about getting in the car, and you *must* drive the whole way before you can stop for snacks. No going back!",
+          "code": "/* Waterfall Model Flow (Strictly Sequential) */\nRequirements -> Design -> Implementation -> Testing -> Deployment -> Maintenance\n\n# Key Characteristic: No overlapping phases, difficult to go back.",
+          "input": "A project with well-defined, unchanging requirements, like developing software for a regulated industry (e.g., medical devices).",
+          "output": "A software product delivered after a single, comprehensive development cycle, with all previous phases completed and frozen."
+        },
+        "interviewQuestions": [
+          {
+            "question": "Explain the Waterfall model.",
+            "answer": "The Waterfall model is a linear, sequential SDLC model where each phase must be fully completed before the next one starts. It's rigid and has distinct stages."
+          },
+          {
+            "question": "What are the advantages and disadvantages of the Waterfall model?",
+            "answer": "Advantages: Simple and easy to manage for small projects with stable requirements. Disadvantages: Inflexible to changes, high risk, no working software until late in the cycle, difficult to get customer feedback early."
+          },
+          {
+            "question": "When is the Waterfall model most appropriate?",
+            "answer": "It's best for projects with very clear, stable, and well-understood requirements, and when there's low risk of changes throughout the project."
+          }
+        ]
+      },
+      {
+        "title": "3. Agile Methodologies & Frameworks (Scrum, Kanban)",
+        "content": {
+          "explanation": "**Agile methodologies** are a set of principles for iterative and incremental software development, emphasizing flexibility, collaboration, and rapid response to change. The **Agile Manifesto** highlights: Individuals and interactions over processes and tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan. Popular **Agile frameworks** include Scrum and Kanban.",
+          "explainLikeKid": "Agile is like building a LEGO tower by showing it to your friends after adding just a few bricks, asking what they think, and then adding more or changing what you're building based on their ideas. You keep doing this in small steps until it's perfect!",
+          "code": "/* Agile Manifesto Core Values */\n1. Individuals and interactions over processes and tools\n2. Working software over comprehensive documentation\n3. Customer collaboration over contract negotiation\n4. Responding to change over following a plan",
+          "input": "A fast-changing market requires frequent software updates and customer feedback.",
+          "output": "A product that continuously evolves and adapts to user needs and market changes, delivered in small, usable increments."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are the core values of the Agile Manifesto?",
+            "answer": "Individuals and interactions, working software, customer collaboration, and responding to change (all 'over' their counterparts)."
+          },
+          {
+            "question": "What are the benefits of using Agile?",
+            "answer": "Increased flexibility, faster time to market, improved customer satisfaction, better quality (due to continuous feedback), and enhanced team collaboration."
+          },
+          {
+            "question": "Can you name other Agile frameworks besides Scrum?",
+            "answer": "Kanban, Lean Software Development, Extreme Programming (XP), Crystal."
+          }
+        ]
+      },
+      {
+        "title": "4. Scrum (Agile Framework)",
+        "content": {
+          "explanation": "**Scrum** is a lightweight Agile framework for managing complex projects, especially software development. It promotes iterative development in fixed-length iterations called **Sprints**. Scrum defines specific **Roles** (Product Owner, Scrum Master, Development Team), **Events** (Sprint Planning, Daily Scrum, Sprint Review, Sprint Retrospective), and **Artifacts** (Product Backlog, Sprint Backlog, Increment) to structure the workflow and foster transparency, inspection, and adaptation.",
+          "explainLikeKid": "Scrum is like a sports team planning and playing short mini-games (sprints). The coach (Scrum Master) helps everyone play well, the captain (Product Owner) decides what games to play, and the players (Development Team) actually play. After each mini-game, they check what worked and what didn't.",
+          "code": "/* Scrum Framework Components */\n\nRoles:\n- Product Owner: Maximizes product value.\n- Scrum Master: Facilitates Scrum, removes impediments.\n- Development Team: Builds the increment.\n\nEvents:\n- Sprint Planning: Plan work for the Sprint.\n- Daily Scrum: 15-min daily sync for Dev Team.\n- Sprint Review: Inspect increment, adapt Product Backlog.\n- Sprint Retrospective: Plan improvements for next Sprint.\n\nArtifacts:\n- Product Backlog: Ordered list of all known product needs.\n- Sprint Backlog: Subset of Product Backlog for one Sprint.\n- Increment: Sum of all Product Backlog items completed during a Sprint.",
+          "input": "A development team adopts Scrum for a new feature development.",
+          "output": "A functional product increment delivered at the end of each Sprint, with continuous team improvement and stakeholder feedback."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is Scrum?",
+            "answer": "Scrum is an Agile framework for developing, delivering, and sustaining complex products, characterized by iterative Sprints, specific roles, and prescribed events."
+          },
+          {
+            "question": "Name the three Scrum roles and their responsibilities.",
+            "answer": "Product Owner (defines 'what' to build, maximizes value), Scrum Master (facilitates Scrum, coaches team, removes impediments), Development Team (builds the 'how', delivers the increment)."
+          },
+          {
+            "question": "What are the four main events in a Scrum Sprint?",
+            "answer": "Sprint Planning, Daily Scrum, Sprint Review, and Sprint Retrospective."
+          },
+          {
+            "question": "What is the purpose of the Daily Scrum?",
+            "answer": "It's a 15-minute daily meeting for the Development Team to synchronize activities and plan for the next 24 hours, inspecting progress towards the Sprint Goal."
+          }
+        ]
+      },
+      {
+        "title": "5. Sprints (in Agile/Scrum)",
+        "content": {
+          "explanation": "**Sprints** are the heart of Scrum, serving as time-boxed iterations (usually 1-4 weeks) during which a 'Done,' usable, and potentially releasable product **Increment** is created. Sprints have a consistent duration throughout a development effort, providing predictability. Each Sprint starts with **Sprint Planning** and ends with a **Sprint Review** and **Sprint Retrospective**, ensuring continuous feedback and adaptation.",
+          "explainLikeKid": "Sprints are like short, focused bursts of work. Imagine you have a big project (like cleaning your whole room), and you break it into small, 2-hour 'sprints.' You focus only on those 2 hours, get as much done as you can, then take a quick break and see how you did before starting the next 'sprint.'",
+          "code": "/* Sprint Lifecycle (Iterative) */\n\nSprint Goal Defined (during Sprint Planning)\n  |\n  V\nDevelopment Team works on Sprint Backlog items\n  |\n  V\nDaily Scrum (daily check-in)\n  |\n  V\nIncrement Produced\n  |\n  V\nSprint Review (show work to stakeholders)\n  |\n  V\nSprint Retrospective (team reflection & improvement)",
+          "input": "A new Sprint begins in a Scrum project.",
+          "output": "At the end of the Sprint, a 'Done' and potentially shippable product Increment is produced, and the team learns from its process for future Sprints."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a Sprint in Scrum?",
+            "answer": "A Sprint is a fixed-length time-box, typically 1-4 weeks, during which a Scrum Team works to create a 'Done,' usable, and potentially releasable product increment."
+          },
+          {
+            "question": "What happens at the end of a Sprint?",
+            "answer": "A 'Done' Increment is created, followed by a Sprint Review (to inspect the Increment) and a Sprint Retrospective (to inspect and adapt the process)."
+          },
+          {
+            "question": "Why are Sprints time-boxed?",
+            "answer": "Time-boxing ensures predictability, limits risk, encourages focus, and provides a rhythm for inspection and adaptation."
+          }
+        ]
+      },
+      {
+        "title": "6. Unified Modeling Language (UML) Diagrams",
+        "content": {
+          "explanation": "**UML (Unified Modeling Language)** is a standardized general-purpose modeling language used to visualize, specify, construct, and document the artifacts of a software system. It provides a rich set of graphical notations for creating abstract models of systems, making it easier to communicate design and structure. Common diagrams include **Use Case**, **Class**, **Sequence**, and **Activity** diagrams.",
+          "explainLikeKid": "UML is like drawing special maps or blueprints for building a software house. Instead of writing long stories about how the house works, you draw pictures that show how the doors open, what rooms there are, and how people move inside. It makes it super clear for everyone!",
+          "code": "/* Examples of UML Diagram Purposes */\n\n- Use Case Diagram: Shows external system behavior (who uses what features).\n- Class Diagram: Illustrates static structure (classes, attributes, methods, relationships).\n- Sequence Diagram: Depicts interaction over time (how objects communicate).\n- Activity Diagram: Models workflow/flow of control (steps in a process).",
+          "input": "A software architect needs to communicate the system's design and user interactions to developers and stakeholders.",
+          "output": "Clear, visual representations of the software's structure, behavior, and functionality, facilitating understanding and reducing ambiguity."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is UML and its purpose?",
+            "answer": "UML is a standardized visual modeling language used to specify, visualize, construct, and document software systems. Its purpose is to facilitate clear communication of system design and architecture."
+          },
+          {
+            "question": "Name and briefly describe two types of UML diagrams.",
+            "answer": "Possible answers: **Class Diagram** (shows static structure, classes, and relationships) and **Sequence Diagram** (shows interaction between objects over time)."
+          },
+          {
+            "question": "When would you use a Use Case Diagram?",
+            "answer": "To describe the functional requirements of a system from the user's perspective, showing how actors interact with the system's functionalities."
+          }
+        ]
+      },
+      {
+        "title": "7. Software Quality & Metrics",
+        "content": {
+          "explanation": "**Software Quality** refers to the degree to which software satisfies stated and implied needs, fulfilling its purpose reliably and efficiently. It encompasses aspects like functionality, reliability, usability, efficiency, maintainability, and portability. **Software Quality Assurance (SQA)** is a set of activities designed to ensure that software development processes meet defined quality standards. **Metrics** (e.g., defect density, code coverage, cyclomatic complexity) are quantitative measures used to assess software attributes and quality throughout the SDLC.",
+          "explainLikeKid": "Software quality is how good a toy is. Does it do what it's supposed to? Does it break easily? Is it fun to play with? Metrics are like counting how many times it falls apart or how easy it is for you to put back together, so you know how 'good' it really is.",
+          "code": "/* Example Quality Metrics */\n\n- **Defect Density**: Number of defects per thousand lines of code (KLOC) or per functional point.\n  Formula: `Total Defects / KLOC`\n\n- **Test Coverage**: Percentage of code exercised by tests.\n  Formula: `(Lines of code covered by tests / Total lines of code) * 100%`\n\n- **Mean Time To Repair (MTTR)**: Average time taken to fix a system after a failure.\n\n- **Maintainability Index**: A calculated value indicating ease of maintenance.",
+          "input": "A software team wants to assess the quality of their recently released module.",
+          "output": "By analyzing metrics like defect density and test coverage, the team identifies areas for improvement in code quality and testing practices, leading to a more robust module in future releases."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is software quality?",
+            "answer": "Software quality is the degree to which software meets stated and implied needs, encompassing factors like functionality, reliability, usability, and efficiency."
+          },
+          {
+            "question": "Why is software quality important?",
+            "answer": "It builds user trust, reduces maintenance costs, minimizes security vulnerabilities, ensures legal compliance, and contributes to business success."
+          },
+          {
+            "question": "Name two common software quality metrics.",
+            "answer": "Defect density (defects per KLOC) and Test Coverage (percentage of code covered by tests)."
+          }
+        ]
+      },
+      {
+        "title": "8. Requirement Engineering",
+        "content": {
+          "explanation": "**Requirement Engineering (RE)** is the process of defining, documenting, and maintaining software requirements. It involves understanding stakeholder needs, analyzing them for consistency and completeness, specifying them clearly, and managing changes. Key activities include: **1. Elicitation**: Gathering requirements. **2. Analysis**: Refining and checking for conflicts. **3. Specification**: Documenting formal requirements. **4. Validation**: Ensuring requirements are correct and meet needs. **5. Management**: Tracking changes and traceability.",
+          "explainLikeKid": "Requirement Engineering is like being a detective for building something. You talk to everyone who wants the thing (elicitation), figure out exactly what they mean and if their ideas fit together (analysis), write down every detail (specification), make sure you got it right (validation), and keep track of any changes they ask for later (management).",
+          "code": "/* Requirement Engineering Activities */\n\n1. Elicitation (Gathering):\n   - Interviews, workshops, brainstorming, prototyping, surveys.\n2. Analysis (Refining):\n   - Categorization, conflict resolution, prioritization, feasibility study.\n3. Specification (Documenting):\n   - User stories, functional requirements, non-functional requirements.\n   - Tools: UML diagrams, Use Case specifications.\n4. Validation (Confirming):\n   - Reviews, walkthroughs, prototyping, acceptance testing criteria.\n5. Management (Tracking):\n   - Change control, traceability matrix, version control for requirements.",
+          "input": "A business identifies a need for a new customer feedback system.",
+          "output": "A clear, consistent, and validated set of requirements document that serves as the foundation for the design and development of the customer feedback system."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is Requirement Engineering?",
+            "answer": "Requirement Engineering is the systematic process of eliciting, analyzing, documenting, validating, and managing the requirements for a software system."
+          },
+          {
+            "question": "What are the main activities in Requirement Engineering?",
+            "answer": "Elicitation, Analysis, Specification, Validation, and Management."
+          },
+          {
+            "question": "Why is proper Requirement Engineering important?",
+            "answer": "It minimizes rework, reduces project failures, ensures the final product meets user needs, and provides a clear scope for development."
+          }
+        ]
+      },
+      {
+        "title": "9. Software Architecture Patterns",
+        "content": {
+          "explanation": "**Software Architecture Patterns** are general, reusable solutions to commonly occurring problems in software architecture within a given context. They provide a blueprint for how a system should be structured, helping to manage complexity, improve maintainability, and ensure scalability. Examples include **Model-View-Controller (MVC)**, **Client-Server**, and **Microservices**.",
+          "explainLikeKid": "Software architecture patterns are like different ways to build a house plan for your software. Do you want separate rooms for displaying things, doing calculations, and storing data (MVC)? Or do you want one big house that handles everything, and many smaller guest houses that do specific jobs (Microservices)? Each way has its own pros and cons.",
+          "code": "/* Common Architecture Patterns */\n\n- **Model-View-Controller (MVC)**:\n  - Model: Manages data and business logic.\n  - View: Displays data to the user.\n  - Controller: Handles user input, updates Model and View.\n\n- **Client-Server**:\n  - Client: Requests services from the server.\n  - Server: Provides services to multiple clients.\n\n- **Microservices**:\n  - A collection of small, loosely coupled services.\n  - Each service runs in its own process and communicates via lightweight mechanisms (e.g., APIs).",
+          "input": "A team needs to design a new web application and choose an appropriate structural blueprint.",
+          "output": "A well-structured application that clearly separates concerns (MVC), efficiently serves requests (Client-Server), or allows independent deployment and scaling of features (Microservices), depending on the chosen pattern."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are software architecture patterns?",
+            "answer": "They are proven, reusable solutions for common architectural problems, providing a high-level organizational structure for software systems."
+          },
+          {
+            "question": "Explain the Model-View-Controller (MVC) pattern.",
+            "answer": "MVC separates an application into three interconnected components: Model (data/logic), View (UI), and Controller (input handler), promoting separation of concerns."
+          },
+          {
+            "question": "What are the advantages of a Microservices architecture?",
+            "answer": "Independent deployment, scalability, technological diversity, resilience to failures in other services, and better organization for large teams."
+          }
+        ]
+      },
+      {
+        "title": "10. Code Quality & Reviews",
+        "content": {
+          "explanation": "**Code Quality** refers to how well code is written in terms of readability, maintainability, efficiency, reliability, and security. High-quality code is easier to understand, extend, debug, and less prone to errors. **Code Reviews** are a systematic examination of source code, usually by peers, to find mistakes, improve overall software quality, and facilitate knowledge sharing. They are a critical practice for maintaining code health and consistency.",
+          "explainLikeKid": "Code quality is like making sure your handwriting is neat, easy to read, and your homework makes sense. Code reviews are when your friend checks your homework to see if there are any mistakes or if they can understand it easily, helping you make it even better.",
+          "code": "/* Best Practices for Code Quality */\n\n- **Readability**: Use meaningful variable names, consistent formatting, comments.\n- **Maintainability**: Modularity, low coupling, high cohesion.\n- **Efficiency**: Optimize algorithms, reduce redundant operations.\n- **Testability**: Write code that's easy to unit test.\n- **Security**: Prevent common vulnerabilities (e.g., input validation).\n\n/* Elements of a Good Code Review */\n- Focus on logic, errors, design flaws, adherence to standards.\n- Constructive feedback, clear explanations.\n- Use of static analysis tools (e.g., linters, SonarQube).",
+          "input": "A developer completes a new feature and submits their code for review.",
+          "output": "Through peer code review, potential bugs are identified, code style inconsistencies are corrected, and the overall code quality of the feature is improved before integration into the main codebase."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is code quality and why is it important?",
+            "answer": "Code quality refers to the characteristics of code like readability, maintainability, and efficiency. It's important for reducing bugs, simplifying maintenance, enabling collaboration, and ensuring long-term project success."
+          },
+          {
+            "question": "What is a code review?",
+            "answer": "A code review is a process where one or more people examine source code, typically to find defects, improve quality, and ensure adherence to coding standards."
+          },
+          {
+            "question": "Name some best practices for writing high-quality code.",
+            "answer": "Writing clean, readable code with meaningful names, adhering to coding standards, modularizing components, writing comprehensive tests, and following design principles (e.g., SOLID)."
+          }
+        ]
+      },
+      {
+        "title": "11. DevOps Basics",
+        "content": {
+          "explanation": "**DevOps** is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the systems development life cycle and provide continuous delivery with high software quality. It's a cultural and professional movement that stresses communication, collaboration, integration, and automation. Key practices include **Continuous Integration (CI)**, **Continuous Delivery (CD)**, and **Continuous Deployment**.",
+          "explainLikeKid": "DevOps is like two teams (the builders and the delivery people) who used to work separately, but now they talk and help each other *all the time*. They build the toy, pack it, and deliver it super fast and smoothly, making sure the toy works perfectly every step of the way.",
+          "code": "/* DevOps Pipeline Concept */\n\n**Continuous Integration (CI)**:\n  - Developers commit code frequently to a shared repository.\n  - Automated builds and tests run on every commit.\n\n**Continuous Delivery (CD)**:\n  - Software is built, tested, and packaged for release.\n  - It's *always* in a deployable state, ready for manual deployment.\n\n**Continuous Deployment (CD)**:\n  - Automated deployment of every change that passes tests to production.\n  - No human intervention required for deployment.",
+          "input": "A company wants to accelerate its software release cycle and improve collaboration between development and operations teams.",
+          "output": "Faster, more reliable software releases, improved team collaboration, reduced deployment failures, and quicker feedback loops due to automation and cultural shifts."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is DevOps?",
+            "answer": "DevOps is a set of practices that combines software development and IT operations, aiming to shorten the development life cycle and provide continuous delivery with high software quality through automation and collaboration."
+          },
+          {
+            "question": "Explain Continuous Integration (CI) and Continuous Delivery (CD).",
+            "answer": "**CI** is frequently merging code changes into a central repository, followed by automated builds and tests. **CD** ensures that software is always in a deployable state, ready for release at any time, often involving automated packaging and staging."
+          },
+          {
+            "question": "What are the main benefits of adopting DevOps?",
+            "answer": "Faster time to market, increased deployment frequency, lower failure rate of new releases, quicker recovery from failures, and improved collaboration and communication."
+          }
+        ]
+      },
+      {
+        "title": "12. Software Design Principles (e.g., SOLID)",
+        "content": {
+          "explanation": "**Software Design Principles** are guidelines that help in designing robust, maintainable, extensible, and scalable software systems. They are not rigid rules but rather recommendations for structuring code. A prominent set of principles is **SOLID**: **S**ingle Responsibility, **O**pen/Closed, **L**iskov Substitution, **I**nterface Segregation, and **D**ependency Inversion. Adhering to these principles leads to cleaner and more adaptable codebases.",
+          "explainLikeKid": "Design principles are like the secret rules for building a LEGO set that makes it easy to add new parts later, or change colors without breaking everything. SOLID is a special set of these rules that helps make your LEGO designs super flexible!",
+          "code": "/* SOLID Principles Overview */\n\n- **S - Single Responsibility Principle (SRP)**:\n  A class should have only one reason to change (one responsibility).\n\n- **O - Open/Closed Principle (OCP)**:\n  Software entities should be open for extension, but closed for modification.\n\n- **L - Liskov Substitution Principle (LSP)**:\n  Objects of a superclass should be replaceable with objects of its subclasses without breaking the application.\n\n- **I - Interface Segregation Principle (ISP)**:\n  Clients should not be forced to depend on interfaces they do not use.\n\n- **D - Dependency Inversion Principle (DIP)**:\n  High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.",
+          "input": "A developer is writing a new feature and wants to ensure the code is maintainable and scalable.",
+          "output": "By applying SOLID principles, the developer creates a design where components are loosely coupled, highly cohesive, easy to extend without modification, and less prone to breaking when changes occur."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What are software design principles?",
+            "answer": "They are guidelines for designing software systems that are robust, flexible, maintainable, and scalable. They help in structuring code and making design decisions."
+          },
+          {
+            "question": "Name and briefly explain two SOLID principles.",
+            "answer": "Possible answers: **Single Responsibility Principle (SRP)** (a class should have only one reason to change) and **Open/Closed Principle (OCP)** (software entities should be open for extension but closed for modification)."
+          },
+          {
+            "question": "Why are design principles important?",
+            "answer": "They lead to cleaner, more modular, and more maintainable codebases, reduce complexity, and facilitate easier testing and debugging."
+          }
+        ]
+      },
+      {
+        "title": "13. Boehm's Top 10 Software Engineering Principles",
+        "content": {
+          "explanation": "Barry Boehm, a renowned software engineer, outlined **ten fundamental principles** for effective software engineering. These principles emphasize a disciplined approach to software development, focusing on understanding requirements, managing complexity, planning, and continuous validation. They serve as a guide for building high-quality, cost-effective software systems. The principles cover aspects from system thinking to continuous learning and improvement.",
+          "explainLikeKid": "Imagine you're building a super cool robot. Boehm's 10 rules are like the top 10 best tips from the best robot builder in the world! They tell you important things like 'know what the robot needs to do before you start' and 'test it often,' so your robot ends up being awesome and not a mess.",
+          "code": "/* Boehm's 10 Principles (Summarized) */\n\n1.  **Understand the Problem**: Thoroughly grasp requirements.\n2.  **Design for Change**: Expect and plan for evolution.\n3.  **Create High-Quality Software**: Focus on defect prevention.\n4.  **Practice Risk Management**: Identify and mitigate risks early.\n5.  **Use Iteration and Incrementation**: Build in small, verifiable steps.\n6.  **Manage Complexity**: Break down large problems into manageable parts.\n7.  **Embrace Tool Support**: Use automation where possible.\n8.  **Ensure Traceability**: Link requirements, design, code, and tests.\n9.  **Foster Teamwork**: Emphasize collaboration and communication.\n10. **Continuously Learn and Improve**: Reflect and adapt processes.",
+          "input": "A software engineering team is starting a new, complex project.",
+          "output": "By adhering to Boehm's principles, the team establishes a disciplined approach, leading to a more robust, maintainable, and successful software product with fewer unexpected issues."
+        },
+        "interviewQuestions": [
+          {
+            "question": "Who is Barry Boehm and what are his contributions?",
+            "answer": "Barry Boehm is a highly influential software engineer known for his contributions to software economics, the Spiral model, and his principles of software engineering."
+          },
+          {
+            "question": "Can you name a few of Boehm's 10 principles?",
+            "answer": "Understand the Problem, Design for Change, Create High-Quality Software, Practice Risk Management, Use Iteration and Incrementation, Manage Complexity, Embrace Tool Support, Ensure Traceability, Foster Teamwork, Continuously Learn and Improve."
+          },
+          {
+            "question": "Which of Boehm's principles relates to breaking down large problems?",
+            "answer": "Manage Complexity."
+          }
+        ]
+      },
+      {
+        "title": "14. Milestones in Software Projects",
+        "content": {
+          "explanation": "In software project management, a **milestone** is a specific point within a project lifecycle that signifies a major event, a decision point, or the completion of a significant deliverable or phase. Milestones do not consume resources or have duration; they are markers used to track progress, ensure alignment, and provide clear checkpoints for stakeholders. Examples include 'Requirements Approved,' 'Design Complete,' 'Alpha Release,' or 'User Acceptance Testing (UAT) Sign-off.'",
+          "explainLikeKid": "Milestones are like the important stops on a long road trip. You don't spend time at them, but they tell you how far you've traveled and that you've finished a big part of your journey before moving to the next. Like 'reached the mountains' or 'crossed the state line'!",
+          "code": "/* Example Project Milestones */\n\n- **Project Kick-off Completed**\n- **Requirements Document Signed Off**\n- **Architectural Design Approved**\n- **Core Feature A Development Complete**\n- **Integration Testing Passed**\n- **User Acceptance Testing (UAT) Started**\n- **Release to Production**\n- **Project Closure**",
+          "input": "A project manager is planning the timeline for a new software development project.",
+          "output": "The project timeline includes key milestones at strategic points, allowing the project manager to effectively track progress, communicate status to stakeholders, and identify potential delays early."
+        },
+        "interviewQuestions": [
+          {
+            "question": "What is a milestone in a software project?",
+            "answer": "A milestone is a significant point or event in a project timeline that marks the completion of a major deliverable or phase, or a key decision point. It has zero duration."
+          },
+          {
+            "question": "Why are milestones important in project management?",
+            "answer": "They serve as checkpoints to track progress, validate decisions, provide clear communication points to stakeholders, and help identify potential risks or delays early in the project."
+          },
+          {
+            "question": "Can a milestone have a duration?",
+            "answer": "No, by definition, milestones have zero duration. They represent a point in time, not a period of activity."
+          }
+        ]
+      }
+    ]
+  }

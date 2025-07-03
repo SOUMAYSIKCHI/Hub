@@ -1,0 +1,953 @@
+{
+  "module": "JavaScript Fundamentals",
+  "topics": [
+    {
+      "title": "Definition and Purpose",
+      "content": {
+        "explanation": "JavaScript is a versatile, high-level programming language primarily used to create interactive effects within web browsers. It allows developers to implement complex features such as dynamic content updates, interactive forms, animations, and more, making web pages come alive.",
+        "explainLikeKid": "JavaScript is like magic for websites. It lets you click buttons, see things move, and play games right in your browser!",
+        "code": "// A simple JavaScript alert\nalert('Hello, world!');",
+        "input": "User visits a web page with the above code.",
+        "output": "A popup appears saying 'Hello, world!'"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is JavaScript?",
+          "answer": "JavaScript is a high-level, interpreted programming language used to make web pages interactive."
+        },
+        {
+          "question": "Is JavaScript only used in browsers?",
+          "answer": "No, JavaScript can also run on servers (Node.js) and in other environments."
+        },
+        {
+          "question": "Name one thing you can do with JavaScript on a web page.",
+          "answer": "You can update content dynamically, validate forms, or create animations."
+        },
+        {
+          "question": "Is JavaScript the same as Java?",
+          "answer": "No, JavaScript and Java are different languages with different purposes."
+        },
+        {
+          "question": "What type of language is JavaScript?",
+          "answer": "It is a high-level, interpreted, and dynamically typed language."
+        }
+      ]
+    },
+    {
+      "title": "Statements and Semicolons",
+      "content": {
+        "explanation": "JavaScript code is made up of statements, which are instructions for the browser to execute. Each statement can be separated by a semicolon (;), though JavaScript can often infer where statements end. However, using semicolons helps avoid errors and makes code more readable.",
+        "explainLikeKid": "Think of semicolons like periods at the end of sentences. They tell the computer when one instruction stops and the next one starts!",
+        "code": "// Two statements on one line\nlet a = 5; let b = 10;",
+        "input": "let a = 5; let b = 10;",
+        "output": "a is 5, b is 10"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a statement in JavaScript?",
+          "answer": "A statement is a single instruction for the browser to execute."
+        },
+        {
+          "question": "Are semicolons required at the end of every statement?",
+          "answer": "No, but they are recommended to avoid errors."
+        },
+        {
+          "question": "What happens if you omit semicolons?",
+          "answer": "JavaScript uses automatic semicolon insertion, but it can sometimes lead to unexpected bugs."
+        },
+        {
+          "question": "Can you write multiple statements on one line?",
+          "answer": "Yes, if you separate them with semicolons."
+        },
+        {
+          "question": "Why is it good practice to use semicolons?",
+          "answer": "It makes code clearer and helps prevent errors."
+        }
+      ]
+    },
+    {
+      "title": "let vs const vs var",
+      "content": {
+        "explanation": "In JavaScript, variables can be declared using var, let, or const. 'var' is function-scoped and can be redeclared, while 'let' and 'const' are block-scoped. 'let' allows reassignment, but 'const' does not. Using 'let' and 'const' is recommended for modern JavaScript.",
+        "explainLikeKid": "Think of 'let' as a box you can change what's inside, 'const' as a box you can't change, and 'var' as an old box that sometimes causes confusion!",
+        "code": "let age = 25;\nconst name = 'Sam';\nvar city = 'London';",
+        "input": "let age = 25; const name = 'Sam'; var city = 'London';",
+        "output": "age is 25, name is 'Sam', city is 'London'"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the difference between let, const, and var?",
+          "answer": "'var' is function-scoped, 'let' and 'const' are block-scoped. 'let' can be reassigned, 'const' cannot."
+        },
+        {
+          "question": "Can you reassign a const variable?",
+          "answer": "No, const variables cannot be reassigned after their initial value."
+        },
+        {
+          "question": "Is it good practice to use var in modern JavaScript?",
+          "answer": "No, it's better to use let and const to avoid scope issues."
+        },
+        {
+          "question": "What happens if you declare a variable without var, let, or const?",
+          "answer": "It becomes a global variable (not recommended)."
+        },
+        {
+          "question": "Which should you use by default: let or const?",
+          "answer": "Use const by default, and let only if you need to reassign the variable."
+        }
+      ]
+    },
+    {
+      "title": "Primitive vs Reference Types",
+      "content": {
+        "explanation": "JavaScript has two main categories of data types: primitive (such as string, number, boolean, null, undefined, symbol, bigint) and reference (objects, arrays, functions). Primitive types store actual values, while reference types store addresses pointing to the value in memory.",
+        "explainLikeKid": "Primitive types are like simple toys you hold in your hand. Reference types are like a treasure map that tells you where the toy is hidden!",
+        "code": "let a = 5; // primitive\nlet b = { value: 10 }; // reference",
+        "input": "let a = 5; let b = { value: 10 };",
+        "output": "a is 5 (primitive), b is an object with value 10 (reference)"
+      },
+      "interviewQuestions": [
+        {
+          "question": "Name three primitive data types in JavaScript.",
+          "answer": "String, number, boolean."
+        },
+        {
+          "question": "What is a reference type?",
+          "answer": "A type that stores a reference (address) to the value, like objects and arrays."
+        },
+        {
+          "question": "Is null a primitive or reference type?",
+          "answer": "Null is a primitive type."
+        },
+        {
+          "question": "How do you check the type of a variable in JavaScript?",
+          "answer": "Use the typeof operator."
+        },
+        {
+          "question": "What happens if you copy a primitive vs a reference type?",
+          "answer": "Copying a primitive copies the value; copying a reference type copies the reference, not the actual value."
+        }
+      ]
+    },
+    {
+      "title": "Defining and Calling Functions",
+      "content": {
+        "explanation": "A function is a reusable block of code that performs a specific task. In JavaScript, you can define a function using the function keyword, and call it by using its name followed by parentheses.",
+        "explainLikeKid": "A function is like a robot: you give it a name and instructions, and whenever you call its name, it does the job for you!",
+        "code": "function greet() {\n  console.log('Hello!');\n}\ngreet();",
+        "input": "greet();",
+        "output": "Hello!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a function in JavaScript?",
+          "answer": "A function is a reusable block of code that performs a specific task."
+        },
+        {
+          "question": "How do you define a function?",
+          "answer": "Using the function keyword, followed by a name, parentheses, and curly braces."
+        },
+        {
+          "question": "How do you call a function?",
+          "answer": "By writing its name followed by parentheses, e.g., greet();"
+        },
+        {
+          "question": "Can a function return a value?",
+          "answer": "Yes, using the return statement."
+        },
+        {
+          "question": "Why use functions?",
+          "answer": "To organize code, avoid repetition, and make code reusable."
+        }
+      ]
+    },
+    {
+      "title": "Making Decisions with if/else",
+      "content": {
+        "explanation": "Conditional statements let you run different code depending on whether a condition is true or false. The if/else statement is the most common way to do this in JavaScript.",
+        "explainLikeKid": "If/else is like asking: 'If it's raining, take an umbrella. Else, wear sunglasses!'",
+        "code": "let weather = 'rainy';\nif (weather === 'rainy') {\n  console.log('Take an umbrella!');\n} else {\n  console.log('Wear sunglasses!');\n}",
+        "input": "weather = 'rainy'",
+        "output": "Take an umbrella!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What does an if statement do?",
+          "answer": "It checks a condition and runs code if the condition is true."
+        },
+        {
+          "question": "What is the purpose of else?",
+          "answer": "It runs code if the if condition is false."
+        },
+        {
+          "question": "Can you have multiple else if branches?",
+          "answer": "Yes, you can chain else if statements for multiple conditions."
+        },
+        {
+          "question": "What is the syntax for an if/else statement?",
+          "answer": "if (condition) { ... } else { ... }"
+        },
+        {
+          "question": "When would you use a switch statement instead of if/else?",
+          "answer": "When you have many possible values for a single variable."
+        }
+      ]
+    },
+    {
+      "title": "Iterating with for",
+      "content": {
+        "explanation": "A for loop lets you repeat a block of code a specific number of times. It's commonly used to iterate over arrays or run code a set number of times.",
+        "explainLikeKid": "A for loop is like counting steps: you start at 1, keep going until you reach the end, and do something at each step!",
+        "code": "for (let i = 0; i < 3; i++) {\n  console.log(i);\n}",
+        "input": "for (let i = 0; i < 3; i++) { console.log(i); }",
+        "output": "0\n1\n2"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a for loop used for?",
+          "answer": "To repeat a block of code a specific number of times."
+        },
+        {
+          "question": "What are the three parts of a for loop?",
+          "answer": "Initialization, condition, and increment/decrement."
+        },
+        {
+          "question": "How do you stop a for loop early?",
+          "answer": "Use the break statement."
+        },
+        {
+          "question": "Can you use a for loop to iterate over an array?",
+          "answer": "Yes, it's commonly used for that purpose."
+        },
+        {
+          "question": "What will this code output: for (let i = 0; i < 2; i++) { console.log(i); }?",
+          "answer": "0\n1"
+        }
+      ]
+    },
+    {
+      "title": "Creating and Accessing Arrays",
+      "content": {
+        "explanation": "An array is a special variable that can hold more than one value at a time. You can create an array using square brackets and access its elements by their index (starting from 0).",
+        "explainLikeKid": "An array is like an egg carton: each slot holds an egg, and you can count from the first slot (0) to find any egg you want!",
+        "code": "let fruits = ['apple', 'banana', 'cherry'];\nconsole.log(fruits[1]); // banana",
+        "input": "let fruits = ['apple', 'banana', 'cherry']; console.log(fruits[1]);",
+        "output": "banana"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is an array?",
+          "answer": "A variable that can hold multiple values in a single variable, using numbered indexes."
+        },
+        {
+          "question": "How do you access the first element of an array?",
+          "answer": "Using index 0, e.g., array[0]."
+        },
+        {
+          "question": "How do you find the length of an array?",
+          "answer": "Using the .length property."
+        },
+        {
+          "question": "Can arrays hold different data types?",
+          "answer": "Yes, arrays can hold any type of value."
+        },
+        {
+          "question": "What will this code output: let arr = [1,2,3]; console.log(arr[2]);?",
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "title": "Creating and Manipulating Strings",
+      "content": {
+        "explanation": "A string is a sequence of characters used to represent text. You can create strings using single or double quotes, and use various methods to manipulate them, such as .length, .toUpperCase(), and .slice().",
+        "explainLikeKid": "A string is like a necklace made of letter beads. You can count the beads, make them all uppercase, or cut the necklace into smaller pieces!",
+        "code": "let name = 'Alice';\nconsole.log(name.toUpperCase()); // 'ALICE'",
+        "input": "let name = 'Alice'; console.log(name.toUpperCase());",
+        "output": "ALICE"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a string in JavaScript?",
+          "answer": "A string is a sequence of characters used to represent text."
+        },
+        {
+          "question": "How do you find the length of a string?",
+          "answer": "Using the .length property."
+        },
+        {
+          "question": "How do you convert a string to uppercase?",
+          "answer": "Using the .toUpperCase() method."
+        },
+        {
+          "question": "How do you extract a part of a string?",
+          "answer": "Using methods like .slice() or .substring()."
+        },
+        {
+          "question": "What will this code output: let str = 'hello'; console.log(str[1]);?",
+          "answer": "e"
+        }
+      ]
+    },
+    {
+      "title": "Working with Numbers and Math Methods",
+      "content": {
+        "explanation": "JavaScript uses the number type for all numeric values, including integers and floating-point numbers. For very large integers, BigInt is used. The Math object provides useful methods for calculations, such as Math.round(), Math.max(), and Math.random().",
+        "explainLikeKid": "Numbers are like building blocks you can count, add, or multiply. The Math object is like a calculator with special buttons for different math tricks!",
+        "code": "let x = 3.7;\nconsole.log(Math.round(x)); // 4",
+        "input": "let x = 3.7; console.log(Math.round(x));",
+        "output": "4"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What type is used for numbers in JavaScript?",
+          "answer": "The number type is used for all numeric values."
+        },
+        {
+          "question": "What is BigInt used for?",
+          "answer": "For representing integers larger than 2^53 - 1."
+        },
+        {
+          "question": "How do you round a number in JavaScript?",
+          "answer": "Using Math.round()."
+        },
+        {
+          "question": "How do you generate a random number?",
+          "answer": "Using Math.random()."
+        },
+        {
+          "question": "What will this code output: Math.max(2, 5, 1)?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "title": "Creating and Accessing Object Properties",
+      "content": {
+        "explanation": "Objects in JavaScript are collections of key-value pairs. You can create an object using curly braces and access its properties using dot notation or bracket notation.",
+        "explainLikeKid": "An object is like a toy box with labels. Each label (key) tells you what's inside (value), like 'car: red' or 'ball: blue'.",
+        "code": "let person = { name: 'Alex', age: 30 };\nconsole.log(person.name); // 'Alex'",
+        "input": "let person = { name: 'Alex', age: 30 }; console.log(person.name);",
+        "output": "Alex"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is an object in JavaScript?",
+          "answer": "A collection of key-value pairs."
+        },
+        {
+          "question": "How do you access a property of an object?",
+          "answer": "Using dot notation (object.key) or bracket notation (object['key'])."
+        },
+        {
+          "question": "Can object properties be added or removed?",
+          "answer": "Yes, you can add or delete properties at any time."
+        },
+        {
+          "question": "What will this code output: let obj = {a:1}; console.log(obj.a);?",
+          "answer": "1"
+        },
+        {
+          "question": "How do you check if an object has a property?",
+          "answer": "Using the 'in' operator or hasOwnProperty method."
+        }
+      ]
+    },
+    {
+      "title": "Using call, apply, and bind",
+      "content": {
+        "explanation": "The call, apply, and bind methods allow you to control the value of 'this' inside a function. 'call' and 'apply' invoke the function immediately, with arguments passed differently. 'bind' returns a new function with 'this' set permanently.",
+        "explainLikeKid": "Imagine you have a remote control (function) that can work with different TVs (objects). 'call' and 'apply' let you use the remote right away, while 'bind' gives you a special remote just for one TV!",
+        "code": "function greet() {\n  console.log('Hello, ' + this.name);\n}\nconst person = { name: 'Sam' };\ngreet.call(person); // Hello, Sam",
+        "input": "greet.call({ name: 'Sam' });",
+        "output": "Hello, Sam"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What does Function.prototype.call do?",
+          "answer": "It calls a function with a given 'this' value and arguments."
+        },
+        {
+          "question": "How is apply different from call?",
+          "answer": "'apply' takes arguments as an array, 'call' takes them individually."
+        },
+        {
+          "question": "What does bind return?",
+          "answer": "A new function with 'this' set to the provided value."
+        },
+        {
+          "question": "When would you use bind?",
+          "answer": "When you want to create a function with a fixed 'this' value for later use."
+        },
+        {
+          "question": "What will this code output: function f() {console.log(this.x);} f.call({x: 5});?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "title": "Understanding Closures",
+      "content": {
+        "explanation": "A closure is a function that remembers the variables from the place where it was created, even after that place has finished executing. Closures are useful for data privacy and creating functions with persistent state.",
+        "explainLikeKid": "A closure is like a backpack: when you leave a room (function), you can still use the things you packed (variables) wherever you go!",
+        "code": "function makeCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\nconst counter = makeCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2",
+        "input": "const counter = makeCounter(); counter(); counter();",
+        "output": "1\n2"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a closure in JavaScript?",
+          "answer": "A closure is a function that remembers variables from its outer scope even after the outer function has finished executing."
+        },
+        {
+          "question": "Why are closures useful?",
+          "answer": "They allow for data privacy and persistent state in functions."
+        },
+        {
+          "question": "What is scope?",
+          "answer": "Scope is the context in which variables are accessible."
+        },
+        {
+          "question": "What is hoisting?",
+          "answer": "Hoisting is JavaScript's behavior of moving declarations to the top of their scope before code execution."
+        },
+        {
+          "question": "Can you give an example of a closure?",
+          "answer": "A function returned from another function that uses variables from the outer function."
+        }
+      ]
+    },
+    {
+      "title": "Selecting and Modifying Elements",
+      "content": {
+        "explanation": "The DOM (Document Object Model) represents the structure of a web page. JavaScript can access and change the DOM to update content, styles, and structure dynamically. You can select elements using methods like getElementById or querySelector, and modify them using properties like innerHTML or style.",
+        "explainLikeKid": "The DOM is like a LEGO model of your web page. JavaScript is your hand, picking up and moving the LEGO pieces to change how the page looks!",
+        "code": "document.getElementById('demo').innerHTML = 'Hello, DOM!';",
+        "input": "<div id='demo'></div> // then run the code above",
+        "output": "The div now shows: Hello, DOM!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the DOM?",
+          "answer": "The Document Object Model, a tree-like structure representing the web page."
+        },
+        {
+          "question": "How do you select an element by its ID?",
+          "answer": "Using document.getElementById('id')."
+        },
+        {
+          "question": "How do you change the content of an element?",
+          "answer": "By setting its innerHTML or textContent property."
+        },
+        {
+          "question": "What does querySelector do?",
+          "answer": "It selects the first element that matches a CSS selector."
+        },
+        {
+          "question": "Can you change the style of an element with JavaScript?",
+          "answer": "Yes, by setting the element's style property."
+        }
+      ]
+    },
+    {
+      "title": "Listening to and Delegating Events",
+      "content": {
+        "explanation": "Events are actions that happen in the browser, like clicks or key presses. You can listen for events using addEventListener. Event delegation is a technique where you attach a single event listener to a parent element to handle events for multiple child elements, improving performance and flexibility.",
+        "explainLikeKid": "Events are like bells that ring when something happens. Event delegation is like having one person listen for all the bells in a room, instead of one person for each bell!",
+        "code": "document.getElementById('btn').addEventListener('click', function() {\n  alert('Button clicked!');\n});",
+        "input": "<button id='btn'>Click me</button> // then run the code above",
+        "output": "An alert pops up saying 'Button clicked!' when the button is clicked."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is an event in JavaScript?",
+          "answer": "An action or occurrence detected by the browser, like a click or key press."
+        },
+        {
+          "question": "How do you listen for an event?",
+          "answer": "Using addEventListener on an element."
+        },
+        {
+          "question": "What is event delegation?",
+          "answer": "A technique where a single event listener handles events for multiple child elements."
+        },
+        {
+          "question": "Why use event delegation?",
+          "answer": "It improves performance and makes code easier to manage."
+        },
+        {
+          "question": "What will this code do: document.getElementById('btn').addEventListener('click', ...)?",
+          "answer": "It will run the function when the button is clicked."
+        }
+      ]
+    },
+    {
+      "title": "Catching and Handling Errors",
+      "content": {
+        "explanation": "Error handling in JavaScript is done using try/catch statements. Code that might throw an error is placed inside the try block, and if an error occurs, the catch block runs. This helps prevent the program from crashing and allows you to handle errors gracefully.",
+        "explainLikeKid": "Try/catch is like wearing a helmet when you ride a bike. If you fall (an error happens), the helmet (catch block) protects you!",
+        "code": "try {\n  throw new Error('Oops!');\n} catch (e) {\n  console.log(e.message);\n}",
+        "input": "try { throw new Error('Oops!'); } catch (e) { console.log(e.message); }",
+        "output": "Oops!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "How do you handle errors in JavaScript?",
+          "answer": "Using try/catch statements."
+        },
+        {
+          "question": "What happens if an error occurs in the try block?",
+          "answer": "The catch block runs and handles the error."
+        },
+        {
+          "question": "Can you have a finally block?",
+          "answer": "Yes, finally runs after try/catch, whether there was an error or not."
+        },
+        {
+          "question": "What does throw do?",
+          "answer": "It creates a custom error that can be caught by catch."
+        },
+        {
+          "question": "Why is error handling important?",
+          "answer": "It prevents the program from crashing and allows graceful recovery."
+        }
+      ]
+    },
+    {
+      "title": "Using Arrow Functions",
+      "content": {
+        "explanation": "Arrow functions are a concise way to write functions in JavaScript, introduced in ES6. They use the => syntax and do not have their own 'this' binding, making them useful for callbacks and short functions.",
+        "explainLikeKid": "Arrow functions are like shortcuts for writing instructions. Instead of saying 'function', you just draw an arrow!",
+        "code": "const add = (a, b) => a + b;\nconsole.log(add(2, 3)); // 5",
+        "input": "add(2, 3)",
+        "output": "5"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is an arrow function?",
+          "answer": "A shorter syntax for writing functions using =>, introduced in ES6."
+        },
+        {
+          "question": "How is 'this' handled in arrow functions?",
+          "answer": "Arrow functions do not have their own 'this'; they inherit it from the parent scope."
+        },
+        {
+          "question": "Can arrow functions be used as constructors?",
+          "answer": "No, they cannot be used as constructors."
+        },
+        {
+          "question": "How do you write a function that adds two numbers using arrow syntax?",
+          "answer": "const add = (a, b) => a + b;"
+        },
+        {
+          "question": "What is a benefit of using arrow functions?",
+          "answer": "They are concise and useful for callbacks."
+        }
+      ]
+    },
+    {
+      "title": "Understanding Prototypes",
+      "content": {
+        "explanation": "Every JavaScript object has a prototype, which is another object it inherits properties and methods from. This forms a prototype chain, allowing objects to share behavior. Inheritance in JavaScript is achieved through prototypes, not classes (until ES6).",
+        "explainLikeKid": "A prototype is like a recipe book your toys share. If a toy doesn't know how to do something, it checks the recipe book (prototype) for instructions!",
+        "code": "const animal = { eats: true };\nconst rabbit = Object.create(animal);\nconsole.log(rabbit.eats); // true",
+        "input": "const animal = { eats: true }; const rabbit = Object.create(animal); console.log(rabbit.eats);",
+        "output": "true"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a prototype in JavaScript?",
+          "answer": "An object from which other objects inherit properties and methods."
+        },
+        {
+          "question": "How does inheritance work in JavaScript?",
+          "answer": "Through the prototype chain."
+        },
+        {
+          "question": "What does Object.create do?",
+          "answer": "It creates a new object with the specified prototype object."
+        },
+        {
+          "question": "Can you change an object's prototype?",
+          "answer": "Yes, using Object.setPrototypeOf or __proto__."
+        },
+        {
+          "question": "What will this code output: const a = {x:1}; const b = Object.create(a); console.log(b.x);?",
+          "answer": "1"
+        }
+      ]
+    },
+    {
+      "title": "Defining Classes and Static Methods",
+      "content": {
+        "explanation": "Classes in JavaScript, introduced in ES6, provide a clearer and more concise way to create objects and handle inheritance. Static methods are defined on the class itself, not on instances, and are called using the class name.",
+        "explainLikeKid": "A class is like a blueprint for building toy cars. Static methods are like special tools you use on the blueprint, not on the cars you build!",
+        "code": "class Car {\n  static honk() {\n    return 'Beep!';\n  }\n}\nconsole.log(Car.honk()); // 'Beep!'",
+        "input": "Car.honk()",
+        "output": "Beep!"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a class in JavaScript?",
+          "answer": "A template for creating objects and handling inheritance, introduced in ES6."
+        },
+        {
+          "question": "What is a static method?",
+          "answer": "A method defined on the class itself, not on instances."
+        },
+        {
+          "question": "How do you call a static method?",
+          "answer": "Using the class name, e.g., Car.honk()."
+        },
+        {
+          "question": "Can static methods access instance properties?",
+          "answer": "No, static methods cannot access instance properties directly."
+        },
+        {
+          "question": "What will this code output: class A { static hi() { return 'hi'; } } console.log(A.hi());?",
+          "answer": "hi"
+        }
+      ]
+    },
+    {
+      "title": "Using Promises for Asynchronous Code",
+      "content": {
+        "explanation": "Promises are a way to handle asynchronous operations in JavaScript. A promise represents a value that may be available now, later, or never. You can use .then() and .catch() to handle the result or error, and async/await syntax to write cleaner asynchronous code.",
+        "explainLikeKid": "A promise is like ordering a pizza: you order it (start the promise), and when it arrives (resolves), you eat it. If something goes wrong (rejects), you get a call from the pizza shop!",
+        "code": "const promise = new Promise((resolve, reject) => {\n  setTimeout(() => resolve('Done!'), 1000);\n});\npromise.then(result => console.log(result)); // 'Done!' after 1 second",
+        "input": "promise.then(result => console.log(result));",
+        "output": "Done! (after 1 second)"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a promise in JavaScript?",
+          "answer": "An object representing the eventual completion or failure of an asynchronous operation."
+        },
+        {
+          "question": "How do you handle the result of a promise?",
+          "answer": "Using .then() for success and .catch() for errors."
+        },
+        {
+          "question": "What does async/await do?",
+          "answer": "It allows you to write asynchronous code that looks synchronous."
+        },
+        {
+          "question": "What will this code output: Promise.resolve(5).then(console.log);?",
+          "answer": "5"
+        },
+        {
+          "question": "How do you create a new promise?",
+          "answer": "Using new Promise((resolve, reject) => { ... })"
+        }
+      ]
+    },
+    {
+      "title": "How the Event Loop Works",
+      "content": {
+        "explanation": "The event loop is a mechanism in JavaScript that allows non-blocking, asynchronous operations. It continuously checks the call stack and the message queue, executing tasks from the queue when the stack is empty. This enables JavaScript to handle events and callbacks efficiently.",
+        "explainLikeKid": "The event loop is like a teacher calling on students one by one to answer questions. If a student isn't ready, the teacher moves on and comes back later!",
+        "code": "console.log('Start');\nsetTimeout(() => {\n  console.log('Timeout');\n}, 0);\nconsole.log('End');",
+        "input": "Run the code above.",
+        "output": "Start\nEnd\nTimeout"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the event loop?",
+          "answer": "A mechanism that handles asynchronous operations in JavaScript."
+        },
+        {
+          "question": "Why is JavaScript single-threaded?",
+          "answer": "It has one call stack, but the event loop allows it to handle many tasks asynchronously."
+        },
+        {
+          "question": "What is the message queue?",
+          "answer": "A queue where asynchronous tasks wait to be executed."
+        },
+        {
+          "question": "What will this code output: console.log('A'); setTimeout(()=>console.log('B'),0); console.log('C');?",
+          "answer": "A\nC\nB"
+        },
+        {
+          "question": "How does setTimeout work with the event loop?",
+          "answer": "It schedules a callback to run after the current call stack is empty."
+        }
+      ]
+    },
+    {
+      "title": "Parsing and Stringifying JSON",
+      "content": {
+        "explanation": "JSON (JavaScript Object Notation) is a format for storing and exchanging data. You can convert a JSON string to a JavaScript object using JSON.parse(), and convert an object to a JSON string using JSON.stringify().",
+        "explainLikeKid": "JSON is like a secret code for sharing toys. You can turn your toy box into a list (stringify) to send to a friend, and they can turn the list back into a toy box (parse)!",
+        "code": "const obj = { name: 'Sam', age: 5 };\nconst str = JSON.stringify(obj);\nconsole.log(str); // {\"name\":\"Sam\",\"age\":5}\nconst newObj = JSON.parse(str);\nconsole.log(newObj.name); // 'Sam'",
+        "input": "const obj = { name: 'Sam', age: 5 }; const str = JSON.stringify(obj); const newObj = JSON.parse(str);",
+        "output": "str = '{\"name\":\"Sam\",\"age\":5}', newObj.name = 'Sam'"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is JSON?",
+          "answer": "A lightweight data format for storing and exchanging data."
+        },
+        {
+          "question": "How do you convert an object to a JSON string?",
+          "answer": "Using JSON.stringify()."
+        },
+        {
+          "question": "How do you convert a JSON string to an object?",
+          "answer": "Using JSON.parse()."
+        },
+        {
+          "question": "Why is JSON useful?",
+          "answer": "It is easy to read, write, and used for data exchange between servers and web apps."
+        },
+        {
+          "question": "What will this code output: JSON.stringify({a:1})?",
+          "answer": "'{\"a\":1}'"
+        }
+      ]
+    },
+    {
+      "title": "Importing and Exporting Modules",
+      "content": {
+        "explanation": "Modules in JavaScript allow you to split your code into separate files. You can export variables, functions, or classes from one file and import them into another using the export and import keywords. This helps organize code and reuse functionality.",
+        "explainLikeKid": "Modules are like different boxes for your toys. You can put some toys in one box and share them with another box using labels (import/export)!",
+        "code": "// math.js\nexport function add(a, b) { return a + b; }\n// main.js\nimport { add } from './math.js';\nconsole.log(add(2, 3)); // 5",
+        "input": "import { add } from './math.js'; add(2, 3);",
+        "output": "5"
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is a module in JavaScript?",
+          "answer": "A file that can export and import code to and from other files."
+        },
+        {
+          "question": "How do you export a function from a module?",
+          "answer": "Using the export keyword."
+        },
+        {
+          "question": "How do you import a function from another module?",
+          "answer": "Using the import keyword."
+        },
+        {
+          "question": "Why use modules?",
+          "answer": "To organize code and reuse functionality."
+        },
+        {
+          "question": "What will this code output: import { add } from './math.js'; console.log(add(2,3));?",
+          "answer": "5"
+        }
+      ]
+    },
+    {
+      "title": "How JavaScript Manages Memory",
+      "content": {
+        "explanation": "JavaScript automatically allocates memory when objects are created and frees it when they are no longer used. This process is called garbage collection. Developers should avoid memory leaks by removing references to unused objects.",
+        "explainLikeKid": "Memory management is like cleaning your room. When you're done playing with a toy, you put it away so your room doesn't get messy!",
+        "code": "let obj = { data: new Array(1000).fill('x') };\nobj = null; // Now the memory can be reclaimed",
+        "input": "let obj = { data: new Array(1000).fill('x') }; obj = null;",
+        "output": "Memory used by obj can now be reclaimed by the garbage collector."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is garbage collection?",
+          "answer": "The process of automatically freeing memory that is no longer in use."
+        },
+        {
+          "question": "How can you help prevent memory leaks?",
+          "answer": "By removing references to objects you no longer need."
+        },
+        {
+          "question": "Does JavaScript manage memory automatically?",
+          "answer": "Yes, through garbage collection."
+        },
+        {
+          "question": "What happens if you keep references to unused objects?",
+          "answer": "It can cause memory leaks and increased memory usage."
+        },
+        {
+          "question": "What will this code do: let a = {x:1}; a = null;?",
+          "answer": "The memory used by 'a' can be reclaimed by the garbage collector."
+        }
+      ]
+    },
+    {
+      "title": "Tips for Faster JavaScript",
+      "content": {
+        "explanation": "Performance optimization in JavaScript involves writing efficient code, minimizing memory usage, and reducing unnecessary computations. Techniques include using local variables, minimizing DOM access, debouncing events, and avoiding memory leaks.",
+        "explainLikeKid": "Optimizing code is like cleaning up your race car so it goes faster—remove extra weight, keep the engine tuned, and drive smart!",
+        "code": "// Use local variables for faster access\nfunction sum(arr) {\n  let total = 0;\n  for (let i = 0, len = arr.length; i < len; i++) {\n    total += arr[i];\n  }\n  return total;\n}",
+        "input": "sum([1,2,3,4])",
+        "output": "10"
+      },
+      "interviewQuestions": [
+        {
+          "question": "How can you optimize JavaScript code?",
+          "answer": "By writing efficient loops, minimizing DOM access, and using local variables."
+        },
+        {
+          "question": "Why is minimizing DOM access important?",
+          "answer": "Because DOM operations are slow compared to JavaScript operations."
+        },
+        {
+          "question": "What is debouncing?",
+          "answer": "A technique to limit how often a function is called, often used for event handlers."
+        },
+        {
+          "question": "How can memory leaks affect performance?",
+          "answer": "They increase memory usage and slow down the application."
+        },
+        {
+          "question": "What will this code output: sum([1,2,3,4])?",
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "title": "Working with Window, Location, and History",
+      "content": {
+        "explanation": "The Browser Object Model (BOM) allows JavaScript to interact with the browser outside the web page content. The window object represents the browser window, location provides information about the current URL, and history lets you navigate through the browser's session history.",
+        "explainLikeKid": "The BOM is like the controls of a car: the window is the windshield, location is your GPS, and history is your trip log!",
+        "code": "console.log(window.location.href); // shows the current URL\nwindow.history.back(); // goes back one page",
+        "input": "console.log(window.location.href); window.history.back();",
+        "output": "Displays the current URL, then navigates back one page."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What is the BOM in JavaScript?",
+          "answer": "The Browser Object Model, which allows interaction with the browser window and navigation."
+        },
+        {
+          "question": "How do you get the current URL in JavaScript?",
+          "answer": "Using window.location.href."
+        },
+        {
+          "question": "How do you go back to the previous page?",
+          "answer": "Using window.history.back()."
+        },
+        {
+          "question": "What does window represent?",
+          "answer": "The browser window and its properties/methods."
+        },
+        {
+          "question": "Can you change the URL with JavaScript?",
+          "answer": "Yes, by setting window.location.href."
+        }
+      ]
+    },
+    {
+      "title": "Making HTTP Requests with Fetch",
+      "content": {
+        "explanation": "The Fetch API allows you to make HTTP requests to servers from JavaScript. It returns a promise and is used for getting or sending data asynchronously. You can also use LocalStorage to store data in the browser, and Geolocation to get the user's location.",
+        "explainLikeKid": "Fetch is like sending a letter to a friend and waiting for their reply. LocalStorage is like a notebook you keep in your desk, and Geolocation is like a GPS in your phone!",
+        "code": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data));",
+        "input": "fetch('https://api.example.com/data')",
+        "output": "Logs the fetched data from the API."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What does the Fetch API do?",
+          "answer": "It allows you to make HTTP requests from JavaScript."
+        },
+        {
+          "question": "What does fetch return?",
+          "answer": "A promise that resolves to the response."
+        },
+        {
+          "question": "How do you store data in the browser?",
+          "answer": "Using LocalStorage."
+        },
+        {
+          "question": "How do you get the user's location in JavaScript?",
+          "answer": "Using the Geolocation API."
+        },
+        {
+          "question": "What will this code do: fetch('url').then(r=>r.json()).then(console.log)?",
+          "answer": "It will fetch data from the URL and log the parsed JSON."
+        }
+      ]
+    },
+    {
+      "title": "Making Requests with XMLHttpRequest",
+      "content": {
+        "explanation": "AJAX (Asynchronous JavaScript and XML) allows web pages to update asynchronously by exchanging data with a server behind the scenes. The XMLHttpRequest object is used to make HTTP requests in older code, before Fetch API became standard.",
+        "explainLikeKid": "AJAX is like sending a message to the kitchen for more snacks without leaving your seat. XMLHttpRequest is the old way of sending those messages!",
+        "code": "var xhr = new XMLHttpRequest();\nxhr.open('GET', 'https://api.example.com/data');\nxhr.onload = function() {\n  if (xhr.status === 200) {\n    console.log(xhr.responseText);\n  }\n};\nxhr.send();",
+        "input": "xhr.open('GET', 'https://api.example.com/data'); xhr.send();",
+        "output": "Logs the response text from the API."
+      },
+      "interviewQuestions": [
+        {
+          "question": "What does AJAX stand for?",
+          "answer": "Asynchronous JavaScript and XML."
+        },
+        {
+          "question": "What is XMLHttpRequest used for?",
+          "answer": "To make HTTP requests in JavaScript (older method)."
+        },
+        {
+          "question": "How is Fetch API different from XMLHttpRequest?",
+          "answer": "Fetch uses promises and is more modern and flexible."
+        },
+        {
+          "question": "Can AJAX update a web page without reloading?",
+          "answer": "Yes, that's its main purpose."
+        },
+        {
+          "question": "What will this code do: xhr.open('GET', url); xhr.send();?",
+          "answer": "It will send a GET request to the URL."
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Todo App",
+      "description": "A simple application to add, display, and remove tasks. Demonstrates DOM manipulation, event handling, and array methods.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Todo App</title>\n</head>\n<body>\n  <input id=\"taskInput\" type=\"text\" placeholder=\"Add a task\">\n  <button onclick=\"addTask()\">Add</button>\n  <ul id=\"taskList\"></ul>\n  <script>\n    function addTask() {\n      var input = document.getElementById('taskInput');\n      var task = input.value.trim();\n      if (task) {\n        var li = document.createElement('li');\n        li.textContent = task;\n        li.onclick = function() { this.remove(); };\n        document.getElementById('taskList').appendChild(li);\n        input.value = '';\n      }\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Quiz App",
+      "description": "A simple quiz application that asks multiple-choice questions and shows the score. Demonstrates array usage, event handling, and DOM manipulation.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Quiz App</title>\n</head>\n<body>\n  <div id=\"quiz\"></div>\n  <script>\n    const questions = [\n      { q: '2 + 2 = ?', options: ['3', '4', '5'], answer: 1 },\n      { q: 'Capital of France?', options: ['London', 'Berlin', 'Paris'], answer: 2 }\n    ];\n    let current = 0, score = 0;\n    function showQuestion() {\n      if (current >= questions.length) {\n        document.getElementById('quiz').innerHTML = 'Score: ' + score + '/' + questions.length;\n        return;\n      }\n      const q = questions[current];\n      let html = '<div>' + q.q + '</div>';\n      q.options.forEach((opt, i) => {\n        html += `<button onclick=\"answer(${i})\">${opt}</button> `;\n      });\n      document.getElementById('quiz').innerHTML = html;\n    }\n    function answer(i) {\n      if (i === questions[current].answer) score++;\n      current++;\n      showQuestion();\n    }\n    showQuestion();\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Digital Clock",
+      "description": "A real-time digital clock that displays the current time and updates every second. Demonstrates use of setInterval and DOM manipulation.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Digital Clock</title>\n</head>\n<body>\n  <h1 id=\"clock\"></h1>\n  <script>\n    function updateClock() {\n      var now = new Date();\n      var time = now.toLocaleTimeString();\n      document.getElementById('clock').textContent = time;\n    }\n    setInterval(updateClock, 1000);\n    updateClock();\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Calculator",
+      "description": "A basic calculator that performs addition, subtraction, multiplication, and division. Demonstrates input handling, event listeners, and basic arithmetic in JavaScript.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Calculator</title>\n</head>\n<body>\n  <input id=\"num1\" type=\"number\" placeholder=\"First number\">\n  <input id=\"num2\" type=\"number\" placeholder=\"Second number\">\n  <select id=\"op\">\n    <option value=\"+\">+</option>\n    <option value=\"-\">-</option>\n    <option value=\"*\">*</option>\n    <option value=\"/\">/</option>\n  </select>\n  <button onclick=\"calc()\">Calculate</button>\n  <div id=\"result\"></div>\n  <script>\n    function calc() {\n      var n1 = parseFloat(document.getElementById('num1').value);\n      var n2 = parseFloat(document.getElementById('num2').value);\n      var op = document.getElementById('op').value;\n      var res = '';\n      if (!isNaN(n1) && !isNaN(n2)) {\n        switch(op) {\n          case '+': res = n1 + n2; break;\n          case '-': res = n1 - n2; break;\n          case '*': res = n1 * n2; break;\n          case '/': res = n2 !== 0 ? n1 / n2 : 'Error'; break;\n        }\n      }\n      document.getElementById('result').textContent = res;\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Currency Converter",
+      "description": "A simple app to convert an amount from USD to EUR using a fixed exchange rate. Demonstrates input handling and basic arithmetic.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Currency Converter</title>\n</head>\n<body>\n  <input id=\"usd\" type=\"number\" placeholder=\"USD\">\n  <button onclick=\"convert()\">Convert to EUR</button>\n  <div id=\"eur\"></div>\n  <script>\n    function convert() {\n      var usd = parseFloat(document.getElementById('usd').value);\n      var rate = 0.9; // Example fixed rate\n      if (!isNaN(usd)) {\n        document.getElementById('eur').textContent = (usd * rate).toFixed(2) + ' EUR';\n      }\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Tip Calculator",
+      "description": "A simple app to calculate the tip amount based on bill and percentage. Demonstrates input handling and basic arithmetic.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Tip Calculator</title>\n</head>\n<body>\n  <input id=\"bill\" type=\"number\" placeholder=\"Bill Amount\">\n  <input id=\"percent\" type=\"number\" placeholder=\"Tip %\">\n  <button onclick=\"calcTip()\">Calculate Tip</button>\n  <div id=\"tip\"></div>\n  <script>\n    function calcTip() {\n      var bill = parseFloat(document.getElementById('bill').value);\n      var percent = parseFloat(document.getElementById('percent').value);\n      if (!isNaN(bill) && !isNaN(percent)) {\n        var tip = bill * percent / 100;\n        document.getElementById('tip').textContent = 'Tip: $' + tip.toFixed(2);\n      }\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Image Slider",
+      "description": "A simple image slider that lets users navigate through images. Demonstrates array usage, DOM manipulation, and event handling.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Image Slider</title>\n</head>\n<body>\n  <img id=\"slider\" width=\"200\" src=\"https://via.placeholder.com/200?text=1\">\n  <br>\n  <button onclick=\"prev()\">Prev</button>\n  <button onclick=\"next()\">Next</button>\n  <script>\n    var images = [\n      'https://via.placeholder.com/200?text=1',\n      'https://via.placeholder.com/200?text=2',\n      'https://via.placeholder.com/200?text=3'\n    ];\n    var idx = 0;\n    function show() {\n      document.getElementById('slider').src = images[idx];\n    }\n    function prev() {\n      idx = (idx - 1 + images.length) % images.length;\n      show();\n    }\n    function next() {\n      idx = (idx + 1) % images.length;\n      show();\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Weather App",
+      "description": "A simple app that fetches and displays weather data for a city using a public API. Demonstrates use of Fetch API and DOM manipulation.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Weather App</title>\n</head>\n<body>\n  <input id=\"cityInput\" type=\"text\" placeholder=\"Enter city\">\n  <button onclick=\"getWeather()\">Get Weather</button>\n  <div id=\"weatherResult\"></div>\n  <script>\n    function getWeather() {\n      var city = document.getElementById('cityInput').value.trim();\n      if (!city) return;\n      fetch('https://wttr.in/' + city + '?format=3')\n        .then(response => response.text())\n        .then(data => {\n          document.getElementById('weatherResult').textContent = data;\n        });\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Notes App",
+      "description": "A simple notes application that lets users add and delete notes. Demonstrates array usage, DOM manipulation, and event handling.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Notes App</title>\n</head>\n<body>\n  <input id=\"noteInput\" type=\"text\" placeholder=\"Add a note\">\n  <button onclick=\"addNote()\">Add</button>\n  <ul id=\"notesList\"></ul>\n  <script>\n    function addNote() {\n      var input = document.getElementById('noteInput');\n      var note = input.value.trim();\n      if (note) {\n        var li = document.createElement('li');\n        li.textContent = note;\n        li.onclick = function() { this.remove(); };\n        document.getElementById('notesList').appendChild(li);\n        input.value = '';\n      }\n    }\n  </script>\n</body>\n</html>"
+    },
+    {
+      "title": "Password Generator",
+      "description": "A simple app to generate a random password of a given length. Demonstrates string manipulation, random number generation, and DOM interaction.",
+      "code": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Password Generator</title>\n</head>\n<body>\n  <input id=\"len\" type=\"number\" placeholder=\"Length\">\n  <button onclick=\"genPass()\">Generate</button>\n  <div id=\"pw\"></div>\n  <script>\n    function genPass() {\n      var length = parseInt(document.getElementById('len').value);\n      var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';\n      var pass = '';\n      for (var i = 0; i < length; i++) {\n        pass += chars.charAt(Math.floor(Math.random() * chars.length));\n      }\n      document.getElementById('pw').textContent = pass;\n    }\n  </script>\n</body>\n</html>"
+    }
+  ]
+}
