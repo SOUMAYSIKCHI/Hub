@@ -47,14 +47,6 @@ const Content = ({ data, subjectId }) => {
     }
   };
 
-  const AdBox = ({ type, className }) => (
-    <div className={`bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-dashed border-blue-200 rounded-lg p-4 text-center ${className}`}>
-      <div className="text-xs text-gray-500 mb-2">Advertisement</div>
-      <div className="text-sm font-medium text-gray-700 mb-2">{type} Ad Space</div>
-      <div className="text-xs text-gray-400">300x250</div>
-    </div>
-  );
-
   const Sidebar = () => (
     <div className={`fixed inset-y-0 left-0 z-50 w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 lg:static lg:shadow-none lg:z-auto lg:h-screen`}>
       {/* Mobile header */}
@@ -312,15 +304,9 @@ const Content = ({ data, subjectId }) => {
       )}
 
       {/* Main content area */}
-      <div className="flex-1 flex flex-col h-screen overflow-hidden relative">
-        {/* Ad boxes - Fixed position in top right, adjusted from top-4 to top-20 */}
-        <div className="hidden lg:block fixed top-20 right-4 z-30 space-y-4">
-          <AdBox type="Banner" className="w-72 h-32" />
-          <AdBox type="Square" className="w-72 h-64" />
-        </div>
-
-        {/* Content area with margin for ads */}
-        <div className="flex-1 overflow-y-auto p-4 lg:p-8 lg:pr-80 pt-16 lg:pt-8">
+      <div className="flex-1 flex flex-col h-screen overflow-hidden">
+        {/* Content area */}
+        <div className="flex-1 overflow-y-auto p-4 lg:p-8 pt-16 lg:pt-8">
           <ContentTabs />
         </div>
       </div>

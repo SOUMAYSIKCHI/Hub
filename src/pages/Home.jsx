@@ -50,53 +50,11 @@ const Home = () => {
             description: 'Understand how data moves across the internet'
         },
         {
-            name: 'CSS',
-            file: 'css.json',
-            icon: 'Paintbrush',
-            color: 'bg-blue-100',
-            description: 'Style beautiful, responsive interfaces'
-        },
-        {
-            name: 'Data Structures',
-            file: 'datastructure.json',
-            icon: 'Stack',
-            color: 'bg-emerald-100',
-            description: 'Master arrays, trees, graphs and more'
-        },
-        {
             name: 'DBMS',
             file: 'dbms.json',
             icon: 'Database',
             color: 'bg-indigo-100',
             description: 'Learn relational database foundations'
-        },
-        {
-            name: 'Express JS',
-            file: 'expressjs.json',
-            icon: 'Server',
-            color: 'bg-neutral-100',
-            description: 'Fast and minimal backend for Node.js'
-        },
-        {
-            name: 'Git & GitHub',
-            file: 'git&github.json',
-            icon: 'GitBranch',
-            color: 'bg-rose-100',
-            description: 'Version control & collaboration workflows'
-        },
-        {
-            name: 'HTML',
-            file: 'html.json',
-            icon: 'FileCode2',
-            color: 'bg-yellow-100',
-            description: 'Structure the web with semantic HTML'
-        },
-        {
-            name: 'Java',
-            file: 'java.json',
-            icon: 'Coffee',
-            color: 'bg-red-100',
-            description: 'Object-oriented programming powerhouse'
         },
         {
             name: 'JavaScript',
@@ -106,46 +64,11 @@ const Home = () => {
             description: 'The language of the web — dynamic and essential'
         },
         {
-            name: 'MongoDB',
-            file: 'mongodb.json',
-            icon: 'HardDrive',
-            color: 'bg-green-100',
-            description: 'NoSQL document database with flexibility'
-        },
-        {
-            name: 'MySQL Query Examples',
-            file: 'mysql-query-example.json',
-            icon: 'ScrollText',
-            color: 'bg-purple-100',
-            description: 'Hands-on SQL practice and syntax walkthroughs'
-        },
-        {
-            name: 'Node JS',
-            file: 'nodejs.json',
-            icon: 'Box',
-            color: 'bg-lime-50',
-            description: 'Server-side JavaScript runtime engine'
-        },
-        {
             name: 'Operating Systems',
             file: 'os.json',
             icon: 'Cpu',
             color: 'bg-cyan-100',
             description: 'Dive into process, memory, and file systems'
-        },
-        {
-            name: 'Python',
-            file: 'python.json',
-            icon: 'Feather',
-            color: 'bg-fuchsia-100',
-            description: 'Readable and versatile language for all levels'
-        },
-        {
-            name: 'React JS',
-            file: 'reactjs.json',
-            icon: 'Atom',
-            color: 'bg-blue-50',
-            description: 'Component-based frontend library by Meta'
         },
         {
             name: 'Software Engineering',
@@ -161,6 +84,84 @@ const Home = () => {
             color: 'bg-zinc-100',
             description: 'Test types, strategies, and automation basics'
         }
+        // ,
+        // {
+        //     name: 'Express JS',
+        //     file: 'expressjs.json',
+        //     icon: 'Server',
+        //     color: 'bg-neutral-100',
+        //     description: 'Fast and minimal backend for Node.js'
+        // },
+        // {
+        //     name: 'Git & GitHub',
+        //     file: 'git&github.json',
+        //     icon: 'GitBranch',
+        //     color: 'bg-rose-100',
+        //     description: 'Version control & collaboration workflows'
+        // },
+        // {
+        //     name: 'HTML',
+        //     file: 'html.json',
+        //     icon: 'FileCode2',
+        //     color: 'bg-yellow-100',
+        //     description: 'Structure the web with semantic HTML'
+        // },
+        // {
+        //     name: 'Java',
+        //     file: 'java.json',
+        //     icon: 'Coffee',
+        //     color: 'bg-red-100',
+        //     description: 'Object-oriented programming powerhouse'
+        // },
+        // {
+        //     name: 'CSS',
+        //     file: 'css.json',
+        //     icon: 'Paintbrush',
+        //     color: 'bg-blue-100',
+        //     description: 'Style beautiful, responsive interfaces'
+        // },
+        // {
+        //     name: 'Data Structures',
+        //     file: 'datastructure.json',
+        //     icon: 'Stack',
+        //     color: 'bg-emerald-100',
+        //     description: 'Master arrays, trees, graphs and more'
+        // },
+        // {
+        //     name: 'MongoDB',
+        //     file: 'mongodb.json',
+        //     icon: 'HardDrive',
+        //     color: 'bg-green-100',
+        //     description: 'NoSQL document database with flexibility'
+        // },
+        // {
+        //     name: 'MySQL Query Examples',
+        //     file: 'mysql-query-example.json',
+        //     icon: 'ScrollText',
+        //     color: 'bg-purple-100',
+        //     description: 'Hands-on SQL practice and syntax walkthroughs'
+        // },
+        // {
+        //     name: 'Node JS',
+        //     file: 'nodejs.json',
+        //     icon: 'Box',
+        //     color: 'bg-lime-50',
+        //     description: 'Server-side JavaScript runtime engine'
+        // },
+        // {
+        //     name: 'Python',
+        //     file: 'python.json',
+        //     icon: 'Feather',
+        //     color: 'bg-fuchsia-100',
+        //     description: 'Readable and versatile language for all levels'
+        // },
+        // {
+        //     name: 'React JS',
+        //     file: 'reactjs.json',
+        //     icon: 'Atom',
+        //     color: 'bg-blue-50',
+        //     description: 'Component-based frontend library by Meta'
+        // }
     ];
 
     const valueProps = [

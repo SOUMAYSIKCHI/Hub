@@ -5,23 +5,24 @@ const Footer = () => {
   const subjects = [
     { name: 'C Programming', file: 'c.json' },
     { name: 'Computer Networks', file: 'cn.json' },
-    { name: 'CSS', file: 'css.json' },
-    { name: 'Data Structures', file: 'datastructure.json' },
+    // { name: 'CSS', file: 'css.json' },
+    // { name: 'Data Structures', file: 'datastructure.json' },
     { name: 'DBMS', file: 'dbms.json' },
-    { name: 'Express JS', file: 'expressjs.json' },
-    { name: 'Git & GitHub', file: 'git&github.json' },
-    { name: 'HTML', file: 'html.json' },
-    { name: 'Java', file: 'java.json' },
+    // { name: 'Express JS', file: 'expressjs.json' },
+    // { name: 'Git & GitHub', file: 'git&github.json' },
+    // { name: 'HTML', file: 'html.json' },
+    // { name: 'Java', file: 'java.json' },
     { name: 'JavaScript', file: 'javascript.json' },
-    { name: 'MongoDB', file: 'mongodb.json' },
-    { name: 'MySQL Query Examples', file: 'mysql-query-example.json' },
-    { name: 'Node JS', file: 'nodejs.json' },
+    // { name: 'MongoDB', file: 'mongodb.json' },
+    // { name: 'MySQL Query Examples', file: 'mysql-query-example.json' },
+    // { name: 'Node JS', file: 'nodejs.json' },
     { name: 'Operating Systems', file: 'os.json' },
-    { name: 'Python', file: 'python.json' },
-    { name: 'React JS', file: 'reactjs.json' },
+    // { name: 'Python', file: 'python.json' },
+    // { name: 'React JS', file: 'reactjs.json' },
     { name: 'Software Engineering', file: 'software-engineering.json' },
     { name: 'Software Testing', file: 'software-testing.json' }
   ];
+
 
   return (
     <footer className="bg-gray-900 text-white py-16">
