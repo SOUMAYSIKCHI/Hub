@@ -130,13 +130,13 @@ const Navbar = () => {
           {/* CTA Link */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://www.linkedin.com/company/devsyncindia/"
+              href="https://www.linkedin.com/company/DevMilapindia/"
               className="flex items-center space-x-2 text-black hover:text-blue-600 transition-colors text-sm font-medium"
               target="_blank"
               rel="noopener noreferrer"
             >
               <ExternalLink className="w-4 h-4" />
-              <span>DevSync Team</span>
+              <span>DevMilap Team</span>
             </a>
           </div>
 
@@ -208,16 +208,16 @@ const Navbar = () => {
               <span>Blogs</span>
             </Link>
 
-            {/* DevSync Team */}
+            {/* DevMilap Team */}
             <a
-              href="https://www.linkedin.com/company/devsyncindia/"
+              href="#"
               className="flex items-center space-x-2 py-2 text-black hover:text-blue-600 text-sm font-medium"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMenuOpen(false)}
             >
               <ExternalLink className="w-4 h-4" />
-              <span>DevSync Team</span>
+              <span>DevMilap Team</span>
             </a>
           </div>
         </div>
