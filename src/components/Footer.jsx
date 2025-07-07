@@ -63,13 +63,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">💼 Support Us</h3>
             <div className="space-y-3">
               <a
-                href="https://www.linkedin.com/company/devsyncindia/"
+                href="#"
                 className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors text-sm"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <ExternalLink className="w-4 h-4" />
-                <span>DevSync Team</span>
+                <span>DevMilap Team</span>
               </a>
             </div>
           </div>
@@ -91,12 +91,12 @@ const Footer = () => {
           <p className="text-gray-500">
             © 2025 <span className="font-medium text-white">InterviewHub</span> by{' '}
             <a
-              href="https://www.linkedin.com/company/devsyncindia/"
+              href="https://www.linkedin.com/company/DevMilapindia/"
               target="_blank"
               rel="noreferrer"
               className="underline hover:text-blue-400"
             >
-              DevSync
+              DevMilap
             </a>. Made with ❤️ for the developer community.
           </p>
         </div>
